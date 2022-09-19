@@ -8,7 +8,10 @@ const Navigation = () => {
   const [isSearchInput, setSearchInput] = useState(false)
 
   return (
-    <div className={isSideBar ? `${styles.openedMenuContainer}` : `${styles.navContainer}`} >
+    <div
+      className={isSideBar ? `${styles.openedMenuContainer}` : `${styles.navContainer}`}
+      style={isSearchInput ? { backgroundColor: '#0d0d0d' } : undefined}
+    >
       <div className={styles.logoContainer}>
         <Link to='/'>
           <svg width="84" height="46" viewBox="0 0 94 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,11 +83,11 @@ const Navigation = () => {
                 className={styles.searchContainer}
                 style={{ backgroundColor: 'rgba(41, 41, 41, 0.74)', border: '1px solid #646464' }}
               >
-                <input 
+                <input
                   type='text'
                   placeholder='Пошук...'
                   autoFocus
-                  style={{ display: 'block', width: '500px', mariginRight: '10px'}}
+                  style={{ display: 'block', width: '500px', mariginRight: '10px' }}
                 />
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z" stroke="#FBFBF6" strokeWidth="2" strokeLinecap="round" />
@@ -96,14 +99,16 @@ const Navigation = () => {
               <div
                 className={styles.searchContainer}
               >
-                <input 
+                <input
                   type='text'
                   placeholder='Пошук...'
                 />
-                <svg onClick={() => { setSearchInput(true)}}
-                 width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <svg onClick={() => { setSearchInput(true) }}
+                  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z" stroke="#FBFBF6" strokeWidth="2" strokeLinecap="round" />
                 </svg>
+
               </div>
 
             </>
@@ -130,7 +135,7 @@ const Navigation = () => {
             </svg>
           </div>
           :
-          <div className={styles.close} onClick={() => isSideBar ? setSideBar(false) : undefined }>
+          <div className={styles.close} onClick={() => isSideBar ? setSideBar(false) : undefined}>
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6.5L6 18.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M6 6.5L18 18.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -138,7 +143,7 @@ const Navigation = () => {
           </div>
       }
 
-    </div>
+    </div >
   )
 }
 

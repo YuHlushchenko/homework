@@ -1,0 +1,48 @@
+@import '../../styles/colors'
+
+//changing default styles for swiper and pagination
+
+.swiperCustomStyles
+    .swiper-pagination 
+        display: flex
+        justify-content: center
+        flex-direction: column
+        height: 100%
+        right: 140px
+        bottom: 0 !important
+        left: auto !important
+        width: max-content !important
+        .swiper-pagination-bullet
+            width: 15px
+            height: 15px
+            border: 0.5px solid #FFFFFF
+            border-radius: 50px
+            margin: 10px 0
+            transition: .3s
+            cursor: pointer
+            opacity: 1
+            margin: 10px 0 !important
+            background-color: transparent !important
+            &:hover
+                background-color: $red !important
+                border-color: $red
+        .swiper-pagination-bullet-active
+            background-color: $red !important
+            border-color: $red
+
+//medias
+
+@media screen and (max-width: 1320px)
+    .swiperCustomStyles
+        .swiper-pagination 
+            right: 80px
+
+@media screen and (max-width: 1050px)
+    .swiperCustomStyles
+        .swiper-pagination 
+            right: 30px
+
+@media screen and (max-width: 850px)
+    .swiperCustomStyles
+        .swiper-pagination 
+            display: none

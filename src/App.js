@@ -1,6 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import { Routes, Route } from "react-router-dom"
+import Home from './pages/Home';
 
 
 function App() {
@@ -10,10 +11,8 @@ function App() {
         <Navigation />
       </section>
 
-      {/* <span>askdjflasdjflasjdf</span> */}
-
       <Routes>
-        {/* <Route path="/aboutUs" element={<Lol />} /> */}
+        <Route path="/" element={<Home/>} />
       </Routes>
     </div>
   );
