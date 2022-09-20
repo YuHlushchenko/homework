@@ -1,4 +1,5 @@
 import React from 'react'
+import Achievements from '../components/Achievements/Achievements'
 import MainSlider from '../components/MainSlider/MainSlider'
 import OurServices from '../components/OurServices/OurServices'
 import styles from '../styles/home.module.sass'
@@ -12,6 +13,10 @@ const Home = () => {
 
       <section className={styles.ourServicesSection}>
         <OurServices />
+      </section>
+
+      <section className={styles.achievementsSection}>
+        <Achievements />
       </section>
     </div>
   )

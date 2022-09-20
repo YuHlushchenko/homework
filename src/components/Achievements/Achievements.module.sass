@@ -1,0 +1,96 @@
+@import '../../styles/colors'
+    
+.achievementsContainer
+    width: 100%
+    background-color: $dark-gray
+    padding: 60px 140px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    width: 100%
+
+.achievementItem
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-right: 45px
+    span
+        font-weight: 700
+        font-size: 70px
+        line-height: 90px
+        color: #FBFBF6
+        margin-right: 15px
+    p
+        font-weight: 400
+        font-size: 23px
+        line-height: 28px
+        color: #FFFFFF
+        letter-spacing: 2px
+    &:last-child
+        margin-right: 0
+
+//medias
+
+@media screen and (max-width: 1900px)
+    .achievementsContainer
+        padding-bottom: 0
+
+    .achievementItem
+        margin-bottom: 60px
+
+@media screen and (max-width: 1464px)
+    .achievementItem
+        span
+            font-size: 60px
+            line-height: 80px
+        p
+            font-size: 20px
+            line-height: 24px
+
+@media screen and (max-width: 1342px)
+    .achievementItem
+        margin-right: 50px
+        width: 400px
+        span
+            width: 105px
+            text-align: right
+        &:last-child
+            margin-right: 50px
+
+@media screen and (max-width: 1179px)
+    .achievementsContainer
+        padding: 60px 30px 0
+    .achievementItem
+        margin-right: 20px
+        span
+            font-size: 50px
+            line-height: 60px
+        &:last-child
+            margin-right: 20px
+
+@media screen and (max-width: 900px)
+    .achievementItem
+        justify-content: center
+        flex-direction: column
+        width: 250px
+        span
+            text-align: center
+            margin-right: 0
+        p
+            width: 280px
+            text-align: center
+            margin-bottom: 0
+            margin-top: 8px
+
+@media screen and (max-width: 599px)
+    .achievementsContainer
+        flex-direction: column
+    .achievementItem
+        margin-right: 0
+        span
+            text-align: center
+        p
+            width: auto
+        &:last-child
+            margin-right: 0
