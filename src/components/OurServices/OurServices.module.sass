@@ -1,0 +1,174 @@
+@import '../../styles/colors'
+    
+.ourServicesContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h2
+        font-weight: 700
+        font-size: 50px
+        line-height: 62px
+        color: $grey
+        text-transform: uppercase
+        margin: 60px 0
+        text-align: center
+    p
+        margin: 0
+        font-weight: 400
+        font-size: 30px
+        line-height: 35px
+        text-align: center
+        color: $grey
+        margin-bottom: 60px
+
+.servicesContainer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.serviceBlock
+    min-width: calc((100% - 120px) / 3)
+    height: 410px
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    margin-right: 60px
+    &:last-child
+        margin-right: 0
+
+.img1
+    background: url(../../../public/ourServicesBackgrounds/img1.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.img2
+    background: url(../../../public/ourServicesBackgrounds/img2.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.img3
+    background: url(../../../public/ourServicesBackgrounds/img3.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.bottomContainer
+    background-color: rgba(255, 255, 255, 0.6)
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 45px 0
+    span
+        font-weight: 600
+        font-size: 30px
+        line-height: 32px
+        color: $grey
+        text-align: center
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .ourServicesContainer
+        h2
+            font-size: 45px
+            line-height: 50px
+        p
+            font-size: 28x
+            line-height: 33px
+
+    .serviceBlock
+        max-height: 380px
+        margin-right: 40px
+
+    .bottomContainer
+        padding: 30px 0
+        span
+            font-size: 26px
+            line-height: 28px
+
+@media screen and (max-width: 1320px)
+    .servicesContainer
+        overflow-x: scroll
+        min-height: 350px
+        justify-content: flex-start
+        &::-webkit-scrollbar
+            width: 20px
+            height: 5px 
+        &::-webkit-scrollbar-track 
+            background: $light-gray
+            border-radius: 5px
+        &::-webkit-scrollbar-thumb
+            background: $red
+            border-radius: 5px
+
+    .ourServicesContainer
+        h2
+            font-size: 48px
+            line-height: 58px
+            margin: 30px 0
+        p
+            font-size: 28px
+            line-height: 33px
+            margin-bottom: 30px
+
+    .serviceBlock
+        min-width: 360px
+        margin-right: 45px
+        max-height: 300px
+
+    .bottomContainer
+            padding: 25px 0
+
+@media screen and (max-width: 1050px)
+    .ourServicesContainer
+        h2
+            font-size: 42px
+            line-height: 52px
+        p
+            font-size: 24px
+            line-height: 30px
+
+    .bottomContainer
+        padding: 20px 0
+        span
+            font-size: 26px
+            line-height: 30px
+
+    .servicesContainer
+        max-height: 300px
+        min-width: 320px
+
+@media screen and (max-width: 700px)
+        .ourServicesContainer
+            h2
+                font-size: 36px
+                line-height: 40px
+                margin: 20px 0
+            p
+                font-size: 20px
+                line-height: 24px
+                margin-bottom: 20px
+        
+        .servicesContainer
+            overflow-x: hidden
+            flex-direction: column
+            justify-content: center
+            max-height: none
+
+        .serviceBlock
+            margin: 10px 0
+            span
+                font-size: 22px
+                line-height: 24px
+
+@media screen and (max-width: 550px)
+    .servicesContainer
+        min-width: 300px
