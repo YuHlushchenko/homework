@@ -1,8 +1,8 @@
 @import '../../../styles/colors'
     
 .default
-    background-color: transparent
-    color: $red
+    background-color: $red
+    color: $white
     font-size: 22px
     line-height: 24px
     padding: 15px 50px
@@ -10,12 +10,17 @@
     transition: .3s
     cursor: pointer
     &:hover
-        color: $white
-        background-color: $red
-        border: 1px solid $red
+        color: $dark-gray
+        background-color: $white
+        border: 1px solid $white
 
 .white
+    background-color: transparent
     color: $white
     border: 1px solid $white
+    &:hover
+        background-color: $red
+        border: 1px solid $red
+        color: $white
 
 

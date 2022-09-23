@@ -4,6 +4,7 @@ import MainSlider from '../components/MainSlider/MainSlider'
 import OurServices from '../components/OurServices/OurServices'
 import CustomMap from '../components/CustomMap/CustomMap'
 import styles from '../styles/home.module.sass'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <MainSlider />
       </section>
 
-      <section className={styles.ourServicesSection}>
+      <section className={styles.ourServicesSection} id='ourServices'>
         <OurServices />
       </section>
 
@@ -22,6 +23,10 @@ const Home = () => {
 
       <section>
         <CustomMap />
+      </section>
+
+      <section>
+        <Footer />
       </section>
     </div>
   )

@@ -1,0 +1,313 @@
+@import '../../styles/colors'
+
+.footerContainer
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 40px 140px
+    background-color: $dark-gray
+
+.topContainer
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    margin-bottom: 40px
+
+.topLeftContainer
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+.logoContainer
+    margin-right: 150px
+
+.aboutUsContainer
+    margin-right: 150px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    span
+        font-weight: 300
+        font-size: 24px
+        line-height: 35px
+        text-transform: uppercase
+        color: $white
+        letter-spacing: 2px
+    p
+        font-weight: 300
+        font-size: 24px
+        line-height: 28px
+        color: $white
+
+.topRightContainer
+    display: flex
+    align-items: flex-start
+    justify-content: center
+
+.anchorsContainer
+    margin-right: 150px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    span
+        font-weight: 300
+        font-size: 24px
+        line-height: 35px
+        text-transform: uppercase
+        color: $white
+        letter-spacing: 2px
+    ul
+        padding-left: 0
+        li
+            list-style: none
+            font-weight: 300
+            font-size: 24px
+            line-height: 28px
+            color: $white
+            margin-bottom: 6px
+            width: max-content
+            transition: .3s
+            cursor: pointer
+            &:hover
+                color: $red
+
+
+.contactInfoContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+.numberContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    margin: 40px 0
+    span
+        text-align: right
+        font-weight: 300
+        font-size: 26px
+        line-height: 30px
+        color: $white
+        margin-bottom: 6px
+
+.addressContainer
+    display: flex
+    align-items: flex-end
+    span
+        font-weight: 300
+        font-size: 26px
+        line-height: 30px
+        color: $white
+        text-align: right
+        width: max-content
+
+.bottomContainer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    span
+        font-weight: 300
+        font-size: 23px
+        line-height: 28px
+        color: $white
+        margin-right: 230px
+    a
+        font-weight: 300
+        font-size: 23px
+        line-height: 28px
+        color: $white
+ 
+//medias
+
+@media screen and (max-width: 1600px)
+    .topContainer
+        margin-bottom: 25px
+    .logoContainer
+        margin-right: 90px
+        a
+            svg
+                width: 101px
+                height: 168.5
+
+    .aboutUsContainer
+        margin-right: 120px
+        span
+            font-size: 18px
+            line-height: 26px
+        p
+            font-size: 18px
+            line-height: 22px
+            min-width: 200px
+    
+    .anchorsContainer
+        margin-right: 120px
+        span
+            font-size: 18px
+            line-height: 26px
+        ul
+            li
+                font-size: 18px
+                line-height: 22px
+                margin-bottom: 5px
+
+
+    .smallLogoContainer
+        display: none
+
+    .numberContainer
+        margin: 25px 0
+        span
+            font-size: 20px
+            line-height: 26px
+            margin-bottom: 5px
+
+    .addressContainer
+        span
+            font-size: 20px
+            line-height: 26px
+
+    .bottomContainer
+        span
+            font-size: 18px
+            line-height: 22px
+        a
+            font-size: 18px
+            line-height: 22px
+ 
+@media screen and (max-width: 1320px)
+    .footerContainer
+        padding: 25px 80px
+
+    .logoContainer
+        margin-right: 70px
+
+    .aboutUsContainer
+        margin-right: 80px
+
+    .anchorsContainer
+        margin-right: 80px
+
+@media screen and (max-width: 1050px)
+    .footerContainer
+        padding: 15px 30px
+
+    .topContainer
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .topLeftContainer
+        width: 100%
+        margin-bottom: 15px
+        justify-content: center
+        align-items: center
+
+    .logoContainer
+        margin-right: 150px
+
+    .aboutUsContainer
+        margin-right: 0
+        max-width: 500px
+
+    .topRightContainer
+        align-items: flex-start
+        justify-content: center
+        width: 100%
+
+    .anchorsContainer
+        margin-right: 280px
+
+@media screen and (max-width: 850px)
+    .logoContainer
+        margin-right: 50px
+
+    .anchorsContainer
+        margin-right: 180px
+
+    .bottomContainer
+        span
+            margin-right: 100px
+
+@media screen and (max-width: 680px)
+    .anchorsContainer
+        margin-right: 100px
+
+@media screen and (max-width: 570px)
+    .topLeftContainer
+        flex-direction: column
+
+    .anchorsContainer
+        margin-right: 50px
+
+@media screen and (max-width: 520px)
+    .logoContainer
+        margin-right: 0
+        margin-bottom: 10px
+
+    .aboutUsContainer
+        align-items: center
+        justify-content: center
+        margin-bottom: 5px
+        span
+            color: $red
+        p
+            text-align: center
+            margin: 2px 0
+
+    .topLeftContainer
+        align-items: center
+        justify-content: center
+        p
+            width: auto
+
+    .topRightContainer
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        margin-bottom: 0
+
+    .anchorsContainer
+        margin-right: 0
+        align-items: center
+        justify-content: center
+        margin-bottom: 15px
+        span
+            text-align: center
+            color: $red
+        ul
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin: 5px 0
+            li
+
+    .contactInfoContainer
+        align-items: center
+        span
+            text-align: center
+
+    .numberContainer
+        align-items: center
+        margin: 15px 0
+
+    .addressContainer
+        align-items: center
+        span
+            text-align: center
+            width: auto
+
+    .bottomContainer
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        span
+            margin: 0 0 5px 0
+
+
