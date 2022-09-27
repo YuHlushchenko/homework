@@ -13,7 +13,7 @@ const Home = () => {
         <MainSlider />
       </section>
 
-      <section className={styles.ourServicesSection} id='ourServices'>
+      <section className={styles.ourServicesSection}>
         <OurServices />
       </section>
 

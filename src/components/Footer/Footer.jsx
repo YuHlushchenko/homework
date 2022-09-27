@@ -27,7 +27,7 @@ const Footer = () => {
                         <span>меню</span>
                         <ul>
                             <li><a href='/#'>Про нас</a></li>
-                            <li><a href='/#ourServices'>Наші послуги</a></li>
+                            <li><a href='/#'>Наші послуги</a></li>
                             <li><a href='/#'>Калькулятор</a></li>
                             <li><a href='/#'>Портфоліо</a></li>
                         </ul>
