@@ -1,0 +1,152 @@
+@import '../../styles/colors'
+
+.anyQuestionsContainer
+    width: 100%
+    min-height: 100vh
+    background: url(../../../public/anyQuestions.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.bgCover
+    width: 100%
+    min-height: 100vh
+    background-color: rgba(0, 0, 0, 0.5)
+    padding: 160px 140px 100px
+
+.formContainer
+    width: min-content
+    h2
+        font-weight: 700
+        margin-top: 0
+        font-size: 50px
+        line-height: 62px
+        text-transform: uppercase
+        color: #FBFBF6
+    p
+        font-weight: 400
+        font-size: 30px
+        line-height: 35px
+        color: $white
+        margin-bottom: 50px
+    form
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        input, textarea
+            outline: 0
+            border: 0
+            width: 700px
+            font-weight: 400
+            font-size: 27px
+            line-height: 33px
+            color: $white
+            padding: 20px 30px
+            margin-bottom: 30px
+            background-color: rgba(251, 251, 246, 0.3)
+            &::placeholder
+                color: $white
+        textarea
+            height: 200px
+            margin-bottom: 60px
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .formContainer
+        h2
+            font-size: 43px
+            line-height: 53px
+        p
+            font-size: 23px
+            line-height: 28px
+        form
+            input, textarea
+                width: 650px
+                font-size: 23px
+                line-height: 28px
+                padding: 15px 25px
+                margin-bottom: 25px
+            textarea
+                height: 180px
+                margin-bottom: 50px
+
+@media screen and (max-width: 1320px)
+    .bgCover
+        padding: 80px
+    .formContainer
+        h2
+            font-size: 35px
+            line-height: 45px
+        p
+            font-size: 20px
+            line-height: 25px
+            margin-bottom: 30px
+            text-align: center
+        form
+            input, textarea
+                width: 450px
+                font-size: 20px
+                line-height: 25px
+                padding: 12px 22px
+                margin-bottom: 20px
+            textarea
+                height: 150px
+                margin-bottom: 40px
+
+@media screen and (max-width: 1050px)
+    .bgCover
+        padding: 80px 30px 80px
+        display: flex
+        align-items: center
+        justify-content: center
+    .formContainer
+        align-items: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: auto
+        h2
+            font-size: 34px
+            line-height: 44px
+        p
+            font-size: 20px
+            line-height: 24px
+            margin-top: 0
+        form
+            input, textarea
+                width: 400px
+                font-size: 16px
+                line-height: 20px
+                padding: 12px 16px
+                margin-bottom: 15px
+            textarea
+                height: 120px
+                margin-bottom: 30px
+
+@media screen and (max-width: 600px)
+    .bgCover
+        padding: 40px 30px
+    .formContainer
+        h2
+            font-size: 24px
+            line-height: 34px
+            text-align: center
+            margin-bottom: 20px
+        p
+            font-size: 16px
+            line-height: 20px
+            margin-bottom: 20px
+        form
+            width: 100%
+            input, textarea
+                width: 100%
+                font-size: 16px
+                line-height: 20px
+                padding: 10px 15px
+                margin-bottom: 15px
+            textarea
+                height: 100px
+                margin-bottom: 20px

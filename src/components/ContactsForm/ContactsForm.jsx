@@ -66,7 +66,7 @@ const ContactsForm = () => {
                                         window.innerWidth <= 600
                                         ?
                                         {
-                                            width: '250px',
+                                            width: '100%',
                                             fontSize: '12px'
                                         }
                                         :

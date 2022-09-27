@@ -5,6 +5,7 @@ import OurServices from '../components/OurServices/OurServices'
 import CustomMap from '../components/CustomMap/CustomMap'
 import styles from '../styles/home.module.sass'
 import Footer from '../components/Footer/Footer'
+import AnyQuestions from '../components/AnyQuestions/AnyQuestions'
 
 const Home = () => {
   return (
@@ -23,6 +24,10 @@ const Home = () => {
 
       <section>
         <CustomMap />
+      </section>
+
+      <section>
+        <AnyQuestions />
       </section>
 
       <section>
