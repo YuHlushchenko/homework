@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import styles from './Navigation.module.sass'
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom"
 
 
 const Navigation = () => {
   const [isSideBar, setSideBar] = useState(false)
   const [isSearchInput, setSearchInput] = useState(false)
 
+  const location = useLocation()
+
   return (
     <div
       className={isSideBar ? `${styles.openedMenuContainer}` : `${styles.navContainer}`}
-      style={isSearchInput ? { backgroundColor: '#0d0d0d' } : undefined}
+      style={
+        isSearchInput || location.pathname !== '/'
+        ? { backgroundColor: '#0d0d0d' }
+        : undefined}
     >
       <div className={styles.logoContainer}>
         <Link to='/'>
@@ -29,7 +34,7 @@ const Navigation = () => {
               <ul>
                 <li>
                   <NavLink
-                    to='/aboutUs'
+                    to='/aboutus'
                     className={({ isActive }) =>
                       isActive ? styles.activeLink : undefined
                     }
