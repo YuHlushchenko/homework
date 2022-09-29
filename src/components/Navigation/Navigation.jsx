@@ -14,8 +14,8 @@ const Navigation = () => {
       className={isSideBar ? `${styles.openedMenuContainer}` : `${styles.navContainer}`}
       style={
         isSearchInput || location.pathname !== '/'
-        ? { backgroundColor: '#0d0d0d' }
-        : undefined}
+          ? { backgroundColor: '#0d0d0d' }
+          : undefined}
     >
       <div className={styles.logoContainer}>
         <Link to='/'>
@@ -43,6 +43,51 @@ const Navigation = () => {
                   </NavLink>
                 </li>
 
+                <div className={styles.subNavigationContainer}>
+                  <ul>
+                    <li>
+                      <NavLink
+                        to='/aboutus'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Про компанію
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/responses'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Відгуки
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/partners'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Партнери
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/promotions'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Акції
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+
                 <li>
                   <NavLink
                     to='/services'
@@ -53,6 +98,61 @@ const Navigation = () => {
                     Наші послуги
                   </NavLink>
                 </li>
+
+                <div className={styles.subNavigationContainer}>
+                  <ul>
+                    <li>
+                      <NavLink
+                        to='/services'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Ремонт під ключ
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Дизайнерський ремонт
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Ремонт комерційної нерухомості
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Дизайн квартир
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/'
+                        className={({ isActive }) =>
+                          isActive ? styles.activeSubLink : styles.subLink
+                        }
+                      >
+                        Розумний будинок
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
 
                 <li>
                   <NavLink

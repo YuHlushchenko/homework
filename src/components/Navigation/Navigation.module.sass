@@ -35,6 +35,9 @@
 .activeLink
     color: $red
 
+.subNavigationContainer
+    display: none
+
 .searchContainer
     display: flex
     align-items: center
@@ -276,6 +279,28 @@
     .burgerMenu
         display: block
 
+    .subNavigationContainer
+        display: flex
+        flex-direction: column
+        margin-left: 25px
+        max-width: 250px
+        align-items: flex-start
+        ul
+            li
+                display: flex
+                &:last-child
+                    margin-bottom: 0
+
+    .subLink
+        font-weight: 300
+        font-size: 18px
+        line-height: 20px
+        color: $white
+
+    .activeSubLink
+        line-height: 20px
+        color: $red
+ 
 @media screen and (max-width: 550px)
     .openedMenuContainer
         .centerContainer

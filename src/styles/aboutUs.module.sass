@@ -1,0 +1,322 @@
+@import './colors'
+
+.mainContentContainer
+    width: 100%
+    padding: 175px 0 80px
+    min-height: calc(100vh - 155px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.topContentContainer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 80px
+    padding: 0 140px
+
+.imgContainer
+    min-width: 510px
+    height: 556px
+    background: url(../../public/aboutUsPageBackgrounds/img0.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.mainTextContainer
+    background-color: #F5F5F5
+    max-width: 1000px
+    padding: 20px 40px
+    margin-left: 60px
+    h2
+        font-weight: 700
+        font-size: 45px
+        line-height: 55px
+        text-transform: uppercase
+        color: $grey
+    p
+        font-weight: 400
+        font-size: 28px
+        line-height: 32px
+        color: #000000
+
+.bottomContentContainer
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0 50px
+    h2
+        font-weight: 700
+        font-size: 45px
+        line-height: 55px
+        text-transform: uppercase
+        color: $grey
+        margin: 20px 0
+    p
+        font-weight: 400
+        font-size: 28px
+        line-height: 32px
+        color: $grey
+        text-align: center
+
+.infoBlocksContainer
+    margin-top: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+.img1
+    background: url(../../public/aboutUsPageBackgrounds/img1.png) no-repeat center center
+
+.img2
+    background: url(../../public/aboutUsPageBackgrounds/img2.png) no-repeat center center
+    
+.img3
+    background: url(../../public/aboutUsPageBackgrounds/img3.png) no-repeat center center
+
+.img4
+    background: url(../../public/aboutUsPageBackgrounds/img4.png) no-repeat center center
+
+.img5
+    background: url(../../public/aboutUsPageBackgrounds/img5.png) no-repeat center center
+
+.img6
+    background: url(../../public/aboutUsPageBackgrounds/img6.png) no-repeat center center
+
+
+.infoBlock
+    width: 430px
+    height: 220px
+    margin: 20px
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.bgCover
+    padding: 15px
+    background-color: rgba(0, 0, 0, 0.6)
+    width: 100%
+    height: 100%
+
+.infoTitle
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    svg
+        margin-right: 15px
+        width: 34px
+        height: 34px
+    p
+        font-weight: 600
+        font-size: 24px
+        line-height: 26px
+        text-transform: uppercase
+        text-align: left
+        color: $white
+        margin: 0
+
+.infoDescription
+    width: 100%
+    height: 100%
+    p
+        font-weight: 400
+        font-size: 23px
+        line-height: 28px
+        color: $white
+        text-align: left
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .mainContentContainer
+        padding: 165px 0 70px
+
+    .topContentContainer
+        margin-bottom: 50px
+
+    .imgContainer
+        min-width: 400px
+        height: 500px
+
+    .mainTextContainer
+        padding: 20px 40px
+        margin-left: 50px
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 5px 0
+        p
+            font-size: 24px
+            line-height: 28px
+
+    .bottomContentContainer
+        padding: 0 20px
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 10px 0
+        p
+            font-size: 24px
+            line-height: 28px
+            margin: 5px 0
+
+    .infoBlock
+        width: 380px
+        height: 220px
+        margin: 20px
+
+    .infoTitle
+        svg
+            margin-right: 10px
+            width: 30px
+            height: 30px
+        p
+            font-weight: 500
+            font-size: 22px
+            line-height: 24px
+
+    .infoDescription
+        width: 100%
+        height: 100%
+        p
+            font-weight: 300
+            font-size: 20px
+            line-height: 24px
+            margin-top: 15px
+
+@media screen and (max-width: 1320px)
+    .mainContentContainer
+        padding: 150px 0 50px
+
+    .topContentContainer
+        margin-bottom: 50px
+        padding: 0 80px
+
+    .imgContainer
+        min-width: 400px
+        height: 500px
+
+    .mainTextContainer
+        padding: 15px 30px
+        h2
+            font-size: 34px
+            line-height: 40px
+            margin: 5px 0
+        p
+            font-size: 22px
+            line-height: 26px
+
+    .bottomContentContainer
+        h2
+            font-size: 34px
+            line-height: 40px
+        p
+            font-size: 22px
+            line-height: 26px
+            margin: 5px 0
+
+    .infoBlocksContainer
+        margin-top: 15px
+
+    .infoBlock
+        width: 310px
+        height: 160px
+        margin: 10px
+
+    .bgCover
+        padding: 10px
+
+    .infoTitle
+        svg
+            width: 20px
+            height: 20px
+        p
+            font-weight: 400
+            font-size: 19px
+            line-height: 20px
+
+    .infoDescription
+        p
+            font-weight: 300
+            font-size: 18px
+            line-height: 20px
+            margin-top: 8px
+
+@media screen and (max-width: 1050px)
+    .topContentContainer
+        flex-direction: column-reverse
+        margin-bottom: 40px
+        padding: 0 30px
+
+    .imgContainer
+        min-width: 400px
+        height: 450px
+
+    .mainTextContainer
+        padding: 15px 30px
+        margin: 0 0 20px
+        border-radius: 5px
+        h2
+            font-size: 30px
+            line-height: 38px
+            margin: 5px 0
+            text-align: center
+        p
+            font-size: 20px
+            line-height: 22px
+            text-align: center
+
+    .bottomContentContainer
+        h2
+            font-size: 30px
+            line-height: 38px
+            text-align: center
+        p
+            font-size: 20px
+            line-height: 22px
+            margin: 5px 0
+
+    .infoTitle
+        p
+            font-size: 18px
+
+    .infoDescription
+        p
+            font-weight: 300
+            font-size: 17px
+            line-height: 19px
+            margin-top: 5px
+
+@media screen and (max-width: 700px)
+    .mainContentContainer
+        padding: 110px 0 50px
+    
+    .mainTextContainer
+        padding: 10px 15px
+        h2
+            font-size: 26px
+            line-height: 28px
+            margin: 0
+        p
+            margin: 10px
+
+    .bottomContentContainer
+        h2
+            font-size: 26px
+            line-height: 28px
+        p
+            font-size: 18px
+            line-height: 20px
+
+@media screen and (max-width: 500px)
+    .imgContainer
+        min-width: 270px
+        height: 320px

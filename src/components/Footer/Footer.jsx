@@ -26,9 +26,9 @@ const Footer = () => {
                     <div className={styles.anchorsContainer}>
                         <span>меню</span>
                         <ul>
-                            <li><a href='/#'>Про нас</a></li>
-                            <li><a href='/#'>Наші послуги</a></li>
-                            <li><a href='/#'>Калькулятор</a></li>
+                            <li><a href='/aboutus'>Про нас</a></li>
+                            <li><a href='/services'>Наші послуги</a></li>
+                            <li><a href='/calculator'>Калькулятор</a></li>
                             <li><a href='/#'>Портфоліо</a></li>
                         </ul>
                     </div>

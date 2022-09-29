@@ -26,7 +26,7 @@ const SubNavigation = ({ type }) => {
     const services = [
         {
             linkName: 'ремонт під ключ',
-            path: '/'
+            path: '/services'
         },
         {
             linkName: 'дизайнерський ремонт',
@@ -38,7 +38,7 @@ const SubNavigation = ({ type }) => {
         },
         {
             linkName: 'дизайн квартир',
-            path: '/services'
+            path: '/'
         },
         {
             linkName: 'розумний будинок',
