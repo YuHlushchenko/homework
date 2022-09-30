@@ -7,32 +7,37 @@ const AboutUs = () => {
     {
       title: 'Логістика на нас',
       description: 'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img1}`
+      bgImg: 'img1.png'
     },
     {
       title: 'Поважаємо сусідів',
       description: 'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img2}`
+      bgImg: 'img2.png'
+
     },
     {
       title: 'Вивозимо сміття',
       description: 'Loreptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img3}`
+      bgImg: 'img3.png'
+
     },
     {
       title: 'Щоденний звіт',
       description: 'Lorem ipsum dolor sit amet. Est uptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img4}`
+      bgImg: 'img4.png'
+
     },
     {
       title: 'Вирішуємо всі питання',
       description: 'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img5}`
+      bgImg: 'img5.png'
+
     },
     {
       title: 'Контролюємо якість',
       description: 'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImgClassName: `${styles.img6}`
+      bgImg: 'img6.png'
+
     },
   ]
 
@@ -64,7 +69,8 @@ const AboutUs = () => {
               infoBlocksContent.map((item, index) => {
                 return (
                   <div
-                    className={`${styles.infoBlock} ${item.bgImgClassName}`}
+                    className={`${styles.infoBlock}`}
+                    style={{ backgroundImage: `url(/aboutUsPageBackgrounds/${item.bgImg})` }}
                     key={index}
                   >
                     <div className={styles.bgCover}>
