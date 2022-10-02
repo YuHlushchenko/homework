@@ -37,21 +37,47 @@
     justify-content: center
 
 .slideContainer
+    padding: 60px
     width: 100%
     height: 100%
     display: flex
     align-items: center
     justify-content: center
 
-.contentContainer
+.bgSheet1
     position: absolute
-    z-index: 111
-    width: calc(100% - 340px)
-    height: calc(100% - 230px)
-    top: 115px
-    bottom: 115px
-    left: 170px
-    right: 170px
+    z-index: -1
+    width: calc(100% - 250px)
+    min-height: 438px
+    background: #F8F4F3
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12)
+    transform: rotate(3deg)
+
+.bgSheet2
+    width: calc(100% - 120px)
+    min-height: 438px
+    background: #F8F4F3
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25)
+    padding: 30px 50px 30px 30px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.topQuotesContainer
+    position: absolute
+    z-index: 3
+    right: 160px
+    top: 0
+
+.bottomQuotesContainer
+    position: absolute
+    z-index: 3
+    left: 160px
+    bottom: 0
+
+.contentContainer
+    width: 100%
+    height: 100%
     display: flex
     align-items: center
     justify-content: space-between
@@ -62,12 +88,12 @@
     flex-direction: column
     align-items: center
     justify-content: center
+    min-width: 260px
     p
         font-weight: 600
         font-size: 30px
         line-height: 35px
         text-align: center
-        width: max-content
         color: $grey
         margin: 10px 0
         &:last-child
@@ -86,7 +112,159 @@
     overflow: hidden
 
 .commentContainer
-    font-weight: 300
-    font-size: 23px
-    line-height: 35px
-    color: #000000
+    p
+        font-weight: 300
+        font-size: 23px
+        line-height: 35px
+        color: #000000
+
+//medias
+
+@media screen and (max-width: 1800px)
+    .responsesContainer
+        padding: 0 120px 50px
+
+@media screen and (max-width: 1550px)
+    .titleContainer
+        h2
+            font-size: 38px
+            line-height: 40px
+        p
+            font-size: 24px
+            line-height: 28px
+
+    .profileInfo
+        margin-right: 35px
+        p
+            font-size: 24px
+            line-height: 28px
+            &:last-child
+                font-size: 24px
+                line-height: 28px
+
+    .photoContainer
+        width: 130px
+        height: 130px
+
+    .commentContainer
+        p
+            font-size: 24px
+            line-height: 28px
+
+@media screen and (max-width: 1350px)
+    .responsesContainer
+        padding: 0 80px 50px
+
+@media screen and (max-width: 1320px)
+    .titleContainer
+        h2
+            font-size: 34px
+            line-height: 40px
+        p
+            font-size: 22px
+            line-height: 26px
+
+    .bgSheet2
+        padding: 20px 50px 20px 20px
+
+    .profileInfo
+        min-width: 240px
+        p
+            font-size: 22px
+            line-height: 24px
+            margin: 5px 0
+            &:last-child
+                font-size: 22px
+                line-height: 24px
+
+    .commentContainer
+        p
+            font-size: 20px
+            line-height: 26px
+
+@media screen and (max-width: 1320px)
+    .responsesContainer
+        padding: 0 30px 50px
+
+    .slideContainer
+        padding: 50px 30px
+
+    .titleContainer
+        h2
+            font-size: 30px
+            line-height: 38px
+        p
+            font-size: 20px
+            line-height: 24px
+
+    .topQuotesContainer
+        right: 100px
+        svg
+            height: 91px
+            width: 91px
+
+    .bottomQuotesContainer
+        left: 100px
+        svg
+            height: 91px
+            width: 91px
+
+    .photoContainer
+        width: 110px
+        height: 110px
+
+    .profileInfo
+        margin-right: 25px
+        p
+            font-size: 22px
+            line-height: 24px
+            &:last-child
+                font-size: 22px
+                line-height: 24px
+
+@media screen and (max-width: 900px)
+    .contentContainer
+        flex-direction: column
+
+    .profileInfo
+        margin-right: 0
+
+    .bgSheet2
+        padding: 40px 20px
+
+    .commentContainer
+        p
+            text-align: center
+
+@media screen and (max-width: 700px)
+    .responsesContainer
+        padding: 0
+        margin-top: 80px
+
+    .titleContainer
+        margin: 0 20px
+
+    .slideContainer
+        padding: 50px 10px
+
+    .topQuotesContainer, .bottomQuotesContainer
+        svg
+            height: 81px
+            width: 81px
+
+
+@media screen and (max-width: 500px)
+    .bgSheet2
+        width: calc(100% - 20px)
+
+    .topQuotesContainer
+        right: 40px
+        svg
+            height: 71px
+            width: 71px
+
+    .bottomQuotesContainer
+        left: 40px
+        svg
+            height: 71px
+            width: 71px
