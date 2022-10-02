@@ -1,0 +1,177 @@
+@import './colors'
+
+.partnersSectionContainer
+    width: 100%
+    min-height: 100vh
+    padding: 196px 140px 60px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+.textContaner
+    background: #F5F5F5
+    max-width: 700px
+    padding: 20px 40px
+    h2
+        font-weight: 700
+        font-size: 45px
+        line-height: 55px
+        text-transform: uppercase
+        color: $grey
+    p
+        font-weight: 400
+        font-size: 28px
+        line-height: 32px
+        color: #000000
+
+.patnersLogosContainer
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-end
+
+.logoContainer
+    border: 1px solid $grey
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 340px
+    height: 220px
+    margin: 0 0 30px 30px
+    padding: 8%
+    svg
+        width: auto
+        height: auto
+
+//medias
+
+@media screen and (max-width: 1725px)
+    .logoContainer
+        width: 300px
+        height: 180px
+
+    .textContaner
+        max-width: 600px
+
+@media screen and (max-width: 1550px)
+    .textContaner
+        max-width: 500px
+        h2
+            font-size: 38px
+            line-height: 40px
+        p
+            font-size: 24px
+            line-height: 28px
+
+    .logoContainer
+        width: 235px
+        height: 150px
+
+@media screen and (max-width: 1320px)
+    .partnersSectionContainer
+        padding: 175px 80px 50px
+
+    .textContaner
+        max-width: 450px
+        h2
+            font-size: 30px
+            line-height: 38px
+        p
+            font-size: 20px
+            line-height: 24px
+
+    .logoContainer
+        padding: 8%
+        width: 260px
+        height: 150px
+
+@media screen and (max-width: 1200px)
+    .logoContainer
+        padding: 7%
+        width: 185px
+        height: 110px
+
+@media screen and (max-width: 1050px)
+    .partnersSectionContainer
+        padding: 175px 30px 50px
+
+@media screen and (max-width: 950px)
+    .partnersSectionContainer
+        flex-direction: column-reverse
+        align-items: center
+
+    .patnersLogosContainer
+        justify-content: center
+        flex-wrap: wrap
+        max-width: 690px
+
+    .logoContainer
+        margin: 0 10px 20px 10px
+        width: 200px
+        height: 120px
+        padding: 6%
+
+    .textContaner
+        display: flex
+        flex-direction: column
+        max-width: 600px
+        h2
+            text-align: center
+            margin: 10px 0
+        p
+            text-align: center
+
+@media screen and (max-width: 900px)
+    .textContaner
+        max-width: 750px
+
+@media screen and (max-width: 700px)
+    .partnersSectionContainer
+        padding: 115px 30px 50px
+
+    .textContaner
+        h2
+            font-size: 28px
+            line-height: 34px
+        p
+            font-size: 18px
+            line-height: 22px
+
+    .patnersLogosContainer
+        max-width: 100%
+
+    .logoContainer
+        margin: 0 10px 20px 10px
+        width: 190px
+        height: 110px
+        padding: 7%
+
+@media screen and (max-width: 600px)
+    .logoContainer  
+        width: 170px
+        height: 90px
+        padding: 8%
+
+@media screen and (max-width: 500px)
+    .logoContainer  
+        width: 160px
+        height: 90px
+        padding: 10%
+
+@media screen and (max-width: 421px)
+    .logoContainer  
+        width: 200px
+        height: 120px
+        padding: 13%
+
+    .textContaner
+        padding: 10px 20px
+        h2
+            font-size: 26px
+            line-height: 28px
+        p
+            font-size: 20px
+            line-height: 22px
+
+
