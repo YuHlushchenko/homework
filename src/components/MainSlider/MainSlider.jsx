@@ -16,7 +16,7 @@ const MainSlider = () => {
             <Swiper
                 modules={[Pagination, Autoplay]}
                 autoplay={{
-                    delay: 100000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -36,35 +36,39 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
 
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
 
                             </div>
@@ -80,35 +84,39 @@ const MainSlider = () => {
                                 <h1>Економ <br /> варіант</h1>
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
                             </div>
 
@@ -123,35 +131,39 @@ const MainSlider = () => {
                                 <h1>Ремонт квартири <br /> євроремонт </h1>
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
                             </div>
 
@@ -166,35 +178,39 @@ const MainSlider = () => {
                                 <h1>Ремонт квартири <br /> бізнес</h1>
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
                             </div>
 
@@ -209,35 +225,39 @@ const MainSlider = () => {
                                 <h1>Дизайнерський ремонт <br /> під ключ</h1>
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
                             </div>
 
@@ -253,35 +273,39 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
 
                                 <div className={styles.bttnsContainer}>
-                                    <Button
-                                        value={'Розрахувати вартість'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                { marginRight: '60px' }
-                                                :
-                                                {
-                                                    marginBottom: '30px',
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
-                                    <Button
-                                        value={'Замовити дзвінок'}
-                                        btnStyle={'white'}
-                                        inlineStyle={
-                                            window.innerWidth > 730
-                                                ?
-                                                undefined
-                                                :
-                                                {
-                                                    width: '280px',
-                                                    fontSize: '17px'
-                                                }
-                                        }
-                                    />
+                                    <a href='/calculator'>
+                                        <Button
+                                            value={'Розрахувати вартість'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    { marginRight: '60px' }
+                                                    :
+                                                    {
+                                                        marginBottom: '30px',
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
+                                    <a href='/contacts'>
+                                        <Button
+                                            value={'Замовити дзвінок'}
+                                            btnStyle={'white'}
+                                            inlineStyle={
+                                                window.innerWidth > 730
+                                                    ?
+                                                    undefined
+                                                    :
+                                                    {
+                                                        width: '280px',
+                                                        fontSize: '17px'
+                                                    }
+                                            }
+                                        />
+                                    </a>
                                 </div>
                             </div>
 
