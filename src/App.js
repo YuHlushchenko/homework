@@ -11,7 +11,10 @@ import Calculator from './pages/Calculator';
 import Responses from './pages/Responses';
 import Promotions from './pages/Promotions';
 import Partners from './pages/Partners';
-
+import SmartHouse from './pages/SmartHouse';
+import DesignRepair from './pages/DesignRepair';
+import CommercialProperty from './pages/CommercialProperty';
+import ApartmentDesign from './pages/ApartmentDesign';
 
 function App() {
   const location = useLocation()
@@ -25,15 +28,20 @@ function App() {
       <section>
         {
           location.pathname === '/aboutus' ||
-          location.pathname === '/responses' ||
-          location.pathname === '/partners' ||
-          location.pathname === '/promotions' 
+            location.pathname === '/responses' ||
+            location.pathname === '/partners' ||
+            location.pathname === '/promotions'
             ? <SubNavigation type={'aboutUs'} />
             :
-            location.pathname === '/services'
-              ? <SubNavigation type={'services'}/>
+            location.pathname === '/services' ||
+            location.pathname === '/designrepair'||
+            location.pathname === '/commercialproperty' ||
+            location.pathname === '/apartmentdesign' ||
+            location.pathname === '/smarthouse'
+              ? <SubNavigation type={'services'} />
               : undefined
         }
+
       </section>
 
       <Routes>
@@ -47,7 +55,10 @@ function App() {
         <Route path="/promotions" element={<Promotions />} />
 
         <Route path="/services" element={<Services />} />
-
+        <Route path="/smarthouse" element={<DesignRepair />} />
+        <Route path="/smarthouse" element={<CommercialProperty />} />
+        <Route path="/smarthouse" element={<ApartmentDesign />} />
+        <Route path="/smarthouse" element={<SmartHouse />} />
       </Routes>
     </div>
   );

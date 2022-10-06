@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from './Navigation.module.sass'
 import { Link, NavLink, useLocation } from "react-router-dom"
 
-
 const Navigation = () => {
   const [isSideBar, setSideBar] = useState(false)
   const [isSearchInput, setSearchInput] = useState(false)

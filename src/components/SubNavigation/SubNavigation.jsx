@@ -3,7 +3,6 @@ import styles from './SubNavigation.module.sass'
 import { NavLink } from "react-router-dom"
 
 const SubNavigation = ({ type }) => {
-
     const aboutUs = [
         {
             linkName: 'про компанію',
@@ -30,24 +29,26 @@ const SubNavigation = ({ type }) => {
         },
         {
             linkName: 'дизайнерський ремонт',
-            path: '/'
+            path: '/designrepair'
         },
         {
             linkName: 'ремонт комерційної нерухомості',
-            path: '/'
+            path: '/commercialproperty'
         },
         {
             linkName: 'дизайн квартир',
-            path: '/'
+            path: '/apartmentdesign'
         },
         {
             linkName: 'розумний будинок',
-            path: '/'
+            path: '/smarthouse'
         },
     ]
 
     return (
-        <div className={styles.subNavigationContainer}>
+        <div
+            className={styles.subNavigationContainer}
+        >
             <nav>
                 <ul>
                     {type === 'aboutUs'
@@ -60,7 +61,7 @@ const SubNavigation = ({ type }) => {
                                     <NavLink
                                         to={item.path}
                                         className={({ isActive }) =>
-                                            isActive ? `${styles.activeLink} ${styles.link} ${styles.linkAboutUs}`  : `${styles.link} ${styles.linkAboutUs}`
+                                            isActive ? `${styles.activeLink} ${styles.link} ${styles.linkAboutUs}` : `${styles.link} ${styles.linkAboutUs}`
                                         }
                                     >
                                         {item.linkName}
