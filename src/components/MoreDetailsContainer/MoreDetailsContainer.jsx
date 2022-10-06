@@ -11,21 +11,24 @@ const MoreDetailsContainer = ({ option }) => {
                 description: 'Ремонт квартири під ключ',
                 title: 'Економ варіант',
                 price: '300 грн',
-                bttnLink: '/',
+                bttnLink: '/services/economy',
+                namePage: 'economy',
             },
             {
                 imgUrl: '/ServicesPageImgs/moreDetails/img2.png',
                 description: 'Ремонт квартири під ключ',
                 title: 'євроремонт',
                 price: '550 грн',
-                bttnLink: '/',
+                bttnLink: '/services/eurorepair',
+                namePage: 'eurorepair',
             },
             {
                 imgUrl: '/ServicesPageImgs/moreDetails/img3.png',
                 description: 'Ремонт квартири під ключ',
                 title: 'бізнес',
                 price: '880 грн',
-                bttnLink: '/',
+                bttnLink: '/services/business',
+                namePage: 'business',
             },
         ],
 
@@ -92,6 +95,7 @@ const MoreDetailsContainer = ({ option }) => {
                                 title={item.title}
                                 price={item.price}
                                 bttnLink={item.bttnLink}
+                                namePage={item.namePage}
                             />
                         )
                     })
@@ -106,7 +110,8 @@ const MoreDetailsContainer = ({ option }) => {
                                     description={item.description}
                                     title={item.title}
                                     price={item.price}
-                                    bttnLinc={item.bttnLinc}
+                                    bttnLinc={item.bttnLink}
+                                    namePage={item.namePage}
                                 />
                             )
                         })
@@ -119,7 +124,8 @@ const MoreDetailsContainer = ({ option }) => {
                                     description={item.description}
                                     title={item.title}
                                     price={item.price}
-                                    bttnLinc={item.bttnLinc}
+                                    bttnLinc={item.bttnLink}
+                                    namePage={item.namePage}
                                 />
                             )
                         })

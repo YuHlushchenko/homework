@@ -8,7 +8,6 @@
     justify-content: flex-start
     &:nth-child(2n)
         margin: 0 50px
-        
 
 .contentContainer
     width: 100%
@@ -28,17 +27,17 @@
     p
         font-weight: 600
         font-size: 30px
-        line-height: 28px
+        line-height: 32px
         text-transform: uppercase
         color: $grey
         margin: 10px
         text-align: center
     h6
         font-weight: 600
-        font-size: 52px
-        line-height: 54px
+        font-size: 50px
+        line-height: 52px
         color: #000000
-        margin: 20px
+        margin: 15px
         text-align: center
 
 .imgContainer
@@ -65,5 +64,113 @@
         letter-spacing: 2px
         font-size: 24px
         line-height: 28px
-        padding: 25px 90px
+        padding: 20px 80px
         margin: 20px 0
+        transition: .3s
+        cursor: pointer
+        &:hover
+            color: $red
+            border-color: $red
+            background-color: $white
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .container
+        &:nth-child(2n)
+            margin: 0 30px
+
+    .contentContainer
+        span
+            font-weight: 400
+            font-size: 26px
+            line-height: 28px
+        p
+            font-weight: 500
+            font-size: 26px
+            line-height: 28px
+            margin: 10px
+        h6
+            font-weight: 500
+            font-size: 44px
+            line-height: 46px
+
+    .imgContainer
+        height: 280px
+
+    .buttonContainer
+        button
+            font-size: 22px
+            line-height: 24px
+            padding: 20px 70px
+
+@media screen and (max-width: 1320px)
+    .contentContainer
+        span
+            font-size: 24px
+            line-height: 26px
+            margin: 10px
+        p
+            font-size: 24px
+            line-height: 26px
+            margin: 8px
+        h6
+            font-size: 38px
+            line-height: 40px
+            margin: 8px
+
+    .imgContainer   
+        height: 270px
+
+    .buttonContainer
+        button
+            font-size: 22px
+            line-height: 24px
+            padding: 20px 60px
+            margin: 15px 0
+
+
+@media screen and (max-width: 1050px)
+    .contentContainer
+        span
+            font-size: 20px
+            line-height: 22px
+            margin: 6px
+        p
+            font-size: 22px
+            line-height: 24px
+            margin: 6px
+        h6
+            font-size: 34px
+            line-height: 36px
+            margin: 6px
+
+    .imgContainer   
+        height: 250px
+    
+    .buttonContainer
+        button
+            font-size: 18px
+            line-height: 20px
+            padding: 15px 50px
+
+@media screen and (max-width: 780px)
+    .container
+        width: 470px
+        &:nth-child(2n)
+            margin: 30px 0
+
+    .imgContainer   
+        height: 200px
+
+@media screen and (max-width: 530px)
+    .container
+            width: 390px
+            &:nth-child(2n)
+                margin: 20px 0
+
+@media screen and (max-width: 450px)
+    .container
+        width: 100%
+        &:nth-child(2n)
+            margin: 20px 0

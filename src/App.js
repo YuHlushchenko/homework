@@ -15,6 +15,8 @@ import SmartHouse from './pages/SmartHouse';
 import DesignRepair from './pages/DesignRepair';
 import CommercialProperty from './pages/CommercialProperty';
 import ApartmentDesign from './pages/ApartmentDesign';
+import Page404 from './pages/Page404';
+import ServicesItem from './pages/ServicesItem';
 
 function App() {
   const location = useLocation()
@@ -55,10 +57,14 @@ function App() {
         <Route path="/promotions" element={<Promotions />} />
 
         <Route path="/services" element={<Services />} />
-        <Route path="/smarthouse" element={<DesignRepair />} />
-        <Route path="/smarthouse" element={<CommercialProperty />} />
-        <Route path="/smarthouse" element={<ApartmentDesign />} />
+        <Route path="/services/:name" element={<ServicesItem />} />
+
+        <Route path="/designrepair" element={<DesignRepair />} />
+        <Route path="/commercialproperty" element={<CommercialProperty />} />
+        <Route path="/apartmentdesign" element={<ApartmentDesign />} />
         <Route path="/smarthouse" element={<SmartHouse />} />
+
+        <Route path='*' element={<Page404 />} />
       </Routes>
     </div>
   );
