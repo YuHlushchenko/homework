@@ -36,6 +36,9 @@ function App() {
             ? <SubNavigation type={'aboutUs'} />
             :
             location.pathname === '/services' ||
+            location.pathname === '/services/economy' ||
+            location.pathname === '/services/eurorepair' ||
+            location.pathname === '/services/business' ||
             location.pathname === '/designrepair'||
             location.pathname === '/commercialproperty' ||
             location.pathname === '/apartmentdesign' ||

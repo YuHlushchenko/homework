@@ -1,0 +1,151 @@
+@import '../../styles/colors'
+
+.adviceForm
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #F5F5F5
+    margin: 0 0 30px
+
+.imgContainer
+    width: 50%
+    height: 400px
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    background-position: center
+
+.formContainer
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 0 50px
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 100%
+
+.inputsContainer
+    display: flex
+    flex-direction: column
+    width: 100%
+    input
+        font-weight: 400
+        font-size: 27px
+        line-height: 33px
+        width: 100%
+        padding: 20px 30px
+        margin-bottom: 30px
+        color: $dark-gray
+        border: 0
+        outline: 0
+        &::placeholder
+            color: $light-gray
+
+.bttnContainer
+    margin-top: 30px
+    width: 100%
+    button
+        background-color: $red
+        color: $white
+        width: 100%
+        font-size: 25px
+        line-height: 30px
+        padding: 15px 50px
+        border: 1px solid $red
+        transition: .3s
+        cursor: pointer
+        &:hover
+            background-color: transparent
+            border: 1px solid $red
+            color: $red
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .imgContainer
+        width: 45%
+        height: 350px
+
+    .formContainer
+        width: 55%
+        
+    .inputsContainer
+        input
+            font-size: 24px
+            line-height: 28px
+            padding: 15px 25px
+            margin-bottom: 25px
+
+    .bttnContainer
+        margin-top: 25px
+        button
+            font-size: 23px
+            line-height: 28px
+            padding: 15px 45px
+            
+@media screen and (max-width: 1320px)
+    .imgContainer
+        height: 300px
+
+    .inputsContainer
+        input
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 20px
+
+    .bttnContainer
+        margin-top: 20px
+        button
+            font-size: 22px
+            line-height: 28px
+
+@media screen and (max-width: 1050px)
+    .imgContainer
+        width: 40%
+        height: 250px
+
+    .formContainer
+        width: 60%
+
+    .inputsContainer
+        input
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: 15px
+            padding: 10px 15px
+
+    .bttnContainer
+        margin-top: 15px
+        button
+            font-size: 20px
+            line-height: 24px
+            padding: 10px 25px
+
+@media screen and (max-width: 900px)
+        .formContainer
+            padding: 0 30px
+
+@media screen and (max-width: 700px)
+    .adviceForm
+        flex-direction: column
+
+    .imgContainer
+        width: 100%
+        height: 300px
+
+    .formContainer
+        width: 100%
+        padding: 20px
+
+    .bttnContainer
+        button
+            font-size: 18px
+            line-height: 25px
+            padding: 10px

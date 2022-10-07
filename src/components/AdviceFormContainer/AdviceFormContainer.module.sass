@@ -1,0 +1,144 @@
+@import '../../styles/colors'
+
+.adviceFormContainer
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2
+        font-weight: 700
+        font-size: 42px
+        line-height: 52px
+        text-transform: uppercase
+        text-align: center
+        color: $grey
+        margin: 20px 0 30px
+    span
+        font-weight: 400
+        font-size: 26px
+        line-height: 30px
+        text-align: center
+        color: $black
+        margin: 0 0 40px
+
+.formContainer
+    width: 100%
+
+.bottomContextContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    h3
+        font-weight: 700
+        font-size: 34px
+        line-height: 38px
+        text-transform: uppercase
+        color: $grey
+        margin: 20px 0 30px
+
+    p
+        font-weight: 400
+        font-size: 23px
+        line-height: 25px
+        color: $dark-gray
+        margin: 10px 0
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .adviceFormContainer
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 20px 0 30px
+        span
+            font-weight: 400
+            font-size: 24px
+            line-height: 28px
+            margin: 0 0 40px
+
+    .bottomContextContainer
+        h3
+            font-weight: 600
+            font-size: 36px
+            line-height: 40px
+            margin: 20px 0 40px
+
+        p
+            font-size: 23px
+            line-height: 26px
+            margin: 10px 0
+
+@media screen and (max-width: 1320px)
+    .adviceFormContainer
+        padding: 0 50px
+        h2
+            font-size: 34px
+            line-height: 40px
+            margin: 20px 0 25px
+        span
+            font-size: 22px
+            line-height: 26px
+            margin: 0 0 30px
+
+    .bottomContextContainer
+        h3
+            font-size: 30px
+            line-height: 36px
+            margin: 20px 0 30px
+
+        p
+            font-size: 21px
+            line-height: 24px
+            margin: 8px 0
+
+@media screen and (max-width: 1050px)
+    .adviceFormContainer
+        padding: 0 10px
+        h2
+            font-size: 30px
+            line-height: 38px
+            margin: 10px 0 15px
+        span
+            font-size: 20px
+            line-height: 22px
+            margin: 0 0 20px
+
+    .bottomContextContainer
+        h3
+            font-size: 24px
+            line-height: 28px
+            margin: 15px 0 20px
+
+        p
+            font-size: 21px
+            line-height: 24px
+            margin: 8px 0
+
+@media screen and (max-width: 900px)
+    .bottomContextContainer
+        align-items: center
+        p
+            text-align: center
+
+@media screen and (max-width: 700px)
+    .adviceFormContainer
+        h2
+            font-size: 26px
+            line-height: 28px
+        span
+            font-size: 20px
+            line-height: 22px
+
+    .bottomContextContainer
+        h3
+            font-size: 22px
+            line-height: 24px
+            text-align: center
+
+        p
+            font-size: 20px
+            line-height: 22px
+            text-align: center

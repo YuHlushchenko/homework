@@ -112,7 +112,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/'
+                        to='/designrepair'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -122,7 +122,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/'
+                        to='/commercialproperty'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -132,7 +132,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/'
+                        to='/apartmentdesign'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -142,7 +142,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/'
+                        to='/smarthouse'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
