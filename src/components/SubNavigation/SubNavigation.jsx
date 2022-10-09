@@ -3,8 +3,8 @@ import styles from './SubNavigation.module.sass'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const SubNavigation = ({ type }) => {
-  const aboutUs = [
+const links = {
+  aboutUs: [
     {
       linkName: 'про компанію',
       path: '/about-us',
@@ -21,9 +21,8 @@ const SubNavigation = ({ type }) => {
       linkName: 'акції',
       path: '/promotions',
     },
-  ]
-
-  const services = [
+  ],
+  services: [
     {
       linkName: 'ремонт під ключ',
       path: '/services',
@@ -44,46 +43,34 @@ const SubNavigation = ({ type }) => {
       linkName: 'розумний будинок',
       path: '/smart-house',
     },
-  ]
+  ],
+}
 
+const SubNavigation = ({ type }) => {
   return (
-    <div className={styles.subNavigationContainer}>
-      <nav>
-        <ul>
-          {type === 'aboutUs'
-            ? aboutUs.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        isActive
-                          ? `${styles.activeLink} ${styles.link} ${styles.linkAboutUs}`
-                          : `${styles.link} ${styles.linkAboutUs}`
-                      }>
-                      {item.linkName}
-                    </NavLink>
-                  </li>
-                )
-              })
-            : services.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        isActive
-                          ? `${styles.activeLink} ${styles.link}`
-                          : styles.link
-                      }>
-                      {item.linkName}
-                    </NavLink>
-                  </li>
-                )
-              })}
-        </ul>
-      </nav>
-    </div>
+    type && (
+      <div className={styles.subNavigationContainer}>
+        <nav>
+          <ul>
+            {links[type].map((item, index) => {
+              return (
+                <li key={index}>
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `${isActive && styles.activeLink} ${styles.link} ${
+                        type === 'aboutUs' && styles.linkAboutUs
+                      }`
+                    }>
+                    {item.linkName}
+                  </NavLink>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+      </div>
+    )
   )
 }
 

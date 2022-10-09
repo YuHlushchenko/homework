@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/partners.module.sass'
-import Footer from '../components/Footer/Footer'
+import PageWrapper from '../components/PageWrapper/PageWrapper'
 
 const Partners = () => {
   const partners = [
@@ -23,7 +23,7 @@ const Partners = () => {
   ]
 
   return (
-    <>
+    <PageWrapper>
       <section className={styles.partnersSectionContainer}>
         <div className={styles.textContaner}>
           <h2>партнери</h2>
@@ -42,11 +42,7 @@ const Partners = () => {
           }
         </div>
       </section>
-
-      <section>
-        <Footer />
-      </section>
-    </>
+    </PageWrapper>
   )
 }
 

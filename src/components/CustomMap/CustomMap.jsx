@@ -14,12 +14,12 @@ const CustomMap = () => {
         style={
           window.innerWidth <= 1650
             ? window.innerWidth <= 800
-              ? { width: "100%", height: "300px" }
-              : { width: "100%", height: "400px" }
-            : { width: "100%", height: "500px" }
+              ? { width: '100%', height: '300px' }
+              : { width: '100%', height: '400px' }
+            : { width: '100%', height: '500px' }
         }>
         <TileLayer
-          url='https://api.mapbox.com/styles/v1/yuhlushchenko/cl8dh46o4000o15o4x7nwlzto/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieXVobHVzaGNoZW5rbyIsImEiOiJjbDhkaDlhMDQxYm5xM3BuM2QxODBkdGxsIn0.VLSxsRbMQPWITpkATcPRdw'
+          url="https://api.mapbox.com/styles/v1/yuhlushchenko/cl8dh46o4000o15o4x7nwlzto/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoieXVobHVzaGNoZW5rbyIsImEiOiJjbDhkaDlhMDQxYm5xM3BuM2QxODBkdGxsIn0.VLSxsRbMQPWITpkATcPRdw"
           attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"
         />
         <Marker position={position}>

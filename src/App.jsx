@@ -1,58 +1,25 @@
-import Navigation from './components/Navigation/Navigation'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import SubNavigation from './components/SubNavigation/SubNavigation'
-
-import Home from './pages/Home'
-import AboutUs from './pages/AboutUs'
-import Calculator from './pages/Calculator'
-import Contacts from './pages/Contacts'
-import Responses from './pages/Responses'
-import Partners from './pages/Partners'
-import Promotions from './pages/Promotions'
-import Services from './pages/Services'
-import ServicesItem from './pages/ServicesItem'
-import DesignRepair from './pages/DesignRepair'
-import CommercialProperty from './pages/CommercialProperty'
-import ApartmentDesign from './pages/ApartmentDesign'
-import ApartmentDesignItem from './pages/ApartmentDesignItem'
-import SmartHouse from './pages/SmartHouse'
-import SmartHouseItem from './pages/SmartHouseItem'
-import Page404 from './pages/Page404'
+import Home from '@pages/Home'
+import AboutUs from '@pages/AboutUs'
+import Calculator from '@pages/Calculator'
+import Contacts from '@pages/Contacts'
+import Responses from '@pages/Responses'
+import Partners from '@pages/Partners'
+import Promotions from '@pages/Promotions'
+import Services from '@pages/Services'
+import ServicesItem from '@pages/ServicesItem'
+import DesignRepair from '@pages/DesignRepair'
+import CommercialProperty from '@pages/CommercialProperty'
+import ApartmentDesign from '@pages/ApartmentDesign'
+import ApartmentDesignItem from '@pages/ApartmentDesignItem'
+import SmartHouse from '@pages/SmartHouse'
+import SmartHouseItem from '@pages/SmartHouseItem'
+import Page404 from '@pages/Page404'
 
 function App() {
-  const location = useLocation()
-
   return (
     <>
-      <section>
-        <Navigation />
-      </section>
-
-      <section>
-        {location.pathname === '/about-us' ||
-        location.pathname === '/responses' ||
-        location.pathname === '/partners' ||
-        location.pathname === '/promotions' ? (
-          <SubNavigation type={'aboutUs'} />
-        ) : location.pathname === '/services' ||
-          location.pathname === '/services/economy' ||
-          location.pathname === '/services/eurorepair' ||
-          location.pathname === '/services/business' ||
-          location.pathname === '/design-repair' ||
-          location.pathname === '/commercial-property' ||
-          location.pathname === '/apartment-design' ||
-          location.pathname === '/apartment-design/project' ||
-          location.pathname === '/apartment-design/visualisation' ||
-          location.pathname === '/apartment-design/placement' ||
-          location.pathname === '/smart-house' ||
-          location.pathname === '/smart-house/climate' ||
-          location.pathname === '/smart-house/lighting' ||
-          location.pathname === '/smart-house/security' ? (
-          <SubNavigation type={'services'} />
-        ) : undefined}
-      </section>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contacts" element={<Contacts />} />

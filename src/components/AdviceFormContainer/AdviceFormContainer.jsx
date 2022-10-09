@@ -3,41 +3,27 @@ import AdviceForm from '../AdviceForm/AdviceForm'
 import styles from './AdviceFormContainer.module.sass'
 import PropTypes from 'prop-types'
 
-const AdviceFormContainer = ({
-  title,
-  description = '',
-  imgUrl,
-  subTitle = '',
-  text1 = '',
-  text2 = '',
-  text3 = '',
-}) => {
+const AdviceFormContainer = ({ item }) => {
   return (
     <div className={styles.adviceFormContainer}>
-      <h2>{title}</h2>
-      {description !== '' ? <span>{description}</span> : undefined}
+      <h2>{item?.title}</h2>
+      {item?.description && <span>{item?.description}</span>}
 
       <div className={styles.formContainer}>
-        <AdviceForm imgUrl={imgUrl} />
+        <AdviceForm imgUrl={item?.imgUrl} />
       </div>
       <div className={styles.bottomContextContainer}>
-        {subTitle !== '' ? <h3>{subTitle}</h3> : undefined}
-        {text1 !== '' ? <p>{text1}</p> : undefined}
-        {text2 !== '' ? <p>{text2}</p> : undefined}
-        {text3 !== '' ? <p>{text3}</p> : undefined}
+        {item?.subTitle && <h3>{item?.subTitle}</h3>}
+        {item?.text1 && <p>{item?.text1}</p>}
+        {item?.text2 && <p>{item?.text2}</p>}
+        {item?.text3 && <p>{item?.text3}</p>}
       </div>
     </div>
   )
 }
 
 AdviceFormContainer.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    subTitle: PropTypes.string,
-    text1: PropTypes.string,
-    text2: PropTypes.string,
-    text3: PropTypes.string,
-    imgUrl: PropTypes.string,
+  item: PropTypes.object,
 }
 
 export default AdviceFormContainer
