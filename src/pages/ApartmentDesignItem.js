@@ -13,7 +13,7 @@ const ApartmentDesignItem = () => {
         project: {
             adviceForm: {
                 title: 'ДИЗАЙН ПРОЄКТ',
-                imgUrl: '/apartmentDesignImgs/img1.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img1.png',
             },
             portfolio: {
 
@@ -23,7 +23,7 @@ const ApartmentDesignItem = () => {
         visualisation: {
             adviceForm: {
                 title: '3d візуалізація',
-                imgUrl: '/apartmentDesignImgs/img2.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img2.png',
             },
             portfolio: {
 
@@ -33,7 +33,7 @@ const ApartmentDesignItem = () => {
         placement: {
             adviceForm: {
                 title: 'План розміщення меблів',
-                imgUrl: '/apartmentDesignImgs/img3.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img3.png',
             },
             portfolio: {
 

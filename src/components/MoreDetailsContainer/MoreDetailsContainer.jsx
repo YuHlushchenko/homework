@@ -34,21 +34,21 @@ const MoreDetailsContainer = ({ option }) => {
 
         apartmentDesign: [
             {
-                imgUrl: '/apartmentDesignImgs/img1.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img1.png',
                 title: 'ДИЗАЙН ПРОЄКТ',
                 price: '10 USD ЗА М',
                 bttnLink: '/apartment-design/project',
                 namePage: 'project',
             },
             {
-                imgUrl: '/apartmentDesignImgs/img2.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img2.png',
                 title: '3D ВІЗУАЛІЗАЦІЯ',
                 price: '20 USD ЗА М',
                 bttnLink: '/apartment-design/visualisation',
                 namePage: 'visualisation',
             },
             {
-                imgUrl: '/apartmentDesignImgs/img3.png',
+                imgUrl: '/apartmentDesignPageImgs/moreDetails/img3.png',
                 title: 'РОЗМІЩЕННЯ МЕБЛІВ',
                 price: '20 USD ЗА М',
                 bttnLink: '/apartment-design/placement',
@@ -58,19 +58,19 @@ const MoreDetailsContainer = ({ option }) => {
 
         smartHouse: [
             {
-                imgUrl: '/smartHousePageImgs/img1.png',
+                imgUrl: '/smartHousePageImgs/moreDetails/img1.png',
                 title: 'Управління кліматом',
                 bttnLink: '/smart-house/climate',
                 namePage: 'climate',
             },
             {
-                imgUrl: '/smartHousePageImgs/img2.png',
+                imgUrl: '/smartHousePageImgs/moreDetails/img2.png',
                 title: 'управління освітленням',
                 bttnLink: '/smart-house/lighting',
                 namePage: 'lighting',
             },
             {
-                imgUrl: '/smartHousePageImgs/img3.png',
+                imgUrl: '/smartHousePageImgs/moreDetails/img3.png',
                 title: 'система безпеки',
                 bttnLink: '/smart-house/security',
                 namePage: 'security',

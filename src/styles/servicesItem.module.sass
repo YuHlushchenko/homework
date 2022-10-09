@@ -1,29 +1,31 @@
 @import '../styles/colors'
 
 .servicesItemContainer
+    width: 100%
     padding-top: 175px
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
 
-.mainContentContainer
+.adviceFormContainer
     width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
     padding: 0 140px
+    margin-bottom: 30px
 
-// .adviceFormContainer
-//     margin: 0 0 60px
+.backgroundContainer
+    padding-top: 60px
+    width: 100%
+    background: no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
 
 .moreDetailsContainer
-    margin: 40px 0 60px
     width: 100%
-    display: flex
-    align-items: center
-    justify-content: center
+    padding: 0 140px
+    margin-bottom: 60px
 
 .footerContainer
     width: 100%
@@ -36,7 +38,10 @@
     .servicesItemContainer
         padding-top: 145px
 
-    .mainContentContainer
+    .adviceFormContainer
+        padding: 0 30px
+
+    .moreDetailsContainer
         padding: 0 30px
 
 @media screen and (max-width: 900px)
@@ -48,5 +53,8 @@
         padding-top: 90px
 
 @media screen and (max-width: 450px)
-    .mainContentContainer
+    .adviceFormContainer
+        padding: 0 20px
+
+    .moreDetailsContainer
         padding: 0 20px

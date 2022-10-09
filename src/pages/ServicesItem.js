@@ -59,27 +59,35 @@ const ServicesItem = () => {
                         name === item
                             ?
                             <div key={index} className={styles.servicesItemContainer}>
-                                <section className={styles.mainContentContainer}>
-                                    <div className={styles.adviceFormContainer}>
-                                        <AdviceFormContainer
-                                            title={options[item].adviceForm.title}
-                                            description={options[item].adviceForm.description}
-                                            imgUrl={options[item].adviceForm.imgUrl}
-                                            subTitle={options[item].adviceForm.subTitle}
-                                            text1={options[item].adviceForm.text1}
-                                            text2={options[item].adviceForm.text2}
-                                            text3={options[item].adviceForm.text3}
-                                        />
-                                    </div>
+                                <section className={styles.adviceFormContainer}>
+                                    <AdviceFormContainer
+                                        title={options[item].adviceForm.title}
+                                        description={options[item].adviceForm.description}
+                                        imgUrl={options[item].adviceForm.imgUrl}
+                                        subTitle={options[item].adviceForm.subTitle}
+                                        text1={options[item].adviceForm.text1}
+                                        text2={options[item].adviceForm.text2}
+                                        text3={options[item].adviceForm.text3}
+                                    />
+                                </section>
 
-                                    <div></div>
-                                    <div></div>
+                                <section className={styles.portfolioContainer}>
 
-                                    <div className={styles.moreDetailsContainer}>
+                                </section>
+
+                                <section 
+                                    className={styles.backgroundContainer}
+                                    style={{ backgroundImage: 'url(/servicesPageImgs/background.png)'}}
+                                >
+                                    <section className={styles.tableContainer}>
+
+                                    </section>
+
+                                    <section className={styles.moreDetailsContainer}>
                                         <MoreDetailsContainer
                                             option={'services'} // 'services' / 'apartmentDesign' / 'smartHause'
                                         />
-                                    </div>
+                                    </section>
                                 </section>
 
                                 <section className={styles.footerContainer}>
