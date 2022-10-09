@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.sass'
+import { NavLink } from 'react-router-dom'
 import Button from '../UI/Button/Button'
 
 const Footer = () => {
@@ -26,30 +27,68 @@ const Footer = () => {
                     <div className={styles.anchorsContainer}>
                         <span>меню</span>
                         <ul>
-                            <li><a href='/aboutus'>Про нас</a></li>
-                            <li><a href='/services'>Наші послуги</a></li>
-                            <li><a href='/calculator'>Калькулятор</a></li>
-                            <li><a href='/#'>Портфоліо</a></li>
+                            <li>
+                                <NavLink
+                                    to='/about-us'
+                                    style={({ isActive }) =>
+                                        isActive ? { color: '#DB0000' } : undefined
+                                    }
+                                >
+                                    Про нас
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='/services'
+                                    style={({ isActive }) =>
+                                        isActive ? { color: '#DB0000' } : undefined
+                                    }
+                                >
+                                    Наші послуги
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='/calculator'
+                                    style={({ isActive }) =>
+                                        isActive ? { color: '#DB0000' } : undefined
+                                    }
+                                >
+                                    Калькулятор
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='/#'
+                                    style={({ isActive }) =>
+                                        isActive ? { color: '#DB0000' } : undefined
+                                    }
+                                >
+                                    Портфоліо
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
 
                     <div className={styles.contactInfoContainer}>
-                        <Button
-                            value={'ЗАТЕЛЕФОНУВАТИ'}
-                            inlineStyle={
-                                window.innerWidth <= 1600
-                                    ?
-                                    {
-                                        fontSize: '16px',
-                                        lineHeight: '18px',
-                                        width: '230px',
-                                        padding: '15px 30px',
-                                        textAlign: 'center'
-                                    }
-                                    :
-                                    undefined
-                            }
-                        />
+                        <a href="tel:+38970000000">
+                            <Button
+                                value={'ЗАТЕЛЕФОНУВАТИ'}
+                                inlineStyle={
+                                    window.innerWidth <= 1600
+                                        ?
+                                        {
+                                            fontSize: '16px',
+                                            lineHeight: '18px',
+                                            width: '230px',
+                                            padding: '15px 30px',
+                                            textAlign: 'center'
+                                        }
+                                        :
+                                        undefined
+                                }
+                            />
+                        </a>
 
                         <div className={styles.numberContainer}>
                             <span>Прийом дзвінків 10:00-18:00</span>

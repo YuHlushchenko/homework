@@ -1,9 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import styles from '../styles/servicesItem.module.sass'
-import Footer from '../components/Footer/Footer'
-import MoreDetailsContainer from '../components/MoreDetailsContainer/MoreDetailsContainer'
+import { useParams } from 'react-router-dom'
 import AdviceFormContainer from '../components/AdviceFormContainer/AdviceFormContainer'
+import MoreDetailsContainer from '../components/MoreDetailsContainer/MoreDetailsContainer'
+import Footer from '../components/Footer/Footer'
 
 const ServicesItem = () => {
     const { name } = useParams()
@@ -58,8 +58,8 @@ const ServicesItem = () => {
                     return (
                         name === item
                             ?
-                            <section key={index} className={styles.servicesItemContainer}>
-                                <div className={styles.mainContentContainer}>
+                            <div key={index} className={styles.servicesItemContainer}>
+                                <section className={styles.mainContentContainer}>
                                     <div className={styles.adviceFormContainer}>
                                         <AdviceFormContainer
                                             title={options[item].adviceForm.title}
@@ -80,12 +80,12 @@ const ServicesItem = () => {
                                             option={'services'} // 'services' / 'apartmentDesign' / 'smartHause'
                                         />
                                     </div>
-                                </div>
+                                </section>
 
-                                <div className={styles.footerContainer}>
+                                <section className={styles.footerContainer}>
                                     <Footer />
-                                </div>
-                            </section>
+                                </section>
+                            </div>
                             : undefined
                     )
                 })

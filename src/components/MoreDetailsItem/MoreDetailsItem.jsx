@@ -9,6 +9,7 @@ const MoreDetailsItem = ({ imgUrl, description = '', title = '', price = '', btt
                     className={styles.imgContainer}
                     style={{ backgroundImage: `url(${imgUrl})` }}
                 ></div>
+                <div className={styles.infoContainer}>
                 {
                     description === ''
                         ? undefined
@@ -24,6 +25,7 @@ const MoreDetailsItem = ({ imgUrl, description = '', title = '', price = '', btt
                         ? undefined
                         : <h6>{price}</h6>
                 }
+                </div>
             </div>
             <div className={styles.buttonContainer}>
                 <a href={bttnLink}>

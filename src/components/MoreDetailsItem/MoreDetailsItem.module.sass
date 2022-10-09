@@ -11,33 +11,42 @@
 
 .contentContainer
     width: 100%
+    min-height: 390px
     background-color: #F8F4F3
     display: flex
     flex-direction: column
     align-items: center
     justify-content: flex-start
+
+.infoContainer
+    padding: 15px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
     span
         font-weight: 400
         font-size: 30px
         line-height: 35px
-        text-align: center
         color: $grey
-        margin: 15px
+        margin: 0 15px 15px
         text-align: center
     p
         font-weight: 600
         font-size: 30px
-        line-height: 32px
+        line-height: 34px
         text-transform: uppercase
         color: $grey
-        margin: 10px
+        margin: 5px 10px
         text-align: center
     h6
         font-weight: 600
-        font-size: 50px
-        line-height: 52px
+        font-size: 46px
+        line-height: 48px
         color: #000000
-        margin: 15px
+        margin: 15px 15px 10px
         text-align: center
 
 .imgContainer
@@ -64,7 +73,7 @@
         letter-spacing: 2px
         font-size: 24px
         line-height: 28px
-        padding: 20px 80px
+        padding: 15px 70px
         margin: 20px 0
         transition: .3s
         cursor: pointer
@@ -88,12 +97,12 @@
         p
             font-weight: 500
             font-size: 26px
-            line-height: 28px
-            margin: 10px
+            line-height: 30px
+            margin: 8px
         h6
             font-weight: 500
-            font-size: 44px
-            line-height: 46px
+            font-size: 40px
+            line-height: 42px
 
     .imgContainer
         height: 280px
@@ -102,7 +111,7 @@
         button
             font-size: 22px
             line-height: 24px
-            padding: 20px 70px
+            padding: 15px 60px
 
 @media screen and (max-width: 1320px)
     .contentContainer
@@ -112,11 +121,11 @@
             margin: 10px
         p
             font-size: 24px
-            line-height: 26px
-            margin: 8px
+            line-height: 28px
+            margin: 6px
         h6
-            font-size: 38px
-            line-height: 40px
+            font-size: 34px
+            line-height: 36px
             margin: 8px
 
     .imgContainer   
@@ -132,17 +141,18 @@
 
 @media screen and (max-width: 1050px)
     .contentContainer
+        min-height: 350px
         span
             font-size: 20px
             line-height: 22px
             margin: 6px
         p
-            font-size: 22px
+            font-size: 20px
             line-height: 24px
-            margin: 6px
+            margin: 4px
         h6
-            font-size: 34px
-            line-height: 36px
+            font-size: 30px
+            line-height: 32px
             margin: 6px
 
     .imgContainer   
@@ -155,6 +165,8 @@
             padding: 15px 50px
 
 @media screen and (max-width: 780px)
+    .contentContainer
+        min-height: 280px
     .container
         width: 470px
         &:nth-child(2n)

@@ -6,7 +6,7 @@ const SubNavigation = ({ type }) => {
     const aboutUs = [
         {
             linkName: 'про компанію',
-            path: '/aboutus'
+            path: '/about-us'
         },
         {
             linkName: 'відгуки',
@@ -29,19 +29,19 @@ const SubNavigation = ({ type }) => {
         },
         {
             linkName: 'дизайнерський ремонт',
-            path: '/designrepair'
+            path: '/design-repair'
         },
         {
             linkName: 'ремонт комерційної нерухомості',
-            path: '/commercialproperty'
+            path: '/commercial-property'
         },
         {
             linkName: 'дизайн квартир',
-            path: '/apartmentdesign'
+            path: '/apartment-design'
         },
         {
             linkName: 'розумний будинок',
-            path: '/smarthouse'
+            path: '/smart-house'
         },
     ]
 

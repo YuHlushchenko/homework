@@ -1,6 +1,6 @@
 import React from 'react'
-import MoreDetailsItem from '../MoreDetailsItem/MoreDetailsItem'
 import styles from './MoreDetailsContainer.module.sass'
+import MoreDetailsItem from '../MoreDetailsItem/MoreDetailsItem'
 
 const MoreDetailsContainer = ({ option }) => {
 
@@ -34,49 +34,46 @@ const MoreDetailsContainer = ({ option }) => {
 
         apartmentDesign: [
             {
-                imgUrl: '',
-                description: 'ДИЗАЙН ПРОЄКТ',
-                title: '',
+                imgUrl: '/apartmentDesignImgs/img1.png',
+                title: 'ДИЗАЙН ПРОЄКТ',
                 price: '10 USD ЗА М',
-                bttnLink: '',
+                bttnLink: '/apartment-design/project',
+                namePage: 'project',
             },
             {
-                imgUrl: '',
-                description: '3D ВІЗУАЛІЗАЦІЯ',
-                title: '',
+                imgUrl: '/apartmentDesignImgs/img2.png',
+                title: '3D ВІЗУАЛІЗАЦІЯ',
                 price: '20 USD ЗА М',
-                bttnLink: '',
+                bttnLink: '/apartment-design/visualisation',
+                namePage: 'visualisation',
             },
             {
-                imgUrl: '',
-                description: 'РОЗМІЩЕННЯ МЕБЛІВ',
-                title: '',
+                imgUrl: '/apartmentDesignImgs/img3.png',
+                title: 'РОЗМІЩЕННЯ МЕБЛІВ',
                 price: '20 USD ЗА М',
-                bttnLink: '',
+                bttnLink: '/apartment-design/placement',
+                namePage: 'placement',
             },
         ],
 
         smartHouse: [
             {
-                imgUrl: '',
-                description: '',
+                imgUrl: '/smartHousePageImgs/img1.png',
                 title: 'Управління кліматом',
-                price: '',
-                bttnLink: '',
+                bttnLink: '/smart-house/climate',
+                namePage: 'climate',
             },
             {
-                imgUrl: '',
-                description: '',
+                imgUrl: '/smartHousePageImgs/img2.png',
                 title: 'управління освітленням',
-                price: '',
-                bttnLink: '',
+                bttnLink: '/smart-house/lighting',
+                namePage: 'lighting',
             },
             {
-                imgUrl: '',
-                description: '',
+                imgUrl: '/smartHousePageImgs/img3.png',
                 title: 'система безпеки',
-                price: '',
-                bttnLink: '',
+                bttnLink: '/smart-house/security',
+                namePage: 'security',
             },
         ]
     }
@@ -110,7 +107,7 @@ const MoreDetailsContainer = ({ option }) => {
                                     description={item.description}
                                     title={item.title}
                                     price={item.price}
-                                    bttnLinc={item.bttnLink}
+                                    bttnLink={item.bttnLink}
                                     namePage={item.namePage}
                                 />
                             )
@@ -124,7 +121,7 @@ const MoreDetailsContainer = ({ option }) => {
                                     description={item.description}
                                     title={item.title}
                                     price={item.price}
-                                    bttnLinc={item.bttnLink}
+                                    bttnLink={item.bttnLink}
                                     namePage={item.namePage}
                                 />
                             )

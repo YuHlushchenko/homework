@@ -33,7 +33,7 @@ const Navigation = () => {
               <ul>
                 <li>
                   <NavLink
-                    to='/aboutus'
+                    to='/about-us'
                     className={({ isActive }) =>
                       isActive ? styles.activeLink : undefined
                     }
@@ -46,7 +46,7 @@ const Navigation = () => {
                   <ul>
                     <li>
                       <NavLink
-                        to='/aboutus'
+                        to='/about-us'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -112,7 +112,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/designrepair'
+                        to='/design-repair'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -122,7 +122,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/commercialproperty'
+                        to='/commercial-property'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -132,7 +132,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/apartmentdesign'
+                        to='/apartment-design'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
@@ -142,7 +142,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to='/smarthouse'
+                        to='/smart-house'
                         className={({ isActive }) =>
                           isActive ? styles.activeSubLink : styles.subLink
                         }
