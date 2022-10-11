@@ -2,6 +2,8 @@ import React from 'react'
 import styles from '../styles/designRepair.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
+import Portfolio from '@components/Portfolio/Portfolio'
+
 
 const item = {
   title: 'Дизайнерський ремонт під ключ',
@@ -12,15 +14,46 @@ const item = {
     'Такий ремонт зазвичай передбачає створення дизайн-проекту, що розробляється індивідуально під замовника. При цьому будуть враховані можливості та особливості простору, ваші побажання та бюджет. Також можуть бути змінені комунікації, виконано перепланування приміщення. Дизайн-проект вийде унікальним та особливим.',
 }
 
+const portfolio = {
+  title: 'портфоліо',
+  imgSrcs: [
+    '/designRepairImgs/portfolio/img1.png',
+    '/designRepairImgs/portfolio/img2.png',
+    '/designRepairImgs/portfolio/img3.png',
+    '/designRepairImgs/portfolio/img4.png',
+    '/designRepairImgs/portfolio/img5.png',
+    '/designRepairImgs/portfolio/img6.png',
+    '/designRepairImgs/portfolio/img1.png',
+    '/designRepairImgs/portfolio/img2.png',
+    '/designRepairImgs/portfolio/img3.png',
+    '/designRepairImgs/portfolio/img4.png',
+  ],
+  alt: 'commercial property example'
+}
+
 const DesignRepair = () => {
   return (
     <PageWrapper>
       <div className={styles.designRepairContainer}>
-        <section className={styles.mainContentContainer}>
-          <div className={styles.adviceFormContainer}>
-            <AdviceFormContainer item={item} />
-          </div>
+        <section className={styles.adviceFormContainer}>
+          <AdviceFormContainer item={item} />
         </section>
+
+        <section
+          className={styles.portfolioContainer}
+        >
+          <Portfolio
+            data={portfolio}
+          />
+        </section>
+
+        <section className={styles.tableContainer}>
+
+        </section>
+
+        <div className={styles.mainTextContainer}>
+
+        </div>
       </div>
     </PageWrapper>
   )

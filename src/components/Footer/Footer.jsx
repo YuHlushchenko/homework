@@ -3,6 +3,25 @@ import styles from './Footer.module.sass'
 import { NavLink } from 'react-router-dom'
 import Button from '../UI/Button/Button'
 
+const navLinks = [
+    {
+        link: '/about-us',
+        linkName: 'Про нас',
+    },
+    {
+        link: '/services',
+        linkName: 'Наші послуги',
+    },
+    {
+        link: '/calculator',
+        linkName: 'Калькулятор',
+    },
+    {
+        link: '/',
+        linkName: 'Портфоліо',
+    }
+]
+
 const Footer = () => {
     return (
         <div className={styles.footerContainer}>
@@ -27,46 +46,18 @@ const Footer = () => {
                     <div className={styles.anchorsContainer}>
                         <span>меню</span>
                         <ul>
-                            <li>
+                            {navLinks.map((item, index) => {
+                                return <li key={index}>
                                 <NavLink
-                                    to='/about-us'
+                                    to={item.link}
                                     style={({ isActive }) =>
                                         isActive ? { color: '#DB0000' } : undefined
                                     }
                                 >
-                                    Про нас
+                                    {item.linkName}
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink
-                                    to='/services'
-                                    style={({ isActive }) =>
-                                        isActive ? { color: '#DB0000' } : undefined
-                                    }
-                                >
-                                    Наші послуги
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to='/calculator'
-                                    style={({ isActive }) =>
-                                        isActive ? { color: '#DB0000' } : undefined
-                                    }
-                                >
-                                    Калькулятор
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to='/#'
-                                    style={({ isActive }) =>
-                                        isActive ? { color: '#DB0000' } : undefined
-                                    }
-                                >
-                                    Портфоліо
-                                </NavLink>
-                            </li>
+                            })}
                         </ul>
                     </div>
 
@@ -92,11 +83,11 @@ const Footer = () => {
 
                         <div className={styles.numberContainer}>
                             <span>Прийом дзвінків 10:00-18:00</span>
-                            <span>+38 00 000 00 00</span>
+                            <a href='tel:+38 00 000 00 00'><span>+38 00 000 00 00</span></a>
                         </div>
 
                         <div className={styles.addressContainer}>
-                            <span>м. Івано-Франківськ, Василіянок 1</span>
+                            <a href='https://goo.gl/maps/3hDCgabCxnpcQowQA' target="_blank" rel="noreferrer"><span>м. Івано-Франківськ, Василіянок 1</span></a>
                         </div>
                     </div>
                 </div>

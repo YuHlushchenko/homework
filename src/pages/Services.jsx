@@ -23,6 +23,14 @@ const Services = () => {
             шпалерами, укладання плитки та ламінату.{' '}
           </p>
         </div>
+
+        <section className={styles.dropDownContainer}>
+
+        </section>
+
+        <section className={styles.mainTextContainer}>
+
+        </section>
       </div>
     </PageWrapper>
   )

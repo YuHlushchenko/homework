@@ -10,6 +10,10 @@ const ApartmentDesign = () => {
         <section className={styles.moreDetailsContainer}>
           <MoreDetailsContainer option={'apartmentDesign'} />
         </section>
+
+        <section className={styles.mainTextContainer}>
+
+        </section>
       </div>
     </PageWrapper>
   )

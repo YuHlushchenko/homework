@@ -336,7 +336,7 @@ const Navigation = () => {
         )}
       </div>
 
-      <section>
+      <section className={styles.subNavContainer}>
         <SubNavigation type={subNavType} />
       </section>
     </>

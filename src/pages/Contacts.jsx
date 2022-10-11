@@ -1,7 +1,7 @@
 import React from 'react'
+import styles from '../styles/contacts.module.sass'
 import ContactsForm from '@components/ContactsForm/ContactsForm'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
-import styles from '../styles/contacts.module.sass'
 
 const Contacts = () => {
   return (
