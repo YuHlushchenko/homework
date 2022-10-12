@@ -25,7 +25,6 @@ const OurServices = () => {
                     <span>Будівництво будинків</span>
                 </div>
             </div>
-
         </div>
     </div>
   )
