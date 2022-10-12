@@ -27,7 +27,7 @@ const portfolio = {
     '/commercialPropertyImgs/portfolio/img3.png',
     '/commercialPropertyImgs/portfolio/img4.png',
   ],
-  alt: 'commercial property example'
+  alt: 'commercial property example',
 }
 
 const CommercialProperty = () => {
@@ -40,16 +40,10 @@ const CommercialProperty = () => {
           </div>
         </section>
 
-        <section className={styles.dropDownContainer}>
+        <section className={styles.dropDownContainer}></section>
 
-        </section>
-
-        <section
-          className={styles.portfolioContainer}
-        >
-          <Portfolio
-            data={portfolio}
-          />
+        <section className={styles.portfolioContainer}>
+          <Portfolio data={portfolio} />
         </section>
       </div>
     </PageWrapper>

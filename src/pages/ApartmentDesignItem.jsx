@@ -26,7 +26,7 @@ const options = {
         '/apartmentDesignPageImgs/projectExamples1/img1.png',
         '/apartmentDesignPageImgs/projectExamples1/img1.png',
       ],
-      alt: 'apartment design example'
+      alt: 'apartment design example',
     },
   },
 
@@ -49,7 +49,7 @@ const options = {
         '/apartmentDesignPageImgs/projectExamples2/img3.png',
         '/apartmentDesignPageImgs/projectExamples2/img4.png',
       ],
-      alt: 'apartment design example'
+      alt: 'apartment design example',
     },
   },
 
@@ -72,7 +72,7 @@ const options = {
         '/apartmentDesignPageImgs/projectExamples3/img3.png',
         '/apartmentDesignPageImgs/projectExamples3/img4.png',
       ],
-      alt: 'apartment design example'
+      alt: 'apartment design example',
     },
   },
 }
@@ -92,16 +92,10 @@ const ApartmentDesignItem = () => {
                 <AdviceFormContainer item={options[item].adviceForm} />
               </section>
 
-              <section className={styles.tableContainer}>
+              <section className={styles.tableContainer}></section>
 
-              </section>
-
-              <section
-                className={styles.portfolioContainer}
-              >
-                <Portfolio
-                  data={options[item].portfolio}
-                />
+              <section className={styles.portfolioContainer}>
+                <Portfolio data={options[item].portfolio} />
               </section>
 
               <section className={styles.moreDetailsContainer}>

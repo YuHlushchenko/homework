@@ -4,7 +4,6 @@ import PageWrapper from '@components/PageWrapper/PageWrapper'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
 import Portfolio from '@components/Portfolio/Portfolio'
 
-
 const item = {
   title: 'Дизайнерський ремонт під ключ',
   imgUrl: '/designRepairImgs/img1.png',
@@ -28,7 +27,7 @@ const portfolio = {
     '/designRepairImgs/portfolio/img3.png',
     '/designRepairImgs/portfolio/img4.png',
   ],
-  alt: 'commercial property example'
+  alt: 'commercial property example',
 }
 
 const DesignRepair = () => {
@@ -39,21 +38,13 @@ const DesignRepair = () => {
           <AdviceFormContainer item={item} />
         </section>
 
-        <section
-          className={styles.portfolioContainer}
-        >
-          <Portfolio
-            data={portfolio}
-          />
+        <section className={styles.portfolioContainer}>
+          <Portfolio data={portfolio} />
         </section>
 
-        <section className={styles.tableContainer}>
+        <section className={styles.tableContainer}></section>
 
-        </section>
-
-        <div className={styles.mainTextContainer}>
-
-        </div>
+        <div className={styles.mainTextContainer}></div>
       </div>
     </PageWrapper>
   )
