@@ -4,36 +4,106 @@
     padding-top: 175px
     width: 100%
     min-height: 100vh
+    h2
+        font-weight: 700
+        font-size: 42px
+        line-height: 52px
+        text-transform: uppercase
+        color: $dark-gray
+        text-align: center
+        margin: 30px 0 40px
 
 .moreDetailsContainer
     padding: 0 140px
     width: 100%
     margin-bottom: 60px
 
+.mainTextContainer
+    background-color: #F8F4F3
+    padding: 30px 40px
+    margin: 0 140px 60px
+    p
+        font-weight: 400
+        font-size: 25px
+        line-height: 27px
+        color: $dark-gray
+        margin: 0
+
 //medias
 
 @media screen and (max-width: 1550px)
     .apartmentDesignContainer
-        padding-top: 152px
+        padding: 152px 0 40px
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 20px 0 30px
+
+    .moreDetailsContainer
+        margin-bottom: 40px
+
+    .mainTextContainer
+        padding: 20px 30px
+        margin: 0 140px
+        p
+            font-size: 23px
+            line-height: 25px
 
 @media screen and (max-width: 1320px)
     .apartmentDesignContainer
-        padding-top: 145px
+        padding: 145px 0 30px
+        h2
+            font-size: 34px
+            line-height: 40px
+            margin: 20px 0 25px
 
     .moreDetailsContainer
         padding: 0 30px
+
+    .mainTextContainer
+        padding: 20px 30px
+        margin: 0 80px
+        p
+            font-size: 21px
+            line-height: 24px
+
+@media screen and (max-width: 1050px)
+    .apartmentDesignContainer
+        h2
+            font-size: 30px
+            line-height: 38px
+            margin: 10px 0 15px
+
+    .moreDetailsContainer
+        margin-bottom: 30px
+
+    .mainTextContainer
+        padding: 20px
+        margin: 0 30px
+        p
+            text-align: center
 
 @media screen and (max-width: 900px)
     .apartmentDesignContainer
         padding-top: 140px
 
-@media screen and (max-width: 780px)
-    .moreDetailsContainer
-        margin-bottom: 30px
-
 @media screen and (max-width: 700px)
     .apartmentDesignContainer
         padding-top: 90px
+        h2
+            font-size: 26px
+            line-height: 28px
+            margin: 10px 0 15px
 
+    .mainTextContainer
+        padding: 20px
+        p
+            text-align: center
+            font-size: 20px
+            font-weight: 22px
 
-    
+@media screen and (max-width: 450px)
+    .mainTextContainer
+        padding: 10px
+        margin: 0 20px
