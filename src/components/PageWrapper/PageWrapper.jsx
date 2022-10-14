@@ -4,7 +4,7 @@ import Navigation from '@components/Navigation/Navigation'
 import Footer from '@components/Footer/Footer'
 
 const PageWrapper = ({ children }) => {
-  console.log(children)
+  // console.log(children)
   return (
     <>
       <Navigation />

@@ -1,0 +1,285 @@
+@import '../../styles/colors'
+
+.repairTypesItemContiner
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.topContentContainer
+    width: 100%
+    display: flex
+
+.reverse
+    flex-direction: row-reverse
+
+.bgContainer
+    height: 400px
+    width: 55%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+
+.mainContentContainer
+    width: 45%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding: 20px 60px
+    background-color: #F8F4F3
+    h3
+        font-weight: 600
+        font-size: 32px
+        line-height: 34px
+        text-transform: uppercase
+        color: $dark-gray
+        margin: 20px 0
+
+.priceContainer, .timeContainer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 10px 0
+    p
+        font-weight: 300
+        font-size: 30px
+        line-height: 32px
+        color: $dark-gray
+        margin: 0 30px 0 0
+    h4
+        font-weight: 600
+        font-size: 30px
+        line-height: 28px
+        color: $dark-gray
+        margin: 0
+
+.dropDownContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    background-color: transparent
+    border: 0
+    outline: 0
+    margin: 10px 0
+    p
+        transition: .3s
+        font-weight: 300
+        font-size: 30px
+        line-height: 32px
+        color: $dark-gray
+        margin: 0
+    &:hover
+        p
+            color: $red
+        svg
+            path
+                fill: $red
+
+.dropDownIconContainer
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+        margin-left: 20px
+        path
+            transition: .3s
+
+.droppedDown
+    p
+        color: $red
+    svg
+        path
+            fill: $red
+    .dropDownIconContainer
+        svg
+            transform: rotate(180deg)
+
+.linkBttnContainer
+    margin: 30px 0 10px
+    button
+        border: 1px solid $red
+        outline: 0
+        background-color: transparent
+        padding: 20px 40px
+        color: $red
+        font-weight: 600
+        font-size: 23px
+        line-height: 28px
+        cursor: pointer
+        transition: .3s
+        &:hover
+            color: $white
+            background-color: $red
+
+.bottomContentContainer
+    width: 100%
+    background-color: #F8F4F3
+
+.bottomContentContainerOpened
+    min-height: 500px
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .bgContainer
+        height: 350px
+
+    .mainContentContainer
+        padding: 10px 30px
+        h3
+            font-weight: 500
+            font-size: 28px
+            line-height: 30px
+
+    .priceContainer, .timeContainer
+        margin: 10px 0
+        p
+            font-size: 24px
+            line-height: 28px
+        h4
+            font-weight: 600
+            font-size: 26px
+            line-height: 28px
+
+    .dropDownContainer
+        p
+            font-size: 24px
+            line-height: 28px
+
+    .dropDownIconContainer
+        svg
+            margin-left: 10px
+
+    .linkBttnContainer
+        margin: 20px 0 10px
+        button
+            padding: 15px 30px
+            font-weight: 500
+            font-size: 21px
+            line-height: 23px
+    
+@media screen and (max-width: 1320px)
+    .bgContainer
+        width: 330px
+        width: 50%
+
+    .mainContentContainer
+        width: 50%
+
+@media screen and (max-width: 1050px)
+    .bgContainer
+        height: 300px
+
+    .mainContentContainer
+        padding: 10px 20px
+        h3
+            font-weight: 500
+            font-size: 22px
+            line-height: 24px
+            margin: 10px 0
+
+    .priceContainer, .timeContainer
+        margin: 7px 0
+        p
+            font-size: 20px
+            line-height: 22px
+            margin-right: 10px
+        h4
+            font-size: 20px
+            line-height: 22px
+            margin-right: 10px
+
+    .dropDownContainer
+        p
+            font-size: 20px
+            line-height: 22px
+
+    .linkBttnContainer
+        margin: 10px
+        button
+            font-size: 20px
+            line-height: 22px
+
+@media screen and (max-width: 900px)
+    .bgContainer
+        height: 280px
+
+@media screen and (max-width: 800px)
+    .repairTypesItemContiner
+        width: 100%
+
+    .topContentContainer
+        flex-direction: column
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .bgContainer
+        width: 90%
+
+    .mainContentContainer
+        width: 90%
+        padding: 20px 70px
+        h3
+            margin: 15px 0
+
+    .priceContainer, .timeContainer
+        margin: 10px 0
+
+    .dropDownContainer
+        margin: 15px 0
+
+    .bottomContentContainer
+        width: 90%
+
+@media screen and (max-width: 550px)
+    .bgContainer
+        width: 100%
+
+    .mainContentContainer
+        width: 100%
+        padding: 10px 30px
+
+    .bottomContentContainer
+        width: 100%
+
+@media screen and (max-width: 400px)
+    .bgContainer
+        height: 250px
+
+    .mainContentContainer
+        padding: 10px
+        h3
+            margin: 7px 0
+            font-size: 18px
+            font-weight: 20px
+
+    .priceContainer, .timeContainer
+        margin: 5px 0
+        p
+            font-size: 18px
+            line-height: 20px
+        h4
+            font-size: 18px
+            line-height: 20px
+
+    .dropDownContainer
+        margin: 7px 0
+        p
+            font-size: 18px
+            line-height: 20px
+        svg
+            width: 18px
+
+    .linkBttnContainer
+        button
+            font-size: 16px
+            line-height: 18px
+    

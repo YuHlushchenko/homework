@@ -6,6 +6,7 @@ import CustomMap from '@components/CustomMap/CustomMap'
 import styles from '../styles/home.module.sass'
 import AnyQuestions from '@components/AnyQuestions/AnyQuestions'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
+import RepairTypesContainer from '../components/RepairTypesContainer/RepairTypesContainer'
 
 const Home = () => {
   return (
@@ -13,6 +14,10 @@ const Home = () => {
       <div className={styles.homeContainer}>
         <section className={styles.mainSliderSection}>
           <MainSlider />
+        </section>
+
+        <section className={styles.repairTypesContainer}>
+          <RepairTypesContainer />
         </section>
 
         <section className={styles.ourServicesSection}>
