@@ -1,0 +1,149 @@
+@import '../../styles/colors'
+
+.tableContainer
+    width: 100%
+
+.line
+    width: 100%
+    height: 50px
+    background-color: $red
+    margin-bottom: 20px
+
+.table
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+
+.cell
+    width: 100%
+    padding-left: 20px
+    border: 1px solid #CECECE
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #FBFBF6
+
+.bg
+    background-color: #F8F4F3
+
+.cellTextContainer
+    width: calc( 100% - 60px )
+    p
+        font-weight: 400
+        margin-right: 10px
+        font-size: 21px
+        line-height: 23px
+        color: $dark-gray
+
+.iconContainer
+    border-left: 1px solid #CECECE
+    height: 100%
+    width: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.showMoreIconContainer
+    display: none
+    width: 100%
+    align-items: center
+    justify-content: center
+    button
+        width: 100%
+        border: 1px solid #CECECE
+        outline: 0
+        height: 40px
+        background-color: $red
+        cursor: pointer
+        transition: .3s
+        svg
+            path
+                transition: .3s
+                fill: $white
+        &:hover
+            background-color: #FBFBF6
+            border-color: $red
+            svg
+                path
+                    fill: $red
+
+.tableOpened
+    height: 100%
+    overflow: auto
+
+.showMoreIconOpened
+    button
+        svg
+            transform: rotate(180deg)
+        
+//medias
+
+@media screen and (max-width: 1550px)
+    .cellTextContainer
+        width: calc( 100% - 50px )
+        p
+            font-size: 19px
+            line-height: 21px
+
+    .iconContainer
+        width: 50px
+        svg
+            width: 20px
+            height: 20px
+
+@media screen and (max-width: 1320px)
+    .line
+        margin-bottom: 15px
+
+    .cellTextContainer
+        width: calc( 100% - 40px )
+        p
+            font-size: 17px
+            line-height: 19px
+
+    .iconContainer
+        width: 40px
+        svg
+            width: 18px
+            height: 18px
+
+@media screen and (max-width: 1050px)
+    .cell
+        padding-left: 0
+
+    .cellTextContainer
+        width: calc( 100% - 40px )
+        p
+            margin: 12px
+
+@media screen and (max-width: 850px)
+    .line
+        height: 30px
+        margin-bottom: 10px
+
+    .table
+        grid-template-columns: 1fr
+        height: 317px
+        overflow: hidden
+
+
+    .cellTextContainer
+        width: calc( 100% - 60px )
+        p
+            font-size: 19px
+            line-height: 21px
+            margin: 15px
+
+    .iconContainer
+        width: 60px
+        svg
+            width: 18px
+            height: 18px
+
+    .showMoreIconContainer
+        display: flex
+
+    .tableOpened
+        height: 100%
+        overflow: auto
+    

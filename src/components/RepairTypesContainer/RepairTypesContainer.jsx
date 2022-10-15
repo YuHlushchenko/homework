@@ -46,7 +46,6 @@ const RepairTypesContainer = () => {
       </p>
       <div className={styles.mainContentContainer}>
         {dataKeys.map((item, index) => {
-          console.log(dataRepair[item])
           return (
             <div key={index} className={styles.repairTypesItemContainer}>
               <RepairTypesItem itemData={dataRepair[item]} />
