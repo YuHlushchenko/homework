@@ -22,25 +22,25 @@ const RepairTypesItem = ({ itemData }) => {
     <div className={styles.repairTypesItemContiner}>
       <div
         className={
-          itemData.isReverse
+          itemData?.isReverse
             ? `${styles.topContentContainer} ${styles.reverse}`
             : `${styles.topContentContainer}`
         }>
         <div
           className={styles.bgContainer}
           style={{
-            backgroundImage: `url(${itemData.imgSrc})`,
+            backgroundImage: `url(${itemData?.imgSrc})`,
           }}></div>
         <div className={styles.mainContentContainer}>
-          <h3>{itemData.title}</h3>
+          <h3>{itemData?.title}</h3>
           <div className={styles.priceContainer}>
             <p>Вартість ремонту:</p>
-            <h4>{itemData.price}</h4>
+            <h4>{itemData?.price}</h4>
           </div>
 
           <div className={styles.timeContainer}>
             <p>Термін виконання:</p>
-            <h4>{itemData.time}</h4>
+            <h4>{itemData?.time}</h4>
           </div>
 
           <button
@@ -68,7 +68,7 @@ const RepairTypesItem = ({ itemData }) => {
           </button>
 
           <div className={styles.linkBttnContainer}>
-            <Link to={itemData.bttnLink}>
+            <Link to={itemData?.bttnLink}>
               <button type="button">Дивитися всі роботи</button>
             </Link>
           </div>

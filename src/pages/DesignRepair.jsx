@@ -3,6 +3,7 @@ import styles from '../styles/designRepair.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
 import Portfolio from '@components/Portfolio/Portfolio'
+import TableContainer from '@components/TableContainer/TableContainer'
 
 const item = {
   title: 'Дизайнерський ремонт під ключ',
@@ -30,6 +31,24 @@ const portfolio = {
   alt: 'commercial property example',
 }
 
+const table = {
+  title: 'Детальніше, що саме входить у вартість:',
+  description: 'Коли дизайн-проект буде узгоджено та затверджено бюджет - починаються роботи з ремонту. Вони складаються з наступних основних етапів:',
+  text: 'Спочатку забираються старі матеріали та комунікації. Якщо потрібне перепланування приміщення, демонтують зайві перегородки, будуються нові. Потім прокладається електропроводка відповідно до дизайн-проекту, де видно розміщення побутових та освітлювальних приладів.',
+  tableData: [
+    'Демонтажні - монтажні роботи ',
+    'Монтаж електричних кабелів',
+    'Штукатурні роботи',
+    'Прокладання труб',
+    'Пристрій стяжки',
+    'Монтажні роботи',
+    'Фінішне оздоблення',
+    'Декорування інтер\'єру',
+    'Клінінг',
+  ]
+}
+
+
 const DesignRepair = () => {
   return (
     <PageWrapper>
@@ -42,7 +61,13 @@ const DesignRepair = () => {
           <Portfolio data={portfolio} />
         </section>
 
-        <section className={styles.tableContainer}></section>
+        <section
+          className={styles.tableContainer}
+          style={{
+            backgroundImage: 'url(/servicesPageImgs/background.png)',
+          }}>
+          <TableContainer data={table} />
+        </section>
 
         <div className={styles.textContainer}>
           <h2>Про вартість</h2>

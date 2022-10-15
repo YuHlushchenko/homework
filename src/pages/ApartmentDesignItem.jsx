@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import MoreDetailsContainer from '@components/MoreDetailsContainer/MoreDetailsContainer'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
-import Portfolio from '../components/Portfolio/Portfolio'
+import Portfolio from '@components/Portfolio/Portfolio'
+import TableContainer from '@components/TableContainer/TableContainer'
 
 const options = {
   project: {
@@ -28,6 +29,26 @@ const options = {
       ],
       alt: 'apartment design example',
     },
+    table: {
+      title: 'бАЗОВИЙ ДИЗАЙН ПРОЄКТ:',
+      description: '',
+      text: '',
+      tableData: [
+        'Обмірний план-креслення',
+        'План після перепланування об\'єкта',
+        'План вимикачів',
+        'План розміщення кондиціонерів',
+        'План розміщення меблів',
+        'План розкладки плитки',
+        'План розеток з прив\'язками',
+        'План розташування обладнання',
+        'План демонтажу і монтажу',
+        'План стелі',
+        'Схема розташування сантехніки',
+        'Специфікація матеріалів',
+        '',
+      ]
+    }
   },
 
   visualisation: {
@@ -51,6 +72,25 @@ const options = {
       ],
       alt: 'apartment design example',
     },
+    table: {
+      title: 'бАЗОВИЙ ДИЗАЙН ПРОЄКТ:',
+      description: '',
+      text: '',
+      tableData: [
+        'Обмірний план-креслення',
+        'План після перепланування об\'єкта',
+        'План вимикачів',
+        'План розміщення кондиціонерів',
+        'План розміщення меблів',
+        'План розкладки плитки',
+        'План розеток з прив\'язками',
+        'План розташування обладнання',
+        'План демонтажу і монтажу',
+        'План стелі',
+        'Схема розташування сантехніки',
+        'Специфікація матеріалів',
+      ]
+    }
   },
 
   placement: {
@@ -74,6 +114,16 @@ const options = {
       ],
       alt: 'apartment design example',
     },
+    table: {
+      title: 'Що входить до плану разташування меблів?',
+      description: '',
+      text: '',
+      tableData: [
+        'Обмірний план квартири',
+        'План розташування меблів',
+        'Консультація дізайнера',
+      ]
+    }
   },
 }
 
@@ -92,7 +142,13 @@ const ApartmentDesignItem = () => {
                 <AdviceFormContainer item={options[item].adviceForm} />
               </section>
 
-              <section className={styles.tableContainer}></section>
+              <section
+                className={styles.tableContainer}
+                style={{
+                  backgroundImage: 'url(/servicesPageImgs/background.png)',
+                }}>
+                <TableContainer data={options[item].table} />
+              </section>
 
               <section className={styles.portfolioContainer}>
                 <Portfolio data={options[item].portfolio} />

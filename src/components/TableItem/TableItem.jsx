@@ -9,8 +9,6 @@ const TableItem = ({ tableData }) => {
 
     const showMoreHandler = () => setShowMore(!showMore)
 
-    console.log(showMore)
-
     useEffect(() => {
         ref.current && autoAnimate(ref.current)
     }, [ref])
@@ -23,22 +21,40 @@ const TableItem = ({ tableData }) => {
                 ref={ref}
             >
                 {
-                    tableData.map((item, index) => {
-                        return <div
-                            key={index}
-                            className={(index + 1) % 2 === 0 ? `${styles.cell} ${styles.bg}` : `${styles.cell}`}
-                        >
-                            <div className={styles.cellTextContainer}>
-                                <p>{item}</p>
-                            </div>
+                    tableData?.map((item, index) => {
+                        if (index <= 5) {
+                            return <div
+                                key={index}
+                                className={(index + 1) % 2 === 0 ? `${styles.cell} ${styles.bg}` : `${styles.cell}`}
+                            >
+                                <div className={styles.cellTextContainer}>
+                                    <p>{item}</p>
+                                </div>
 
-                            <div className={styles.iconContainer}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 5V19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M5 12H19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <div className={styles.iconContainer}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M5 12H19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
+                        } else if (showMore && index >= 6 || window.innerWidth > 850) {
+                            return <div
+                                key={index}
+                                className={(index + 1) % 2 === 0 ? `${styles.cell} ${styles.bg}` : `${styles.cell}`}
+                            >
+                                <div className={styles.cellTextContainer}>
+                                    <p>{item}</p>
+                                </div>
+
+                                <div className={styles.iconContainer}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M5 12H19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        }
                     })
                 }
             </div>

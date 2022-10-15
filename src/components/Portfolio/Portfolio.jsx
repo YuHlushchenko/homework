@@ -23,7 +23,7 @@ const Portfolio = ({ data }) => {
 
   return (
     <div className={styles.portfolioContainer}>
-      <h3>{data.title}</h3>
+      <h3>{data?.title}</h3>
       <div className={styles.brLine}></div>
       <div className={styles.mainContantContainer}>
         <div className={styles.photosContainer}>
@@ -33,7 +33,7 @@ const Portfolio = ({ data }) => {
                 <div key={index + 1}>
                   <div className={styles.imgContainer}>
                     <button type="button" onClick={() => setZoom(index + 1)}>
-                      <img src={item} alt={data.alt} />
+                      <img src={item} alt={data?.alt} />
                     </button>
                   </div>
 
@@ -42,7 +42,7 @@ const Portfolio = ({ data }) => {
                       zoom === index + 1 ? styles.zoomContainer : styles.hide
                     }
                     ref={ref}>
-                    <img src={item} alt={data.alt} />
+                    <img src={item} alt={data?.alt} />
 
                     <div className={styles.closeZoomContainer}>
                       <button type="button" onClick={() => setZoom(null)}>
@@ -77,7 +77,7 @@ const Portfolio = ({ data }) => {
                 <div key={index + 1}>
                   <div className={styles.imgContainer}>
                     <button type="button" onClick={() => setZoom(index + 1)}>
-                      <img src={item} alt={data.alt} />
+                      <img src={item} alt={data?.alt} />
                     </button>
                   </div>
 
@@ -86,7 +86,7 @@ const Portfolio = ({ data }) => {
                       zoom === index + 1 ? styles.zoomContainer : styles.hide
                     }
                     ref={ref}>
-                    <img src={item} alt={data.alt} />
+                    <img src={item} alt={data?.alt} />
 
                     <div className={styles.closeZoomContainer}>
                       <button type="button" onClick={() => setZoom(null)}>
