@@ -3,6 +3,7 @@ import styles from '../styles/commercialProperty.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
 import Portfolio from '@components/Portfolio/Portfolio'
+import AccordionContainer from '@components/AccordionContainer/AccordionContainer'
 
 const item = {
   title: 'ремонт офісів',
@@ -30,6 +31,12 @@ const portfolio = {
   alt: 'commercial property example',
 }
 
+const accordion = {
+  title: 'мИ НАДАЄМО:',
+  description: 'Компанія «HOME WORK» виконує професійний ремонт офісів, та іншої коммерційної нерухомості.',
+  option: 'commercialProperty',
+}
+
 const CommercialProperty = () => {
   return (
     <PageWrapper>
@@ -40,7 +47,9 @@ const CommercialProperty = () => {
           </div>
         </section>
 
-        <section className={styles.dropDownContainer}></section>
+        <section className={styles.accordionContainer}>
+          <AccordionContainer data={accordion} />
+        </section>
 
         <section className={styles.portfolioContainer}>
           <Portfolio data={portfolio} />
