@@ -2,6 +2,11 @@ import React from 'react'
 import styles from '../styles/services.module.sass'
 import MoreDetailsContainer from '@components/MoreDetailsContainer/MoreDetailsContainer'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
+import AccordionContainer from '@components/AccordionContainer/AccordionContainer'
+
+const accordion = {
+  option: 'services'
+}
 
 const Services = () => {
   return (
@@ -25,11 +30,9 @@ const Services = () => {
         </div>
 
         <section className={styles.dropDownContainer}>
-
-        </section>
-
-        <section className={styles.mainTextContainer}>
-
+          <AccordionContainer
+            data={accordion}
+          />
         </section>
       </div>
     </PageWrapper>

@@ -2,6 +2,13 @@ import React from 'react'
 import MoreDetailsContainer from '@components/MoreDetailsContainer/MoreDetailsContainer'
 import styles from '../styles/smartHouse.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
+import AccordionContainer from '@components/AccordionContainer/AccordionContainer'
+
+const accordion = {
+  title: 'Розумний будинок вміє багато чого:',
+  option: 'smartHouse',
+  theme: 'white',
+}
 
 const SmartHouse = () => {
   return (
@@ -12,7 +19,13 @@ const SmartHouse = () => {
           <MoreDetailsContainer option={'smartHouse'} />
         </section>
 
-        <section></section>
+        <section className={styles.accordionContainer}>
+          <div className={styles.coverContainer}>
+            <AccordionContainer
+              data={accordion}
+            />
+          </div>
+        </section>
 
         <div className={styles.mainTextContainer}>
           <h2> Навіщо потрібен розумний будинок? </h2>

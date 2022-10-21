@@ -29,6 +29,11 @@
         line-height: 30px
         margin: 20px 0
 
+.white
+    @extend .titleContainer
+    h6
+        color: $white !important
+
 .dropDownBtnContainer
     button
         border: 0
@@ -52,11 +57,30 @@
                 path
                     fill: $red
 
+.dropDownBtnWhite
+    @extend .dropDownBtnContainer
+    button
+        svg
+            path
+                fill: $white !important
+        &:hover
+            cursor: pointer
+            svg
+                path
+                    fill: $red !important
+
 .dropDownBtnContainerActive
     @extend .dropDownBtnContainer
     button
         svg
             transform: rotate(180deg)
+
+.dropDownBtnContainerActiveWhite
+    @extend .dropDownBtnWhite
+    button
+        svg
+            transform: rotate(180deg)
+    
 
 .bottomContainer
     display: flex
@@ -85,6 +109,11 @@
         font-size: 24px
         line-height: 28px
         margin: 0 0 20px 0
+
+.whiteText
+    @extend .textContainer
+    p
+        color: $white !important
 
 //medias
 
