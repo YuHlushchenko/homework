@@ -7,6 +7,7 @@ import styles from '../styles/home.module.sass'
 import AnyQuestions from '@components/AnyQuestions/AnyQuestions'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import RepairTypesContainer from '../components/RepairTypesContainer/RepairTypesContainer'
+import ChooseUs from '../components/ChooseUs/ChooseUs'
 
 const Home = () => {
   return (
@@ -24,6 +25,8 @@ const Home = () => {
           <OurServices />
         </section>
 
+        <ChooseUs />
+
         <section className={styles.achievementsSection}>
           <Achievements />
         </section>
@@ -32,9 +35,7 @@ const Home = () => {
           <CustomMap />
         </section>
 
-        <section>
-          <AnyQuestions />
-        </section>
+        <AnyQuestions />
 
       </div>
     </PageWrapper>

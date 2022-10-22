@@ -1,0 +1,185 @@
+@import '../../styles/colors'
+
+.conatiner
+    width: 100%
+    min-height: 100vh
+    background: url(../../../public/chooseUsBackground.png) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.bgCover
+    width: 100%
+    min-height: 100vh
+    background-color: rgba(0, 0, 0, .6)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    padding: 120px 140px
+    h2
+        font-weight: 700
+        font-size: 45px
+        line-height: 55px
+        color: $white
+        text-transform: uppercase
+        margin: 0 0 80px
+        text-align: center
+
+.blocksContainer
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    column-gap: 50px
+    row-gap: 50px
+
+.block
+    border: 1px solid $black
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 10px 30px
+    h6
+        color: $white
+        font-weight: 600
+        font-size: 32px
+        line-height: 34px
+        text-transform: uppercase
+        margin: 20px 0
+    p
+        font-weight: 300
+        font-size: 28px
+        line-height: 30px
+        color: $white
+        margin: 10px 0
+
+.redStripe
+    height: 15px
+    width: 100px
+    background-color: $red
+    position: relative
+    top: -18px
+    left: 0
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .bgCover
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 0 0 60px
+
+    .block
+        padding: 10px 30px
+        h6
+            font-weight: 500
+            font-size: 28px
+            line-height: 30px
+            margin: 10px 0
+        p
+            font-size: 24px
+            line-height: 28px
+
+@media screen and (max-width: 1320px)
+    .bgCover
+        padding: 80px
+        h2
+            margin: 0 0 60px
+
+    .blocksContainer
+        column-gap: 30px
+        row-gap: 30px
+
+    .block
+        padding: 15px
+        h6
+            font-weight: 500
+            font-size: 26px
+            line-height: 28px
+        p
+            font-size: 22px
+            line-height: 26px
+
+@media screen and (max-width: 1050px)
+    .bgCover
+        padding: 60px 30px
+        h2
+            font-size: 34px
+            line-height: 40px
+
+    .block
+        h6
+            font-size: 24px
+            line-height: 26px
+            margin: 5px 0
+        p
+            font-size: 22px
+            line-height: 26px
+            margin: 5px 0
+
+    .redStripe
+        height: 10px
+        width: 60px
+        top: -21px
+
+@media screen and (max-width: 900px)
+    .blocksContainer
+        grid-template-columns: 1fr 1fr
+        column-gap: 20px
+        row-gap: 20px
+
+@media screen and (max-width: 800px)
+    .bgCover
+        padding: 40px 30px
+        h2
+            font-size: 30px
+            line-height: 36px
+            margin-bottom: 30px
+
+    .block
+        h6
+            font-size: 22px
+            line-height: 24px
+            margin: 5px 0
+        p
+            font-size: 20px
+            line-height: 22px
+            margin: 5px 0
+
+@media screen and (max-width: 550px)
+
+    .blocksContainer
+        grid-template-columns: 1fr
+        column-gap: 20px
+        row-gap: 20px
+
+    .bgCover
+        padding: 40px 30px
+        h2
+            width: 100%
+            font-size: 26px
+            line-height: 28px
+
+    .block
+        padding: 10px
+        h6
+            width: 100%
+            text-align: center
+            font-size: 20px
+            line-height: 22px
+            margin: 5px 0
+        p
+            width: 100%
+            text-align: center
+            font-size: 18px
+            line-height: 20px
+            margin: 5px 0
+
+    .redStripe
+        height: 8px
+        width: 50px
+        top: -15px
+        left: calc( 50% - 25px )
