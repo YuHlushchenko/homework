@@ -10,17 +10,17 @@ const dataRepair = {
     time: '45-50 днів',
     bttnLink: '/services/economy',
     isReverse: false,
-    // tableName: 'economyTable',
+    tableName: 'economyTable',
   },
 
   eurorepair: {
     imgSrc: '/servicesPageImgs/moreDetails/img2.png',
-    title: 'Економ варіант',
+    title: 'євроремонт',
     price: '300 грн м',
     time: '45-50 днів',
     bttnLink: '/services/eurorepair',
     isReverse: true,
-    // tableName: 'economyTable',
+    tableName: 'eurorepairTable',
   },
 
   business: {
@@ -30,7 +30,7 @@ const dataRepair = {
     time: '45-50 днів',
     bttnLink: '/services/business',
     isReverse: false,
-    // tableName: 'economyTable',
+    tableName: 'businessTable',
   },
 }
 

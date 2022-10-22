@@ -41,7 +41,7 @@ const AccordionItem = ({ info, styleType }) => {
 
                     {
                         ((info.imgs && !!info.imgs.length) || info.text) && dropDown && <div className={styles.bottomContainer}>
-                            {!!info.imgs.length && <div className={styles.imgsContainer} >
+                            {!!info.imgs?.length && <div className={styles.imgsContainer} >
                                 {
                                     !!info.imgs?.length && info.imgs.map((item, index) => {
                                         return (
