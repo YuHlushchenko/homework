@@ -8,6 +8,7 @@ import AnyQuestions from '@components/AnyQuestions/AnyQuestions'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import RepairTypesContainer from '../components/RepairTypesContainer/RepairTypesContainer'
 import ChooseUs from '../components/ChooseUs/ChooseUs'
+import CalculatorItem from '../components/CalculatorItem/CalculatorItem'
 
 const Home = () => {
   return (
@@ -19,6 +20,10 @@ const Home = () => {
 
         <section className={styles.repairTypesContainer}>
           <RepairTypesContainer />
+        </section>
+
+        <section className={styles.calculatorContainer}>
+          <CalculatorItem title='Розрахуйте вартість ремонту'/>
         </section>
 
         <section className={styles.ourServicesSection}>
