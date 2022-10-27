@@ -24,10 +24,17 @@ const list = {
 
 const CalculatorItem = ({ title = '' }) => {
   const [rangeValue, setRangeValue] = useState(44)
+  const [WSValue, setWSValue] = useState('separate')
 
   const rangeHandler = (value) => {
     setRangeValue(Number(value))
   }
+
+  const WSHandler = (value) => {
+    setWSValue(value)
+  }
+
+  console.log('WS: ' + WSValue + ', range: ' + rangeValue + ', ')
 
   return (
     <div className={styles.container}>
@@ -98,12 +105,12 @@ const CalculatorItem = ({ title = '' }) => {
               <div className={styles.radioBtnsContainer}>
 
                 <div className={styles.radio}>
-                  <input type="radio" defaultChecked value='IF' id='IF' name='location' />
+                  <input onClick={(e) => console.log(e.target.value)} type="radio" defaultChecked value='IF' id='IF' name='location' />
                   <label htmlFor="IF">Івано-Франківськ</label>
                 </div>
 
                 <div className={styles.radio}>
-                  <input type="radio" value='outOfCity' id='outOfCity' name='location' />
+                  <input onChange={(e) => WSHandler(e.target.value)} type="radio" value='outOfCity' id='outOfCity' name='location' />
                   <label htmlFor="outOfCity">За містом</label>
                 </div>
 

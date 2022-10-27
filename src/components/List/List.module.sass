@@ -32,3 +32,57 @@
     font-weight: 500
     &:hover
         color: $white
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .inactive
+        padding: 15px
+        font-size: 21px
+        line-height: 24px
+
+@media screen and (max-width: 1380px)
+    .inactive
+        padding: 10px
+        font-size: 21px
+        line-height: 24px
+
+@media screen and (max-width: 1240px)
+    .inactive
+        padding: 10px
+        font-size: 18px
+        line-height: 20px
+
+@media screen and (max-width: 900px)
+    .active
+        font-weight: 300
+
+@media screen and (max-width: 700px)
+    .inactive
+        padding: 8px
+        font-size: 18px
+        line-height: 20px
+
+@media screen and (max-width: 530px)
+    .container
+        flex-direction: column
+        width: 100%
+
+    .inactive
+        padding: 10px
+        border: 0
+        width: 100%
+        border-bottom: 1px solid $red
+        margin: 0
+        color: $dark-gray
+        &:last-child
+            border: 0
+        &:hover
+            color: $red
+
+    .active
+        @extend .inactive
+        background-color: $red
+        color: $white
+        &:hover
+            color: $white

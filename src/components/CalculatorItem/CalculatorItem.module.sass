@@ -13,7 +13,7 @@
         text-transform: uppercase
         color: #FBFBF6
         text-align: center
-        margin: 20px 0 40px
+        margin: 20px 0 80px
 
 .calculatorContainer
     background-color: $white
@@ -146,3 +146,238 @@ input[type="radio"]:checked + label
     display: flex
     align-items: center
     justify-content: flex-start
+
+//medias
+
+@media screen and (max-width: 1650px)
+    .calculatorContainer
+        padding: 50px 70px
+
+@media screen and (max-width: 1550px)
+    .container
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            text-align: center
+            margin: 20px 0 70px
+
+    .inputContainer
+        margin-bottom: 35px
+        p
+            font-size: 26px
+            line-height: 28px
+            margin: 0 0 20px 0
+
+    .rangeInputContainer
+        padding: 5px 10px
+        p
+            margin: 0
+            font-size: 24px
+            line-height: 28px
+
+    .bottomContent
+        button
+            padding: 17px
+            font-weight: 500
+            font-size: 20px
+            line-height: 22px
+        p
+            font-size: 26px
+            line-height: 28px
+            margin: 0 15px 0 0
+        h6
+            font-weight: 600
+            font-size: 26px
+            line-height: 28px
+
+
+@media screen and (max-width: 1380px)
+    .container
+        padding: 0 80px
+        h2
+            font-weight: 600
+            font-size: 38px
+            line-height: 48px
+            margin: 20px 0 40px
+
+    .bottomContent
+        button
+            padding: 15px
+            font-weight: 500
+            font-size: 20px
+            line-height: 22px
+
+@media screen and (max-width: 1240px)
+    .calculatorContainer
+        padding: 30px 40px
+    
+    .container
+        h2
+            font-size: 34px
+            line-height: 40px
+            margin-bottom: 30px
+
+    .inputContainer
+        margin-bottom: 30px
+        p
+            font-size: 22px
+            line-height: 24px
+            margin: 0 0 10px 0
+
+    .rangeInputContainer
+        padding: 5px 10px
+        p
+            margin: 0
+            font-size: 23px
+            line-height: 25px
+
+    .radio
+        label
+            margin-right: 20px
+            font-size: 19px
+            line-height: 21px
+            text-align: center
+            color: $dark-gray
+            cursor: pointer
+            &::before
+                width: 10px
+                height: 10px
+                margin: 0 5px 1px 0
+
+    .bottomContent
+        button
+            padding: 15px
+            font-size: 18px
+        p
+            font-size: 22px
+            line-height: 24px
+            margin: 0 15px 0 0
+        h6
+            font-weight: 600
+            font-size: 24px
+            line-height: 26px
+
+@media screen and (max-width: 1050px)
+    .container
+        padding: 0 30px
+        h2
+            font-weight: 600
+            font-size: 30px
+            line-height: 38px
+            text-align: center
+            margin: 20px 0 30px
+
+@media screen and (max-width: 940px)
+    .calculatorContainer
+        padding: 20px
+
+@media screen and (max-width: 900px)
+    .calculatorContainer
+        align-items: center
+
+    .calculatorContainer
+        padding: 20px
+
+    .topContent
+        flex-direction: column
+
+    .leftContent, .rightContent
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    .inputContainer
+        flex-direction: row
+        align-items: flex-end
+        p
+            margin: 0 30px 0 0
+
+    .rangeInputContainer
+        p
+            margin: 0
+
+@media screen and (max-width: 700px)
+    .inputContainer
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 20px
+        p
+            margin: 0 0 10px
+            font-size: 20px
+
+    .container
+        padding: 0 30px
+        h2
+            font-weight: 500
+            font-size: 26px
+            line-height: 28px
+            margin: 20px 0 30px
+
+    .rangeInputContainer
+        p
+            margin: 0
+
+    .radio
+        label
+            font-size: 18px
+            line-height: 20px
+
+    .bottomContent
+        button
+            padding: 10px
+            font-size: 18px
+            line-height: 20px
+        p
+            font-size: 20px
+            line-height: 22px
+        h6
+            font-size: 22px
+            line-height: 24px
+
+@media screen and (max-width: 530px)
+    .container
+        padding: 0 10px
+        h2
+            margin: 20px 0
+
+    .calculatorContainer
+        padding: 20px 40px
+
+    .topContent, .bottomContent
+        width: 100%
+
+    .leftContent, .rightContent
+        width: 100%
+
+    .inputContainer
+        width: 100%
+
+    .radioBtnsContainer
+        width: 100%
+        flex-direction: column
+
+    .radio
+        label
+            margin: 0
+        &:first-child
+            margin-bottom: 10px
+
+    .rangeContainer
+        width: 100%
+        flex-direction: column
+        margin-bottom: 20px
+
+    .rangeInputContainer
+            margin: 0 0 10px
+
+    .bottomContent
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        button
+            margin: 0 0 10px
+
+@media screen and (max-width: 330px)
+    .calculatorContainer
+        padding: 20px 10px
