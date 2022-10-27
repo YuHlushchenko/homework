@@ -1,0 +1,35 @@
+.horizontal-slider {
+    width: 200px;
+}
+
+.example-thumb {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    background: #DB0000;
+    border: 5px solid #DB0000;
+    border-radius: 100%;
+    display: block;
+}
+
+.example-track {
+    position: relative;
+    background: #CECECE;
+}
+
+.example-track.example-track-0 {
+    background: #DB0000;
+}
+
+.horizontal-slider .example-track {
+    top: 0;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.horizontal-slider .example-thumb {
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    outline: none;
+}

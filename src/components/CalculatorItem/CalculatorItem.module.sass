@@ -37,8 +37,44 @@
         font-weight: 400
         font-size: 28px
         line-height: 30px
-        color: #413F44
+        color: $dark-gray
         margin: 0 0 20px 0
+
+.rangeContainer
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+.rangeInputContainer
+    border: 1px solid $light-gray
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    padding: 5px 10px
+    margin-right: 20px
+    input[type=number]
+        border: 0
+        outline: 0
+        color: $dark-gray
+        font-weight: 300
+        font-size: 20px
+        width: 40px
+        -moz-appearance: textfield
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
+    p
+        font-size: 20px
+        line-height: 22px
+        margin-bottom: 3px
+
+.rangeDetails
+    display: flex
+    align-items: flex-end
+    position: relative
+    top: 0
+    left: 0
 
 .radioBtnsContainer
     display: flex
@@ -74,7 +110,6 @@
 input[type="radio"]:checked + label
     &::before
         background: $red
-
 
 .bottomContent
     display: flex

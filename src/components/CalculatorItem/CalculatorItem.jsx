@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './CalculatorItem.module.sass'
 import List from '../List/List'
+import Range from '../Range/Range'
 
 const list = {
   rooms: [
@@ -22,6 +23,12 @@ const list = {
 }
 
 const CalculatorItem = ({ title = '' }) => {
+  const [rangeValue, setRangeValue] = useState(44)
+
+  const rangeHandler = (value) => {
+    setRangeValue(Number(value))
+  }
+
   return (
     <div className={styles.container}>
       {
@@ -37,7 +44,24 @@ const CalculatorItem = ({ title = '' }) => {
 
             <div className={styles.inputContainer}>
               <p>Загальна площа:</p>
+              <div className={styles.rangeContainer}>
+                <div className={styles.rangeInputContainer}>
+                  <input
+                    onChange={(e) => rangeHandler(e.target.value)}
+                    type='number'
+                    min='15'
+                    max='120'
+                    value={rangeValue}
+                  />
+                  <p className={styles.squareMetre}>м<sup>2</sup></p>
+                </div>
 
+                <Range
+                  rangeValue={rangeValue}
+                  rangeHandler={rangeHandler}
+                />
+
+              </div>
             </div>
 
             <div className={styles.inputContainer}>
@@ -95,7 +119,7 @@ const CalculatorItem = ({ title = '' }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
