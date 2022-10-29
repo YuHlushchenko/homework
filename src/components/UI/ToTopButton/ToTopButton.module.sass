@@ -1,0 +1,25 @@
+@import '../../../styles/colors'
+
+.container
+    position: fixed
+    border-radius: 5px
+    bottom: 30px
+    right: 10px
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 7px
+    border: 1px solid $red
+    outline: 0
+    background-color: transparent
+    transition: .3s
+    cursor: pointer
+    svg
+        path
+            transition: .3s
+    &:hover
+        background-color: $red
+        svg
+            path
+                stroke: $white
