@@ -1,2 +1,63 @@
+@import '../styles/colors'
+
 .container
-    margin-top: 200px
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h2
+        color: $red
+        text-align: center
+        font-weight: 600
+        font-size: 200px
+        line-height: 210px
+        margin: 40px 0
+    p
+        color: $dark-gray
+        text-align: center
+        font-weight: 400
+        font-size: 28px
+        line-height: 34px
+        margin: 20px 0
+        a
+            color: $red
+            text-decoration: underline $red
+            cursor: pointer
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .container
+        h2
+            font-size: 160px
+            line-height: 180px
+            margin: 30px 0
+
+@media screen and (max-width: 1320px)
+    .container
+        p
+            font-size: 26px
+            line-height: 30px
+            margin: 15px 0
+
+@media screen and (max-width: 1050px)
+    .container
+        h2
+            font-size: 150px
+            line-height: 160px
+            margin: 15px 0
+
+@media screen and (max-width: 850px)
+    .container
+        padding: 80px
+        p
+            font-size: 24px
+            line-height: 32px
+
+@media screen and (max-width: 600px)
+    .container
+        padding: 30px
+        h2
+            font-size: 130px
+            line-height: 150px
