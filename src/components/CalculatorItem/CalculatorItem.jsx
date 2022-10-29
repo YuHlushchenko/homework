@@ -25,16 +25,109 @@ const list = {
 const CalculatorItem = ({ title = '' }) => {
   const [rangeValue, setRangeValue] = useState(44)
   const [WSValue, setWSValue] = useState('separate')
+  const [locationValue, setLocationValue] = useState('IF')
+  const [roomValue, setRoomValue] = useState('Студія')
+  const [tariffValue, setTariffValue] = useState('Економ')
+  const [apartmentTypeValue, setApartmentTypeValue] = useState('Новобудова')
+
+  const [price, setPrice] = useState('21 800')
 
   const rangeHandler = (value) => {
     setRangeValue(Number(value))
   }
 
-  const WSHandler = (value) => {
-    setWSValue(value)
+  const listHandler = (listItem, value) => {
+    switch (listItem) {
+      case 'rooms':
+        setRoomValue(value)
+        break
+      case 'tariff':
+        setTariffValue(value)
+        break
+      case 'apartmentType':
+        setApartmentTypeValue(value)
+        break
+    }
   }
 
-  console.log('WS: ' + WSValue + ', range: ' + rangeValue + ', ')
+  const radioHandler = (key, value) => {
+    switch (key) {
+      case 'WS':
+        setWSValue(value)
+        break
+      case 'location':
+        setLocationValue(value)
+        break
+    }
+  }
+
+  const calcPrice = () => {
+    let res = rangeValue * 250
+
+    switch (roomValue) {
+      case 'Студія':
+        res *= 1.5
+        break
+      case 'Однокімнатна':
+        res *= 1.1
+        break
+      case 'Двокімнатна':
+        res *= 1.2
+        break
+      case 'Трикімнатна':
+        res *= 1.3
+        break
+    }
+
+    switch (tariffValue) {
+      case 'Економ':
+        res *= 1.1
+        break
+      case 'Євроремонт':
+        res *= 1.4
+        break
+      case 'Бізнес':
+        res *= 1.5
+        break
+    }
+
+    switch (apartmentTypeValue) {
+      case 'Новобудова':
+        res *= 1.2
+        break
+      case 'Вторинний ринок':
+        res *= 1.1
+        break
+    }
+
+    if (WSValue === 'shared') {
+      res *= 0.85
+    }
+
+    if (locationValue === 'outOfCity') {
+      res *= 1.25
+    }
+
+    res = numberToString(res)
+
+    setPrice(res)
+  }
+
+  const numberToString = (price) => {
+    const roundedPrice = (Math.ceil(Math.round(price) / 100)) * 100
+    let priceArr = String(roundedPrice).split('')
+    let res = []
+
+    priceArr.reverse().map((item, index) => {
+      if(index % 3 === 0 && index !== 0) {
+        res.push(' ', item)
+      } else {
+        res.push(item)
+      }
+    })
+
+    return res.reverse()
+  }
 
   return (
     <div className={styles.container}>
@@ -46,7 +139,11 @@ const CalculatorItem = ({ title = '' }) => {
           <div className={styles.leftContent}>
             <div className={styles.inputContainer}>
               <p>Кімнатність:</p>
-              <List list={list.rooms} />
+              <List
+                list={list.rooms}
+                listHandler={listHandler}
+                listName={'rooms'}
+              />
             </div>
 
             <div className={styles.inputContainer}>
@@ -73,14 +170,22 @@ const CalculatorItem = ({ title = '' }) => {
 
             <div className={styles.inputContainer}>
               <p>Ремонт по тарифу:</p>
-              <List list={list.tariff} />
+              <List
+                list={list.tariff}
+                listHandler={listHandler}
+                listName={'tariff'}
+              />
             </div>
           </div>
 
           <div className={styles.rightContent}>
             <div className={styles.inputContainer}>
               <p>Тип квартири:</p>
-              <List list={list.apartmentType} />
+              <List
+                list={list.apartmentType}
+                listHandler={listHandler}
+                listName={'apartmentType'}
+              />
             </div>
 
             <div className={styles.inputContainer}>
@@ -88,12 +193,12 @@ const CalculatorItem = ({ title = '' }) => {
               <div className={styles.radioBtnsContainer}>
 
                 <div className={styles.radio}>
-                  <input type="radio" defaultChecked value='separate' id='separate' name='WS' />
+                  <input onChange={(e) => radioHandler('WS', e.target.value)} type="radio" defaultChecked value='separate' id='separate' name='WS' />
                   <label htmlFor="separate">Роздільний</label>
                 </div>
 
                 <div className={styles.radio}>
-                  <input type="radio" value='shared' id='shared' name='WS' />
+                  <input onChange={(e) => radioHandler('WS', e.target.value)} type="radio" value='shared' id='shared' name='WS' />
                   <label htmlFor="shared">Спільний</label>
                 </div>
 
@@ -105,12 +210,12 @@ const CalculatorItem = ({ title = '' }) => {
               <div className={styles.radioBtnsContainer}>
 
                 <div className={styles.radio}>
-                  <input onClick={(e) => console.log(e.target.value)} type="radio" defaultChecked value='IF' id='IF' name='location' />
+                  <input onChange={(e) => radioHandler('location', e.target.value)} type="radio" defaultChecked value='IF' id='IF' name='location' />
                   <label htmlFor="IF">Івано-Франківськ</label>
                 </div>
 
                 <div className={styles.radio}>
-                  <input onChange={(e) => WSHandler(e.target.value)} type="radio" value='outOfCity' id='outOfCity' name='location' />
+                  <input onChange={(e) => radioHandler('location', e.target.value)} type="radio" value='outOfCity' id='outOfCity' name='location' />
                   <label htmlFor="outOfCity">За містом</label>
                 </div>
 
@@ -119,10 +224,10 @@ const CalculatorItem = ({ title = '' }) => {
           </div>
         </div>
         <div className={styles.bottomContent}>
-          <button>Розрахувати вартість</button>
+          <button onClick={calcPrice}>Розрахувати вартість</button>
           <div className={styles.priceContainer}>
             <p>Всього:</p>
-            <h6>16 000$</h6>
+            <h6>{price}$</h6>
           </div>
         </div>
       </div>

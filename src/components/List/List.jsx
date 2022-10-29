@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import styles from './List.module.sass'
 import PropTypes from 'prop-types'
 
-const List = ({ list }) => {
+const List = ({ list, listHandler, listName }) => {
     const [active, setActive] = useState(0)
 
     const clickHandler = (index) => {
         setActive(index)
+        listHandler(listName, list[index])
     }
 
     return (
@@ -29,7 +30,9 @@ const List = ({ list }) => {
 }
 
 List.propTypes = {
-    list: PropTypes.array
+    list: PropTypes.array,
+    listHandler: PropTypes.func,
+    listName: PropTypes.string,
 }
 
 export default List
