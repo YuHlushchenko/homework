@@ -3,9 +3,9 @@
 .notificationContainer
     overflow: hidden
     position: fixed
-    top: 165px
-    right: 20px
-    z-index: 999
+    bottom: 100px
+    right: 10px
+    z-index: 1001
     display: flex
     align-items: flex-start
     justify-content: center
@@ -53,3 +53,39 @@
         width: 100%
     to
         width: 0
+
+//medias
+
+@media screen and (max-width: 1550px)
+    .notificationContainer
+        p
+            font-size: 20px
+
+@media screen and (max-width: 1320px)
+    .notificationContainer
+        p
+            font-size: 18px
+            
+@media screen and (max-width: 1050px)
+    .notificationContainer
+        top: 135px
+        bottom: auto
+        p
+            font-size: 16px
+            margin: 10px
+
+    .closeBtnContainer
+        position: absolute
+        top: 3px
+        button
+            svg
+                width: 20px
+                height: 20px
+                    
+    .lineProgress
+        height: 5px
+
+@media screen and (max-width: 700px)
+    .notificationContainer
+        left: 10px
+        top: 85px

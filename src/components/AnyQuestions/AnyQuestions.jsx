@@ -5,9 +5,9 @@ import axios from 'axios'
 import Notification from '@components/Notification/Notification'
 
 const AnyQuestions = () => {
-    const [showNotification, setShowNotification] = useState(false)
+    const [showNotification, setShowNotification] = useState(true)
     const [notification, setNotification] = useState({
-        message: '',
+        message: 'aosdjfjasefj jsfi jisdj  asdlfuij lajsdf jio fijasd',
         isSuccess: false,
     })
 
@@ -84,42 +84,12 @@ const AnyQuestions = () => {
                             required="required"
                             minLength={5}
                         />
-                        <Button
-                            inlineStyle={
-                                window.innerWidth <= 1550
-                                    ?
-                                    window.innerWidth <= 1320
-                                        ?
-                                        window.innerWidth <= 1050
-                                            ?
-                                            window.innerWidth <= 600
-                                                ?
-                                                {
-                                                    width: '100%',
-                                                    fontSize: '14px',
-                                                    padding: '10px 15px'
-                                                }
-                                                :
-                                                {
-                                                    width: '400px'
-                                                }
-                                            :
-                                            {
-                                                width: '450px'
-                                            }
-                                        :
-                                        {
-                                            width: '650px',
-                                            padding: '20px'
-                                        }
-                                    :
-                                    {
-                                        width: '700px',
-                                        padding: '25px'
-                                    }
-                            }
-                            value='Відправити повідомлення'
-                        />
+                        <div className={styles.btnContainer}>
+                            <Button
+                                type='submit'
+                                value='Відправити повідомлення'
+                            />
+                        </div>
                     </form>
                 </div>
             </div>
