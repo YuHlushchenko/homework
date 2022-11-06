@@ -1,0 +1,55 @@
+@import '../../styles/colors'
+
+.notificationContainer
+    overflow: hidden
+    position: fixed
+    top: 165px
+    right: 20px
+    z-index: 999
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    border: 1px
+    border-radius: 10px
+    padding-top: 15px
+    p
+        color: $white
+        font-size: 22px
+        margin: 15px
+
+.closeBtnContainer
+    position: absolute
+    top: 5px
+    right: 3px
+    button
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 0
+        outline: 0
+        background-color: transparent
+        cursor: pointer
+        transition: .3s
+        &:hover
+            animation-duration: .3s
+            animation-name: rotate
+
+.lineProgress
+    width: 100%
+    height: 8px
+    background-color: $grey
+    animation-duration: 5s
+    animation-name: disappearing
+
+@keyframes rotate
+    from
+        transform: rotate(0)
+    to
+        transform: rotate(180deg)
+
+@keyframes disappearing
+    from
+        width: 100%
+    to
+        width: 0

@@ -1,6 +1,7 @@
 @import '../../../styles/colors'
     
 .default
+    width: 100%
     background-color: $red
     color: $white
     font-size: 22px
@@ -29,4 +30,6 @@
         border: 1px solid $red
         color: $red
 
-
+@media screen and (max-width: 600px)
+    .default
+        font-size: 16px

@@ -8,6 +8,7 @@ const Button = ({
   btnStyle,
   handleClick,
   inlineStyle,
+  disabled = false,
   id = null,
 }) => {
   return (
@@ -16,6 +17,7 @@ const Button = ({
       className={
         btnStyle ? `${styles.default} ${styles[btnStyle]}` : styles.default
       }
+      disabled={disabled}
       style={inlineStyle}
       type={btnType}
       onClick={handleClick}>
@@ -28,6 +30,7 @@ Button.propTypes = {
   value: PropTypes.string,
   btnType: PropTypes.string,
   btnStyle: PropTypes.string,
+  disabled: PropTypes.bool,
   id: PropTypes.string,
   handleClick: PropTypes.func,
   inlineStyle: PropTypes.object,

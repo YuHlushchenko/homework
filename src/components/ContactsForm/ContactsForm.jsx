@@ -1,10 +1,82 @@
-import React from 'react'
-import Button from '../UI/Button/Button'
+import { useState } from 'react'
+import Button from '@components/UI/Button/Button'
+import Notification from '@components/Notification/Notification'
 import styles from './ContactsForm.module.sass'
+import axios from 'axios'
+
+const useInput = (initialValue) => {
+    const [value, setValue] = useState(initialValue)
+
+    const onChange = (e) => {
+        console.log(e.target.value)
+        setValue(e.target.value)
+    }
+
+    return {
+        value,
+        onChange,
+        handleClear: () => setValue('')
+    }
+}
 
 const ContactsForm = () => {
+    const userName = useInput('')
+    const userNumber = useInput('')
+    const userMessage = useInput('')
+
+    const [showNotification, setShowNotification] = useState(false)
+    const [notification, setNotification] = useState({
+        message: '',
+        isSuccess: false,
+    })
+
+    const formSubmit = (e, name, number, messageText) => {
+        e.preventDefault()
+
+        const TG_CHAT_ID = process.env.REACT_APP_TG_CHAT_ID
+        const TG_URL_API = process.env.REACT_APP_TG_URL_API
+
+        let message = '<b>Запит "Відправити повідомлення"</b>\n'
+        message += `<b>Ім'я: </b> ${name} \n`
+        message += `<b>Номер телефону: </b> ${number} \n`
+        message += `<b>Текст: </b> ${messageText}`
+
+        axios.post(TG_URL_API, {
+            chat_id: TG_CHAT_ID,
+            parse_mode: 'html',
+            text: message,
+        }).then(() => {
+            userName.handleClear()
+            userNumber.handleClear()
+            userMessage.handleClear()
+            setNotification({
+                message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
+                isSuccess: true,
+            })
+        }).catch((error) => {
+            setNotification({
+                message: 'Схоже сталася помилка. Запит НЕ надіслано.',
+                isSuccess: false,
+            })
+
+            console.error(error)
+        }).finally(() => {
+            setShowNotification(true)
+
+            setTimeout(() => {
+                setShowNotification(false)
+            }, 5000)
+        })
+    }
+
     return (
         <div className={styles.contactsFormContainer}>
+            {
+                showNotification && <Notification
+                    textNotification={notification}
+                    setShowNotification={setShowNotification}
+                />
+            }
             <div className={styles.leftContainer}>
                 <h2>КОНТАКТИ</h2>
 
@@ -35,60 +107,39 @@ const ContactsForm = () => {
             </div>
 
             <div className={styles.formContainer}>
-                <form>
-                    <input 
+                <form onSubmit={(e) => formSubmit(e, userName.value, userNumber.value, userMessage.value)}>
+                    <input
                         type="text"
                         placeholder='Ваше Ім’я'
                         required="required"
                         minLength={3}
                         maxLength={40}
+                        value={userName.value}
+                        onChange={(e) => userName.onChange(e)}
                     />
-                    <input 
+                    <input
                         type="tel"
                         name="phone"
                         placeholder='+38 09 000 00 00'
                         required="required"
+                        value={userNumber.value}
+                        onChange={(e) => userNumber.onChange(e)}
                     />
-                    <textarea 
+                    <textarea
                         type="text"
                         placeholder='Повідомлення...'
                         required="required"
                         minLength={5}
+                        value={userMessage.value}
+                        onChange={(e) => userMessage.onChange(e)}
                     />
-                    <Button 
-                        inlineStyle={
-                            window.innerWidth <= 1550
-                            ?
-                                window.innerWidth <= 1320
-                                ? 
-                                    window.innerWidth <= 1050
-                                    ?
-                                        window.innerWidth <= 600
-                                        ?
-                                        {
-                                            width: '100%',
-                                            fontSize: '12px'
-                                        }
-                                        :
-                                        {
-                                            width: '400px'
-                                        }
-                                    :
-                                    {
-                                        width: '450px'
-                                    }
-                                :
-                                {
-                                    width: '650px'
-                                }
-                            :
-                            {
-                                width: '700px'
-                            }
-                        }
-                        value='Відправити повідомлення'
-                        btnStyle={'red'}
-                    />
+                    <div className={styles.btnContainer}>
+                        <Button
+                            value='Відправити повідомлення'
+                            btnStyle={'red'}
+                            type={'submit'}
+                        />
+                    </div>
                 </form>
             </div>
         </div>
