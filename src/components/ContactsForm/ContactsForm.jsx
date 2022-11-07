@@ -15,7 +15,6 @@ const useInput = (initialValue, validatiions) => {
     }
 
     const onChange = (e) => {
-        console.log(e.target.value)
         setValue(e.target.value)
     }
 
@@ -175,9 +174,9 @@ const ContactsForm = () => {
                         <Button
                             value='Відправити повідомлення'
                             btnStyle={
-                                userName.inputValid &&
-                                    userNumber.inputValid &&
-                                    userMessage.inputValid
+                                (!userName.isDirty || userName.inputValid) &&
+                                (!userNumber.isDirty || userNumber.inputValid) &&
+                                (!userMessage.isDirty || userMessage.inputValid)
                                     ?
                                     'red'
                                     :
@@ -185,9 +184,9 @@ const ContactsForm = () => {
                             }
                             type={'submit'}
                             disabled={
-                                !userName.inputValid ||
-                                !userNumber.inputValid ||
-                                !userMessage.inputValid
+                                (userName.isDirty && !userName.inputValid) ||
+                                (userNumber.isDirty && !userNumber.inputValid) ||
+                                (userMessage.isDirty && !userMessage.inputValid)
                             }
                         />
                     </div>

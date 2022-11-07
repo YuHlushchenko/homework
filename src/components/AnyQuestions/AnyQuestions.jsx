@@ -19,9 +19,10 @@ const AnyQuestions = () => {
         const TG_CHAT_ID = process.env.REACT_APP_TG_CHAT_ID
         const TG_URL_API = process.env.REACT_APP_TG_URL_API
 
+
         let message = '<b>Запит "Залишились питання"</b>\n'
-        message += `<b>Ім'я: </b> ${data.name} \n`
-        message += `<b>Номер телефону: </b> ${data.number} \n`
+        message += `<b>Ім'я: </b> ${data.name}\n`
+        message += `<b>Номер телефону: </b> ${data.number}\n`
         message += `<b>Текст: </b> ${data.messageText}`
 
         axios.post(TG_URL_API, {
