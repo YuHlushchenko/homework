@@ -3,9 +3,16 @@ import Button from '@components/UI/Button/Button'
 import Notification from '@components/Notification/Notification'
 import styles from './ContactsForm.module.sass'
 import axios from 'axios'
+import { useValidation } from '@hooks/useValidation'
 
-const useInput = (initialValue) => {
+const useInput = (initialValue, validatiions) => {
     const [value, setValue] = useState(initialValue)
+    const [isDirty, setDirty] = useState(false)
+    const valid = useValidation(value, validatiions)
+
+    const onBlur = () => {
+        setDirty(true)
+    }
 
     const onChange = (e) => {
         console.log(e.target.value)
@@ -14,15 +21,19 @@ const useInput = (initialValue) => {
 
     return {
         value,
+        isDirty,
         onChange,
-        handleClear: () => setValue('')
+        handleClear: () => setValue(''),
+        onBlur,
+        handleBLurClear: () => setDirty(false),
+        ...valid
     }
 }
 
 const ContactsForm = () => {
-    const userName = useInput('')
-    const userNumber = useInput('')
-    const userMessage = useInput('')
+    const userName = useInput('', { isEmpty: true, minLength: 3 })
+    const userNumber = useInput('', { isEmpty: true, minLength: 10, isNumber: false })
+    const userMessage = useInput('', { isEmpty: true, minLength: 10 })
 
     const [showNotification, setShowNotification] = useState(false)
     const [notification, setNotification] = useState({
@@ -47,8 +58,11 @@ const ContactsForm = () => {
             text: message,
         }).then(() => {
             userName.handleClear()
+            userName.handleBLurClear()
             userNumber.handleClear()
+            userNumber.handleBLurClear()
             userMessage.handleClear()
+            userMessage.handleBLurClear()
             setNotification({
                 message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
                 isSuccess: true,
@@ -108,6 +122,12 @@ const ContactsForm = () => {
 
             <div className={styles.formContainer}>
                 <form onSubmit={(e) => formSubmit(e, userName.value, userNumber.value, userMessage.value)}>
+                    {
+                        (userName.isDirty && userName.isEmpty) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Поле не може бути порожнім.</span>
+                    }
+                    {
+                        (userName.isDirty && userName.minLengthError) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Не менше трьох символів.</span>
+                    }
                     <input
                         type="text"
                         placeholder='Ваше Ім’я'
@@ -116,15 +136,32 @@ const ContactsForm = () => {
                         maxLength={40}
                         value={userName.value}
                         onChange={(e) => userName.onChange(e)}
+                        onBlur={userName.onBlur}
                     />
+                    {
+                        (userNumber.isDirty && userNumber.isEmpty) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Поле не може бути порожнім.</span>
+                    }
+                    {
+                        (userNumber.isDirty && userNumber.minLengthError) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Не менше десяти символів.</span>
+                    }
+                    {
+                        (userNumber.isDirty && userNumber.numberError) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Неправильний формат даних.</span>
+                    }
                     <input
-                        type="tel"
+                        type="number"
                         name="phone"
                         placeholder='+38 09 000 00 00'
                         required="required"
                         value={userNumber.value}
                         onChange={(e) => userNumber.onChange(e)}
+                        onBlur={userNumber.onBlur}
                     />
+                    {
+                        (userMessage.isDirty && userMessage.isEmpty) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Поле не може бути порожнім.</span>
+                    }
+                    {
+                        (userMessage.isDirty && userMessage.minLengthError) && <span style={{ color: '#DB0000', paddingBottom: '5px' }}>Не менше десяти символів.</span>
+                    }
                     <textarea
                         type="text"
                         placeholder='Повідомлення...'
@@ -132,12 +169,26 @@ const ContactsForm = () => {
                         minLength={5}
                         value={userMessage.value}
                         onChange={(e) => userMessage.onChange(e)}
+                        onBlur={userMessage.onBlur}
                     />
                     <div className={styles.btnContainer}>
                         <Button
                             value='Відправити повідомлення'
-                            btnStyle={'red'}
+                            btnStyle={
+                                userName.inputValid &&
+                                    userNumber.inputValid &&
+                                    userMessage.inputValid
+                                    ?
+                                    'red'
+                                    :
+                                    'disabled'
+                            }
                             type={'submit'}
+                            disabled={
+                                !userName.inputValid ||
+                                !userNumber.inputValid ||
+                                !userMessage.inputValid
+                            }
                         />
                     </div>
                 </form>

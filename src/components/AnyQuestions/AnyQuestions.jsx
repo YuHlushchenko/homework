@@ -5,9 +5,9 @@ import axios from 'axios'
 import Notification from '@components/Notification/Notification'
 
 const AnyQuestions = () => {
-    const [showNotification, setShowNotification] = useState(true)
+    const [showNotification, setShowNotification] = useState(false)
     const [notification, setNotification] = useState({
-        message: 'aosdjfjasefj jsfi jisdj  asdlfuij lajsdf jio fijasd',
+        message: '',
         isSuccess: false,
     })
 
@@ -50,6 +50,7 @@ const AnyQuestions = () => {
             }, 5000)
         })
     }
+
     return (
         <div className={styles.anyQuestionsContainer}>
             {
