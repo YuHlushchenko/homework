@@ -78,6 +78,12 @@
             padding: 20px 30px
             margin-bottom: 30px
             border: 1px solid $black
+        input[type=number]
+            -moz-appearance: textfield
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button
+                -webkit-appearance: none
+                margin: 0
         textarea
             height: 200px
             margin-bottom: 60px
@@ -130,7 +136,7 @@
 
 @media screen and (max-width: 1320px)
     .contactsFormContainer
-        padding: 130px 120px 50px 80px 
+        padding: 130px 120px 50px 80px
 
     .leftContainer
         h2
@@ -174,7 +180,7 @@
 
 @media screen and (max-width: 1050px)
     .contactsFormContainer
-        padding: 100px 30px 50px 30px 
+        padding: 100px 30px 50px 30px
 
     .leftContainer
         h2
@@ -237,7 +243,7 @@
 
     .leftContainer
         margin-top: 60px
-        
+
     .formContainer
         padding: 20px
         width: 100%
