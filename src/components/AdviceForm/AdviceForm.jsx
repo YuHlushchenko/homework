@@ -1,16 +1,14 @@
 import styles from './AdviceForm.module.sass'
-import { useState } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import Notification from '@components/Notification/Notification'
 import { useForm } from 'react-hook-form'
+import { useSetRecoilState } from 'recoil'
+import { notificationState, showNotificationState } from '../../atoms'
 
 const AdviceForm = ({ imgUrl }) => {
-  const [showNotification, setShowNotification] = useState(false)
-  const [notification, setNotification] = useState({
-    message: '',
-    isSuccess: false,
-  })
+  const setNotification = useSetRecoilState(notificationState)
+  const setShowNotification = useSetRecoilState(showNotificationState)
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
 
   const submit = (dataForm) => {
@@ -51,12 +49,6 @@ const AdviceForm = ({ imgUrl }) => {
 
   return (
     <div className={styles.adviceForm}>
-      {
-        showNotification && <Notification
-          textNotification={notification}
-          setShowNotification={setShowNotification}
-        />
-      }
       <div
         className={styles.imgContainer}
         style={{ backgroundImage: `url(${imgUrl})` }}></div>

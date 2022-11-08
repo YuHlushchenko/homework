@@ -1,65 +1,66 @@
-import { useState } from 'react'
 import styles from './AnyQuestions.module.sass'
 import Button from '../UI/Button/Button'
 import axios from 'axios'
-import Notification from '@components/Notification/Notification'
+import { validateAnyQuestionForm } from '@utils/validation'
+import { useSetRecoilState } from 'recoil'
+import { notificationState, showNotificationState } from '../../atoms'
 
 const AnyQuestions = () => {
-    const [showNotification, setShowNotification] = useState(false)
-    const [notification, setNotification] = useState({
-        message: '',
-        isSuccess: false,
-    })
+    const setNotification = useSetRecoilState(notificationState)
+    const setShowNotification = useSetRecoilState(showNotificationState)
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         const data = Object.fromEntries(new FormData(e.target))
+        const isValid = validateAnyQuestionForm(data)
 
-        const TG_CHAT_ID = process.env.REACT_APP_TG_CHAT_ID
-        const TG_URL_API = process.env.REACT_APP_TG_URL_API
+        if (isValid) {
+            const TG_CHAT_ID = process.env.REACT_APP_TG_CHAT_ID
+            const TG_URL_API = process.env.REACT_APP_TG_URL_API
 
 
-        let message = '<b>Запит "Залишились питання"</b>\n'
-        message += `<b>Ім'я: </b> ${data.name}\n`
-        message += `<b>Номер телефону: </b> ${data.number}\n`
-        message += `<b>Текст: </b> ${data.messageText}`
+            let message = '<b>Запит "Залишились питання"</b>\n'
+            message += `<b>Ім'я: </b> ${data.name}\n`
+            message += `<b>Номер телефону: </b> ${data.number}\n`
+            message += `<b>Текст: </b> ${data.messageText}`
 
-        axios.post(TG_URL_API, {
-            chat_id: TG_CHAT_ID,
-            parse_mode: 'html',
-            text: message,
-        }).then(() => {
-            e.target.reset()
+            axios.post(TG_URL_API, {
+                chat_id: TG_CHAT_ID,
+                parse_mode: 'html',
+                text: message,
+            }).then(() => {
+                e.target.reset()
 
-            setNotification({
-                message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
-                isSuccess: true,
+                setNotification({
+                    message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
+                    isSuccess: true,
+                })
+            }).catch((error) => {
+                setNotification({
+                    message: 'Схоже сталася помилка. Запит НЕ надіслано.',
+                    isSuccess: false,
+                })
+
+                console.error(error)
+            }).finally(() => {
+                setShowNotification(true)
+
+                setTimeout(() => {
+                    setShowNotification(false)
+                }, 5000)
             })
-        }).catch((error) => {
+        }
+        else {
             setNotification({
                 message: 'Схоже сталася помилка. Запит НЕ надіслано.',
                 isSuccess: false,
             })
-
-            console.error(error)
-        }).finally(() => {
-            setShowNotification(true)
-
-            setTimeout(() => {
-                setShowNotification(false)
-            }, 5000)
-        })
+        }
     }
 
     return (
         <div className={styles.anyQuestionsContainer}>
-            {
-                showNotification && <Notification
-                    textNotification={notification}
-                    setShowNotification={setShowNotification}
-                />
-            }
             <div className={styles.bgCover}>
                 <div className={styles.formContainer}>
                     <h2>залишились питання?</h2>

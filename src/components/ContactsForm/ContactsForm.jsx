@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Button from '@components/UI/Button/Button'
-import Notification from '@components/Notification/Notification'
 import styles from './ContactsForm.module.sass'
 import axios from 'axios'
 import { useValidation } from '@hooks/useValidation'
+import { useSetRecoilState } from 'recoil'
+import { notificationState, showNotificationState } from '../../atoms'
 
 const useInput = (initialValue, validatiions) => {
     const [value, setValue] = useState(initialValue)
@@ -34,11 +35,8 @@ const ContactsForm = () => {
     const userNumber = useInput('', { isEmpty: true, minLength: 10, isNumber: false })
     const userMessage = useInput('', { isEmpty: true, minLength: 10 })
 
-    const [showNotification, setShowNotification] = useState(false)
-    const [notification, setNotification] = useState({
-        message: '',
-        isSuccess: false,
-    })
+    const setNotification = useSetRecoilState(notificationState)
+    const setShowNotification = useSetRecoilState(showNotificationState)
 
     const formSubmit = (e, name, number, messageText) => {
         e.preventDefault()
@@ -84,12 +82,6 @@ const ContactsForm = () => {
 
     return (
         <div className={styles.contactsFormContainer}>
-            {
-                showNotification && <Notification
-                    textNotification={notification}
-                    setShowNotification={setShowNotification}
-                />
-            }
             <div className={styles.leftContainer}>
                 <h2>КОНТАКТИ</h2>
 
