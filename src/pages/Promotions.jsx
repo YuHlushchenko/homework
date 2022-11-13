@@ -3,31 +3,31 @@ import PageWrapper from '@components/PageWrapper/PageWrapper'
 import styles from '../styles/promotions.module.sass'
 import PromotionItem from '@components/PromotionItem/PromotionItem'
 
+const promotions = [
+  {
+    imgSrc: '/promotionsImgs/img1.webp',
+    imgAlt: 'furniture',
+    isReverse: false,
+    titleText: 'Розумний Дім зі знижкою',
+    discount: ' - 50%',
+    date: '30.09.2021',
+    details:
+      'При замовленні ремонту в компанії Свої Стіни - діє знижка 50% на монтаж системи Розумного Будинку',
+  },
+
+  {
+    imgSrc: '/promotionsImgs/img2.webp',
+    imgAlt: 'furniture',
+    isReverse: true,
+    titleText: 'Дизайн-проект в подарунок',
+    discount: '',
+    date: '30.09.2021',
+    details:
+      'При замовленні ремонту в компанії "Свої Стіни" - дизайн проект в подарунок',
+  },
+]
+
 const Promotions = () => {
-  const promotions = [
-    {
-      imgSrc: '/promotionsImgs/img1.png',
-      imgAlt: 'furniture',
-      isReverse: false,
-      titleText: 'Розумний Дім зі знижкою',
-      discount: ' - 50%',
-      date: '30.09.2021',
-      details:
-        'При замовленні ремонту в компанії Свої Стіни - діє знижка 50% на монтаж системи Розумного Будинку',
-    },
-
-    {
-      imgSrc: '/promotionsImgs/img2.png',
-      imgAlt: 'furniture',
-      isReverse: true,
-      titleText: 'Дизайн-проект в подарунок',
-      discount: '',
-      date: '30.09.2021',
-      details:
-        'При замовленні ремонту в компанії "Свої Стіни" - дизайн проект в подарунок',
-    },
-  ]
-
   return (
     <PageWrapper>
       <section className={styles.promotionsSectionContainer}>

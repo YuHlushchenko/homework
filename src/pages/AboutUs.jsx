@@ -2,46 +2,46 @@ import React from 'react'
 import styles from '../styles/aboutUs.module.sass'
 import PageWrapper from '../components/PageWrapper/PageWrapper'
 
-const AboutUs = () => {
-  const infoBlocksContent = [
-    {
-      title: 'Логістика на нас',
-      description:
-        'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img1.png',
-    },
-    {
-      title: 'Поважаємо сусідів',
-      description:
-        'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img2.png',
-    },
-    {
-      title: 'Вивозимо сміття',
-      description:
-        'Loreptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img3.png',
-    },
-    {
-      title: 'Щоденний звіт',
-      description:
-        'Lorem ipsum dolor sit amet. Est uptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img4.png',
-    },
-    {
-      title: 'Вирішуємо всі питання',
-      description:
-        'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img5.png',
-    },
-    {
-      title: 'Контролюємо якість',
-      description:
-        'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-      bgImg: 'img6.png',
-    },
-  ]
+const infoBlocksContent = [
+  {
+    title: 'Логістика на нас',
+    description:
+      'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img1.png',
+  },
+  {
+    title: 'Поважаємо сусідів',
+    description:
+      'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img2.png',
+  },
+  {
+    title: 'Вивозимо сміття',
+    description:
+      'Loreptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img3.png',
+  },
+  {
+    title: 'Щоденний звіт',
+    description:
+      'Lorem ipsum dolor sit amet. Est uptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img4.png',
+  },
+  {
+    title: 'Вирішуємо всі питання',
+    description:
+      'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img5.png',
+  },
+  {
+    title: 'Контролюємо якість',
+    description:
+      'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
+    bgImg: 'img6.png',
+  },
+]
 
+const AboutUs = () => {
   return (
     <PageWrapper>
       <div className={styles.aboutUsContainer}>
@@ -51,7 +51,6 @@ const AboutUs = () => {
 
             <div className={styles.mainTextContainer}>
               <h2>Про компанію</h2>
-
               <p>
                 Наша компанія виконує професійний ремонт квартир та будинків,
                 комерційной нерухомості в Києві та області. Протягом 4 років
@@ -69,21 +68,20 @@ const AboutUs = () => {
 
           <div className={styles.bottomContentContainer}>
             <h2>чому обирають саме нас</h2>
-
             <p>
               Ми робимо все, щоб ви приймали якомога менше участі в роботах, і{' '}
               <br /> отримали саме той результат, на який очікували
             </p>
 
             <div className={styles.infoBlocksContainer}>
-              {infoBlocksContent.map((item, index) => {
+              {infoBlocksContent.map((item) => {
                 return (
                   <div
                     className={`${styles.infoBlock}`}
                     style={{
                       backgroundImage: `url(/aboutUsPageBackgrounds/${item.bgImg})`,
                     }}
-                    key={index}>
+                    key={item.title}>
                     <div className={styles.bgCover}>
                       <div className={styles.infoTitle}>
                         <svg

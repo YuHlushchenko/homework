@@ -2,26 +2,26 @@ import React from 'react'
 import styles from '../styles/partners.module.sass'
 import PageWrapper from '../components/PageWrapper/PageWrapper'
 
-const Partners = () => {
-  const partners = [
-    {
-      imgSrc: '/partnersLogos/antei.png',
-      alt: 'antei'
-    },
-    {
-      imgSrc: '/partnersLogos/knauf.png',
-      alt: 'knauf'
-    },
-    {
-      imgSrc: '/partnersLogos/artDoor.png',
-      alt: 'artDoor'
-    },
-    {
-      imgSrc: '/partnersLogos/grohe.png',
-      alt: 'grohe'
-    },
-  ]
+const partners = [
+  {
+    imgSrc: '/partnersLogos/antei.webp',
+    alt: 'antei'
+  },
+  {
+    imgSrc: '/partnersLogos/knauf.webp',
+    alt: 'knauf'
+  },
+  {
+    imgSrc: '/partnersLogos/artDoor.webp',
+    alt: 'artDoor'
+  },
+  {
+    imgSrc: '/partnersLogos/grohe.webp',
+    alt: 'grohe'
+  },
+]
 
+const Partners = () => {
   return (
     <PageWrapper>
       <section className={styles.partnersSectionContainer}>
@@ -32,9 +32,9 @@ const Partners = () => {
 
         <div className={styles.patnersLogosContainer}>
           {
-            partners.map((item, index) => {
+            partners.map((item) => {
               return (
-                <div className={styles.logoContainer} key={index}>
+                <div className={styles.logoContainer} key={item.alt}>
                   <img src={item.imgSrc} alt={item.alt} width='100%' />
                 </div>
               )
