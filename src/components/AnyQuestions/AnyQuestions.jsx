@@ -2,12 +2,25 @@ import styles from './AnyQuestions.module.sass'
 import Button from '../UI/Button/Button'
 import axios from 'axios'
 import { validateAnyQuestionForm } from '@utils/validation'
-import { useSetRecoilState } from 'recoil'
-import { notificationState, showNotificationState } from '../../atoms'
+import { useRecoilState } from 'recoil'
+import { notificationState } from '../../atoms'
+import { useEffect } from 'react'
 
 const AnyQuestions = () => {
-    const setNotification = useSetRecoilState(notificationState)
-    const setShowNotification = useSetRecoilState(showNotificationState)
+    const [notification, setNotification] = useRecoilState(notificationState)
+    let newNotificationArray = []
+
+    const createNotification = (message, isSuccess = false) => {
+        newNotificationArray = [
+            ...notification,
+            {
+                id: notification.length,
+                message,
+                isSuccess,
+            }
+        ]
+        setNotification(newNotificationArray)
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -15,10 +28,9 @@ const AnyQuestions = () => {
         const data = Object.fromEntries(new FormData(e.target))
         const isValid = validateAnyQuestionForm(data)
 
-        if (isValid) {
+        if (isValid === true) {
             const TG_CHAT_ID = process.env.REACT_APP_TG_CHAT_ID
             const TG_URL_API = process.env.REACT_APP_TG_URL_API
-
 
             let message = '<b>Запит "Залишились питання"</b>\n'
             message += `<b>Ім'я: </b> ${data.name}\n`
@@ -31,33 +43,45 @@ const AnyQuestions = () => {
                 text: message,
             }).then(() => {
                 e.target.reset()
-
-                setNotification({
-                    message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
-                    isSuccess: true,
-                })
+                createNotification('Дані отримано. Ми Вам зателефонуємо.', true)
             }).catch((error) => {
-                setNotification({
-                    message: 'Схоже сталася помилка. Запит НЕ надіслано.',
-                    isSuccess: false,
-                })
+                createNotification('Схоже сталася помилка. Дані НЕ отримано.', false)
 
                 console.error(error)
-            }).finally(() => {
-                setShowNotification(true)
-
-                setTimeout(() => {
-                    setShowNotification(false)
-                }, 5000)
             })
         }
         else {
-            setNotification({
-                message: 'Схоже сталася помилка. Запит НЕ надіслано.',
-                isSuccess: false,
+            isValid.map((errorMessage, i) => {
+                newNotificationArray.push({
+                    id: notification.length + i,
+                    message: errorMessage,
+                    isSuccess: false,
+                })
             })
+            setNotification([
+                ...notification,
+                ...newNotificationArray,
+            ])
+            newNotificationArray = []
         }
     }
+
+    useEffect(() => {
+        const deleteNotification = (keys) => {
+            keys.map((key) => {
+                setNotification(
+                    notification.filter((item) => {
+                        item.id !== key
+                    })
+                )
+                console.log(notification)
+            })
+        }
+
+        const timeoutId = setTimeout(() => deleteNotification(Object.keys(notification)), 5000)
+
+        return () => clearTimeout(timeoutId)
+    }, [notification, setNotification])
 
     return (
         <div className={styles.anyQuestionsContainer}>

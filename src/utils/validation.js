@@ -30,7 +30,7 @@ export const validateAnyQuestionForm = (data) => {
 
     objectKeys.forEach((key) => {
         if (isEmpty(data[key])) {
-            errors.push(`${key} must not be empty`)
+            errors.push(`Поле ${key} не може бути порожнім.`)
         }
     })
 
@@ -39,11 +39,11 @@ export const validateAnyQuestionForm = (data) => {
     }
 
     if (!isPhoneNumber(data.number)) {
-        errors.push('Некоректно введено номер.')
+        errors.push('Некоректно введено номер телефону.')
     }
 
     if (!isMinLength(data.messageText, 10)) {
-        errors.push('Не менше десяти символів.')
+        errors.push('У полі "Повідомлення" не може бути менше десяти символів.')
     }
 
     return errors.length ? errors : true

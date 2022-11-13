@@ -3,8 +3,9 @@ import Button from '@components/UI/Button/Button'
 import styles from './ContactsForm.module.sass'
 import axios from 'axios'
 import { useValidation } from '@hooks/useValidation'
-import { useSetRecoilState } from 'recoil'
-import { notificationState, showNotificationState } from '../../atoms'
+import { useRecoilState } from 'recoil'
+import { notificationState } from '../../atoms'
+import { useEffect } from 'react'
 
 const useInput = (initialValue, validatiions) => {
     const [value, setValue] = useState(initialValue)
@@ -35,8 +36,37 @@ const ContactsForm = () => {
     const userNumber = useInput('', { isEmpty: true, minLength: 10, isNumber: false })
     const userMessage = useInput('', { isEmpty: true, minLength: 10 })
 
-    const setNotification = useSetRecoilState(notificationState)
-    const setShowNotification = useSetRecoilState(showNotificationState)
+    const [notification, setNotification] = useRecoilState(notificationState)
+    let newNotificationArray = []
+
+    const createNotification = (message, isSuccess = false) => {
+        newNotificationArray = [
+            ...notification,
+            {
+                id: notification.length,
+                message,
+                isSuccess,
+            }
+        ]
+        setNotification(newNotificationArray)
+    }
+
+    useEffect(() => {
+        const deleteNotification = (keys) => {
+            keys.map((key) => {
+                setNotification(
+                    notification.filter((item) => {
+                        item.id !== key
+                    })
+                )
+                console.log(notification)
+            })
+        }
+
+        const timeoutId = setTimeout(() => deleteNotification(Object.keys(notification)), 5000)
+
+        return () => clearTimeout(timeoutId)
+    }, [notification, setNotification])
 
     const formSubmit = (e, name, number, messageText) => {
         e.preventDefault()
@@ -60,23 +90,12 @@ const ContactsForm = () => {
             userNumber.handleBLurClear()
             userMessage.handleClear()
             userMessage.handleBLurClear()
-            setNotification({
-                message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
-                isSuccess: true,
-            })
+            createNotification('Дані отримано. Ми Вам зателефонуємо.', true)
         }).catch((error) => {
-            setNotification({
-                message: 'Схоже сталася помилка. Запит НЕ надіслано.',
-                isSuccess: false,
-            })
+            createNotification('Схоже сталася помилка. Дані НЕ отримано.', false)
 
             console.error(error)
         }).finally(() => {
-            setShowNotification(true)
-
-            setTimeout(() => {
-                setShowNotification(false)
-            }, 5000)
         })
     }
 
@@ -167,8 +186,8 @@ const ContactsForm = () => {
                             value='Відправити повідомлення'
                             btnStyle={
                                 (!userName.isDirty || userName.inputValid) &&
-                                (!userNumber.isDirty || userNumber.inputValid) &&
-                                (!userMessage.isDirty || userMessage.inputValid)
+                                    (!userNumber.isDirty || userNumber.inputValid) &&
+                                    (!userMessage.isDirty || userMessage.inputValid)
                                     ?
                                     'red'
                                     :

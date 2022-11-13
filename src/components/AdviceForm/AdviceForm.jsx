@@ -2,14 +2,44 @@ import styles from './AdviceForm.module.sass'
 import PropTypes from 'prop-types'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
-import { useSetRecoilState } from 'recoil'
-import { notificationState, showNotificationState } from '../../atoms'
+import { useRecoilState } from 'recoil'
+import { notificationState } from '../../atoms'
+import { useEffect } from 'react'
 
 const AdviceForm = ({ imgUrl }) => {
-  const setNotification = useSetRecoilState(notificationState)
-  const setShowNotification = useSetRecoilState(showNotificationState)
-
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
+  
+  const [notification, setNotification] = useRecoilState(notificationState)
+  let newNotificationArray = []
+
+  const createNotification = (message, isSuccess = false) => {
+      newNotificationArray = [
+          ...notification,
+          {
+              id: notification.length,
+              message,
+              isSuccess,
+          }
+      ]
+      setNotification(newNotificationArray)
+  }
+
+  useEffect(() => {
+    const deleteNotification = (keys) => {
+        keys.map((key) => {
+            setNotification(
+                notification.filter((item) => {
+                    item.id !== key
+                })
+            )
+            console.log(notification)
+        })
+    }
+
+    const timeoutId = setTimeout(() => deleteNotification(Object.keys(notification)), 5000)
+
+    return () => clearTimeout(timeoutId)
+}, [notification, setNotification])
 
   const submit = (dataForm) => {
 
@@ -26,24 +56,10 @@ const AdviceForm = ({ imgUrl }) => {
       text: message,
     }).then(() => {
       reset()
-
-      setNotification({
-        message: 'Ваш запит успішно відправлено. Ми Вам зателефонуємо.',
-        isSuccess: true,
-      })
+      createNotification('Дані отримано. Ми Вам зателефонуємо.', true)
     }).catch((error) => {
-      setNotification({
-        message: 'Схоже сталася помилка. Запит НЕ надіслано.',
-        isSuccess: false,
-      })
-
+      createNotification('Схоже сталася помилка. Дані НЕ отримано.', false)
       console.error(error)
-    }).finally(() => {
-      setShowNotification(true)
-
-      setTimeout(() => {
-        setShowNotification(false)
-      }, 5000)
     })
   }
 

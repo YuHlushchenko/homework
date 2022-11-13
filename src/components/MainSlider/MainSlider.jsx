@@ -37,23 +37,15 @@ const MainSlider = () => {
 
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
+                                        <div className={styles.rightBtnContainer}>
                                         <Button
                                             value={'Замовити дзвінок'}
                                             btnStyle={'white'}
@@ -63,11 +55,11 @@ const MainSlider = () => {
                                                     undefined
                                                     :
                                                     {
-                                                        width: '280px',
-                                                        fontSize: '17px'
+                                                        
                                                     }
                                             }
                                         />
+                                        </div>
                                     </a>
                                 </div>
 
@@ -85,21 +77,12 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
                                         <Button
@@ -132,21 +115,12 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
                                         <Button
@@ -179,21 +153,12 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
                                         <Button
@@ -226,21 +191,12 @@ const MainSlider = () => {
                                 <p>Зробимо ремонт вашої мрії та втілимо <br /> всі ваші бажання по дизайн-проєкту</p>
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
                                         <Button
@@ -274,21 +230,12 @@ const MainSlider = () => {
 
                                 <div className={styles.bttnsContainer}>
                                     <a href='/calculator'>
-                                        <Button
-                                            value={'Розрахувати вартість'}
-                                            btnStyle={'white'}
-                                            inlineStyle={
-                                                window.innerWidth > 730
-                                                    ?
-                                                    { marginRight: '60px' }
-                                                    :
-                                                    {
-                                                        marginBottom: '30px',
-                                                        width: '280px',
-                                                        fontSize: '17px'
-                                                    }
-                                            }
-                                        />
+                                        <div className={styles.leftBtnContainer}>
+                                            <Button
+                                                value={'Розрахувати вартість'}
+                                                btnStyle={'white'}
+                                            />
+                                        </div>
                                     </a>
                                     <a href='/contacts'>
                                         <Button

@@ -3,18 +3,26 @@ import PropTypes from 'prop-types'
 import Navigation from '@components/Navigation/Navigation'
 import Footer from '@components/Footer/Footer'
 import ToTopButton from '@components/UI/ToTopButton/ToTopButton'
-import { useRecoilValue } from 'recoil'
-import { showNotificationState } from '../../atoms'
+import NotificationsContainer from '@components/NotificationsContainer/NotificationsContainer'
 import Notification from '../Notification/Notification'
+import { useRecoilValue } from 'recoil'
+import { notificationState } from '../../atoms'
 
 const PageWrapper = ({ children }) => {
-  const showNotification = useRecoilValue(showNotificationState)
+  const notification = useRecoilValue(notificationState)
   return (
     <>
       <Navigation />
-      {
-        showNotification && <Notification />
-      }
+      <NotificationsContainer>
+        {
+          notification && notification.map((item) => {
+            return <Notification
+              key={item.id}
+              notificationData={item}
+            />
+          })
+        }
+      </NotificationsContainer>
       {children}
       <ToTopButton />
       <Footer />
