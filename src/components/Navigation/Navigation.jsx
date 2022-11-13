@@ -208,7 +208,10 @@ const Navigation = () => {
 
           {isSearchInput ? (
             <>
-              onClick={() => { setSearchInput(false)}}
+              onClick=
+              {() => {
+                setSearchInput(false)
+              }}
               <div
                 className={styles.searchContainer}
                 style={{

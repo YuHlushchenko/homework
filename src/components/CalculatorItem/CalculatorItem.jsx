@@ -5,21 +5,9 @@ import List from '../List/List'
 import Range from '../Range/Range'
 
 const list = {
-  rooms: [
-    'Студія',
-    'Однокімнатна',
-    'Двокімнатна',
-    'Трикімнатна',
-  ],
-  tariff: [
-    'Економ',
-    'Євроремонт',
-    'Бізнес',
-  ],
-  apartmentType: [
-    'Новобудова',
-    'Вторинний ринок',
-  ]
+  rooms: ['Студія', 'Однокімнатна', 'Двокімнатна', 'Трикімнатна'],
+  tariff: ['Економ', 'Євроремонт', 'Бізнес'],
+  apartmentType: ['Новобудова', 'Вторинний ринок'],
 }
 
 const CalculatorItem = ({ title = '' }) => {
@@ -113,11 +101,33 @@ const CalculatorItem = ({ title = '' }) => {
     setPrice(res)
   }
 
+  // const numberToString = (price) => {
+  //   const roundedPrice = `${Math.ceil(Math.round(price) / 100) * 100}`
+  //   const step = 3
+
+  //   const iteration = Math.floor(roundedPrice.length / step)
+  //   console.log(roundedPrice, iteration)
+
+  //   let subStrings = ''
+
+  //   for (let i = 1; i <= iteration; i++) {
+  //     const prevIndex = roundedPrice.length - i * step
+  //     subStrings =
+  //       roundedPrice.slice(prevIndex, prevIndex + step) + ' ' + subStrings
+  //     console.log(subStrings)
+  //     if (i === iteration) {
+  //       subStrings = roundedPrice.slice(0, prevIndex) + ' ' + subStrings
+  //     }
+  //   }
+
+  //   return subStrings
+  // }
+
   const numberToString = (price) => {
     const roundedPrice = (Math.ceil(Math.round(price) / 100)) * 100
     let priceArr = String(roundedPrice).split('')
     let res = []
-
+    
     priceArr.reverse().map((item, index) => {
       if(index % 3 === 0 && index !== 0) {
         res.push(' ', item)
@@ -125,15 +135,13 @@ const CalculatorItem = ({ title = '' }) => {
         res.push(item)
       }
     })
-
+    
     return res.reverse()
   }
 
   return (
     <div className={styles.container}>
-      {
-        title && <h2>{title}</h2>
-      }
+      {title && <h2>{title}</h2>}
       <div className={styles.calculatorContainer}>
         <div className={styles.topContent}>
           <div className={styles.leftContent}>
@@ -152,19 +160,17 @@ const CalculatorItem = ({ title = '' }) => {
                 <div className={styles.rangeInputContainer}>
                   <input
                     onChange={(e) => rangeHandler(e.target.value)}
-                    type='number'
-                    min='15'
-                    max='120'
+                    type="number"
+                    min="15"
+                    max="120"
                     value={rangeValue}
                   />
-                  <p className={styles.squareMetre}>м<sup>2</sup></p>
+                  <p className={styles.squareMetre}>
+                    м<sup>2</sup>
+                  </p>
                 </div>
 
-                <Range
-                  rangeValue={rangeValue}
-                  rangeHandler={rangeHandler}
-                />
-
+                <Range rangeValue={rangeValue} rangeHandler={rangeHandler} />
               </div>
             </div>
 
@@ -191,34 +197,56 @@ const CalculatorItem = ({ title = '' }) => {
             <div className={styles.inputContainer}>
               <p>Санвузол:</p>
               <div className={styles.radioBtnsContainer}>
-
                 <div className={styles.radio}>
-                  <input onChange={(e) => radioHandler('WS', e.target.value)} type="radio" defaultChecked value='separate' id='separate' name='WS' />
+                  <input
+                    onChange={(e) => radioHandler('WS', e.target.value)}
+                    type="radio"
+                    defaultChecked
+                    value="separate"
+                    id="separate"
+                    name="WS"
+                  />
                   <label htmlFor="separate">Роздільний</label>
                 </div>
 
                 <div className={styles.radio}>
-                  <input onChange={(e) => radioHandler('WS', e.target.value)} type="radio" value='shared' id='shared' name='WS' />
+                  <input
+                    onChange={(e) => radioHandler('WS', e.target.value)}
+                    type="radio"
+                    value="shared"
+                    id="shared"
+                    name="WS"
+                  />
                   <label htmlFor="shared">Спільний</label>
                 </div>
-
               </div>
             </div>
 
             <div className={styles.inputContainer}>
               <p>Локація:</p>
               <div className={styles.radioBtnsContainer}>
-
                 <div className={styles.radio}>
-                  <input onChange={(e) => radioHandler('location', e.target.value)} type="radio" defaultChecked value='IF' id='IF' name='location' />
+                  <input
+                    onChange={(e) => radioHandler('location', e.target.value)}
+                    type="radio"
+                    defaultChecked
+                    value="IF"
+                    id="IF"
+                    name="location"
+                  />
                   <label htmlFor="IF">Івано-Франківськ</label>
                 </div>
 
                 <div className={styles.radio}>
-                  <input onChange={(e) => radioHandler('location', e.target.value)} type="radio" value='outOfCity' id='outOfCity' name='location' />
+                  <input
+                    onChange={(e) => radioHandler('location', e.target.value)}
+                    type="radio"
+                    value="outOfCity"
+                    id="outOfCity"
+                    name="location"
+                  />
                   <label htmlFor="outOfCity">За містом</label>
                 </div>
-
               </div>
             </div>
           </div>
@@ -231,12 +259,12 @@ const CalculatorItem = ({ title = '' }) => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
 CalculatorItem.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 export default CalculatorItem
