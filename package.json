@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
+    "build": "craco  build",
     "lint": "prettier --write ."
   },
   "eslintConfig": {
