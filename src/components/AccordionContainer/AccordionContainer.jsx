@@ -11,15 +11,15 @@ const accordionsInfo = {
                 title: 'безкоштовний виїзд замірника',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img1.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img1.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img3.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img3.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],
@@ -29,15 +29,15 @@ const accordionsInfo = {
                 title: 'підбір матеріалів та розрахунок кошторису',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],
@@ -72,15 +72,15 @@ const accordionsInfo = {
                 title: 'безкоштовний виїзд замірника',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img1.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img1.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img3.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img3.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],
@@ -90,15 +90,15 @@ const accordionsInfo = {
                 title: 'підбір матеріалів та розрахунок кошторису',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],
@@ -133,15 +133,15 @@ const accordionsInfo = {
                 title: 'безкоштовний виїзд замірника',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img1.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img1.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img3.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img3.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],
@@ -151,15 +151,15 @@ const accordionsInfo = {
                 title: 'підбір матеріалів та розрахунок кошторису',
                 imgs: [
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                     {
-                        imgUrl: '/commercialPropertyImgs/accordion/img2.png',
+                        imgUrl: '/commercialPropertyImgs/accordion/img2.webp',
                         imgAlt: 'commercialProperty example',
                     },
                 ],

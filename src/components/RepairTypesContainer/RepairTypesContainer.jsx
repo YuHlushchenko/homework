@@ -4,7 +4,7 @@ import RepairTypesItem from '../RepairTypesItem/RepairTypesItem'
 
 const dataRepair = {
   economy: {
-    imgSrc: '/servicesPageImgs/moreDetails/img1.png',
+    imgSrc: '/servicesPageImgs/moreDetails/img1.webp',
     title: 'Економ варіант',
     price: '300 грн м',
     time: '45-50 днів',
@@ -14,7 +14,7 @@ const dataRepair = {
   },
 
   eurorepair: {
-    imgSrc: '/servicesPageImgs/moreDetails/img2.png',
+    imgSrc: '/servicesPageImgs/moreDetails/img2.webp',
     title: 'євроремонт',
     price: '300 грн м',
     time: '45-50 днів',
@@ -24,7 +24,7 @@ const dataRepair = {
   },
 
   business: {
-    imgSrc: '/servicesPageImgs/moreDetails/img3.png',
+    imgSrc: '/servicesPageImgs/moreDetails/img3.webp',
     title: 'бізнес варіант',
     price: '800 грн м',
     time: '45-50 днів',

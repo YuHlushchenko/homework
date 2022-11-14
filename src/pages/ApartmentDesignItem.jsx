@@ -11,7 +11,7 @@ const options = {
   project: {
     adviceForm: {
       title: 'ДИЗАЙН ПРОЄКТ',
-      imgUrl: '/apartmentDesignPageImgs/moreDetails/img1.png',
+      imgUrl: '/apartmentDesignPageImgs/moreDetails/img1.webp',
     },
     portfolio: {
       title: 'приклади дизайн проєкту',
@@ -54,7 +54,7 @@ const options = {
   visualisation: {
     adviceForm: {
       title: '3d візуалізація',
-      imgUrl: '/apartmentDesignPageImgs/moreDetails/img2.png',
+      imgUrl: '/apartmentDesignPageImgs/moreDetails/img2.webp',
     },
     portfolio: {
       title: 'приклади дизайн проєкту',
@@ -96,7 +96,7 @@ const options = {
   placement: {
     adviceForm: {
       title: 'План розміщення меблів',
-      imgUrl: '/apartmentDesignPageImgs/moreDetails/img3.png',
+      imgUrl: '/apartmentDesignPageImgs/moreDetails/img3.webp',
     },
     portfolio: {
       title: 'План розміщення меблів: ',
@@ -129,7 +129,6 @@ const options = {
 
 const ApartmentDesignItem = () => {
   const { name } = useParams()
-
   const optionsKeys = Object.keys(options)
 
   return (

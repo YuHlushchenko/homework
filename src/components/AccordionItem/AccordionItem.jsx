@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './AccordionItem.module.sass'
 import PropTypes from 'prop-types'
 import autoAnimate from '@formkit/auto-animate'

@@ -19,7 +19,7 @@ const CustomMap = () => {
     <div className={styles.mapContainer}>
       <MapContainer
         center={position}
-        zoom={18}
+        zoom={17}
         scrollWheelZoom={false}
         style={{ width: '100%', height: '100%' }}>
         <TileLayer

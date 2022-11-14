@@ -1,5 +1,5 @@
 import styles from './AnyQuestions.module.sass'
-import Button from '../UI/Button/Button'
+import Button from '@components/UI/Button/Button'
 import axios from 'axios'
 import { validateAnyQuestionForm } from '@utils/validation'
 import { useRecoilState } from 'recoil'
