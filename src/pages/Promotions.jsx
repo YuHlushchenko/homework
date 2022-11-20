@@ -1,4 +1,3 @@
-import React from 'react'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import styles from '../styles/promotions.module.sass'
 import PromotionItem from '@components/PromotionItem/PromotionItem'

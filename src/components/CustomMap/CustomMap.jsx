@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './CustomMap.module.sass'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'

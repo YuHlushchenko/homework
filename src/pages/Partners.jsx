@@ -1,6 +1,5 @@
-import React from 'react'
 import styles from '../styles/partners.module.sass'
-import PageWrapper from '../components/PageWrapper/PageWrapper'
+import PageWrapper from '@components/PageWrapper/PageWrapper'
 
 const partners = [
   {

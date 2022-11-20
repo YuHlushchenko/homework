@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/commercialProperty.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
@@ -32,8 +31,9 @@ const portfolio = {
 }
 
 const accordion = {
-  title: 'мИ НАДАЄМО:',
-  description: 'Компанія «HOME WORK» виконує професійний ремонт офісів, та іншої коммерційної нерухомості.',
+  title: 'ми надаємо:',
+  description:
+    'Компанія «HOME WORK» виконує професійний ремонт офісів, та іншої коммерційної нерухомості.',
   option: 'commercialProperty',
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import styles from './RepairTypesItem.module.sass'
@@ -92,7 +92,7 @@ const tablesData = {
     'Відеодомофон',
     'Система охоронної сигналізації',
     'Кондиціювання',
-  ]
+  ],
 }
 
 const RepairTypesItem = ({ itemData }) => {
@@ -169,9 +169,11 @@ const RepairTypesItem = ({ itemData }) => {
             ? `${styles.bottomContentContainer} ${styles.bottomContentContainerOpened}`
             : `${styles.bottomContentContainer}`
         }>
-        {dropDown && <div className={styles.tableContainer}>
-          <TableItem tableData={tablesData[itemData.tableName]} />
-        </div>}
+        {dropDown && (
+          <div className={styles.tableContainer}>
+            <TableItem tableData={tablesData[itemData.tableName]} />
+          </div>
+        )}
       </div>
     </div>
   )

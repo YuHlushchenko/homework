@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './CalculatorItem.module.sass'
-import List from '../List/List'
-import Range from '../Range/Range'
+import List from '@components/List/List'
+import Range from '@components/Range/Range'
 
 const list = {
   rooms: ['Студія', 'Однокімнатна', 'Двокімнатна', 'Трикімнатна'],
@@ -124,18 +124,18 @@ const CalculatorItem = ({ title = '' }) => {
   // }
 
   const numberToString = (price) => {
-    const roundedPrice = (Math.ceil(Math.round(price) / 100)) * 100
+    const roundedPrice = Math.ceil(Math.round(price) / 100) * 100
     let priceArr = String(roundedPrice).split('')
     let res = []
-    
+
     priceArr.reverse().map((item, index) => {
-      if(index % 3 === 0 && index !== 0) {
+      if (index % 3 === 0 && index !== 0) {
         res.push(' ', item)
       } else {
         res.push(item)
       }
     })
-    
+
     return res.reverse()
   }
 

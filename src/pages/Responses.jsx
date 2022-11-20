@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/responses.module.sass'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
 
@@ -52,11 +51,10 @@ const Responses = () => {
             navigation
             loop={true}
             autoplay={
-              window.innerWidth <= 700
-                && {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                  }
+              window.innerWidth <= 700 && {
+                delay: 5000,
+                disableOnInteraction: false,
+              }
             }
             spaceBetween={50}
             slidesPerView={1}
