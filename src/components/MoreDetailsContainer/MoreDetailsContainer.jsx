@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const options = {
   services: [
     {
-      imgUrl: '/ServicesPageImgs/moreDetails/img1.webp',
+      imgUrl: '/servicesPageImgs/moreDetails/img1.webp',
       description: 'Ремонт квартири під ключ',
       title: 'Економ варіант',
       price: '300 грн',
@@ -13,7 +13,7 @@ const options = {
       namePage: 'economy',
     },
     {
-      imgUrl: '/ServicesPageImgs/moreDetails/img2.webp',
+      imgUrl: '/servicesPageImgs/moreDetails/img2.webp',
       description: 'Ремонт квартири під ключ',
       title: 'євроремонт',
       price: '550 грн',
@@ -21,7 +21,7 @@ const options = {
       namePage: 'eurorepair',
     },
     {
-      imgUrl: '/ServicesPageImgs/moreDetails/img3.webp',
+      imgUrl: '/servicesPageImgs/moreDetails/img3.webp',
       description: 'Ремонт квартири під ключ',
       title: 'бізнес',
       price: '880 грн',
