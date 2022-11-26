@@ -1,5 +1,19 @@
-import React from 'react'
 import styles from './OurServices.module.sass'
+
+const ourServicesData = [
+  {
+    title: 'Ремонт квартир під ключ',
+    imgUrl: '/ourServicesBackgrounds/img1.webp',
+  },
+  {
+    title: 'Дизайн інтер’єру',
+    imgUrl: '/ourServicesBackgrounds/img2.webp',
+  },
+  {
+    title: 'Будівництво будинків',
+    imgUrl: '/ourServicesBackgrounds/img3.webp',
+  },
+]
 
 const OurServices = () => {
   return (
@@ -11,23 +25,19 @@ const OurServices = () => {
       </p>
 
       <div className={styles.servicesContainer}>
-        <div className={`${styles.serviceBlock} ${styles.img1}`}>
-          <div className={styles.bottomContainer}>
-            <span>Ремонт квартир під ключ</span>
-          </div>
-        </div>
-
-        <div className={`${styles.serviceBlock} ${styles.img2}`}>
-          <div className={styles.bottomContainer}>
-            <span>Дизайн інтер’єру</span>
-          </div>
-        </div>
-
-        <div className={`${styles.serviceBlock} ${styles.img3}`}>
-          <div className={styles.bottomContainer}>
-            <span>Будівництво будинків</span>
-          </div>
-        </div>
+        {
+          ourServicesData && ourServicesData.map((item) => {
+            return <div
+              key={item.title}
+              className={`${styles.serviceBlock} ${styles.img}`}
+              style={{ backgroundImage: `url(${item.imgUrl})`}}
+            >
+              <div className={styles.bottomContainer}>
+                <span>{item.title}</span>
+              </div>
+            </div>
+          })
+        }
       </div>
     </div>
   )
