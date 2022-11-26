@@ -6,37 +6,37 @@ const infoBlocksContent = [
     title: 'Логістика на нас',
     description:
       'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img1.png',
+    bgImg: 'img1.webp',
   },
   {
     title: 'Поважаємо сусідів',
     description:
       'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img2.png',
+    bgImg: 'img2.webp',
   },
   {
     title: 'Вивозимо сміття',
     description:
       'Loreptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img3.png',
+    bgImg: 'img3.webp',
   },
   {
     title: 'Щоденний звіт',
     description:
       'Lorem ipsum dolor sit amet. Est uptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img4.png',
+    bgImg: 'img4.webp',
   },
   {
     title: 'Вирішуємо всі питання',
     description:
       'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img5.png',
+    bgImg: 'img5.webp',
   },
   {
     title: 'Контролюємо якість',
     description:
       'Lorem ipsum dolor sit amet. Est voluptatem dolorem sed obcm ipsum dolor sit amet. Est voluptatem dolorem dolor sit amet. Est voluptatem dolorem sem ',
-    bgImg: 'img6.png',
+    bgImg: 'img6.webp',
   },
 ]
 
