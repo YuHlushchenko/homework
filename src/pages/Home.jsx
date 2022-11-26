@@ -17,9 +17,7 @@ const Home = () => {
         <RepairTypesContainer />
 
         <section className={styles.calculatorContainer}>
-          <CalculatorItem
-            title='Розрахуйте вартість ремонту'
-          />
+          <CalculatorItem title="Розрахуйте вартість ремонту" />
         </section>
 
         <section className={styles.ourServicesSection}>

@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/servicesItem.module.sass'
 import { useParams } from 'react-router-dom'
 import AdviceFormContainer from '@components/AdviceFormContainer/AdviceFormContainer'
@@ -35,11 +34,12 @@ const options = {
         '/servicesPageImgs/portfolio1/img3.webp',
         '/servicesPageImgs/portfolio1/img4.webp',
       ],
-      alt: 'service example'
+      alt: 'service example',
     },
     table: {
       title: 'Детальніше, що саме входить у вартість:',
-      description: 'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі!',
+      description:
+        'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі!',
       text: '',
       tableData: [
         'Дизайн-проект',
@@ -69,8 +69,8 @@ const options = {
         'Відеодомофон',
         'Система охоронної сигналізації',
         'Кондиціювання',
-      ]
-    }
+      ],
+    },
   },
 
   eurorepair: {
@@ -78,7 +78,7 @@ const options = {
       title: 'ремонт квартири євроремонт',
       imgUrl: '/servicesPageImgs/moreDetails/img2.webp',
       text1:
-        'Послуги є комплексними та включають всі витрати як на матеріали, так і на роботи. Одна компанія бере на себе все: виміри та розробку дизайн-проекту, електрику, вирівнювання стін, сантехніку, монтаж стель, обклеювання шпалерами, укладання плитки та ламінату.  ',
+        'Послуги є комплексними та включають всі витрати як на матеріали, так і на роботи. Одна компанія бере на себе все: виміри та розробку дизайн-проекту, електрику, вирівнювання стін, сантехніку, монтаж стель, обклеювання шпалерами, укладання плитки та ламінату.',
       text2:
         'Вам залишається лише оформити заявку, поетапно внести оплату та в\'їхати до готового затишного будинку. До виконання усіх заходів залучаються високоспеціалізовані майстри – дизайнери, архітектори, будівельники, інженери, електрики та інші. Наш підхід до співпраці позбавить вас від хвилювання та напруженості. Весь процес повністю контролюють профільні спеціалісти.',
     },
@@ -96,11 +96,12 @@ const options = {
         '/servicesPageImgs/portfolio2/img3.webp',
         '/servicesPageImgs/portfolio2/img4.webp',
       ],
-      alt: 'eurorepair example'
+      alt: 'eurorepair example',
     },
     table: {
       title: 'Детальніше, що саме входить у вартість:',
-      description: 'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі! ',
+      description:
+        'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі! ',
       text: '',
       tableData: [
         'Дизайн-проект',
@@ -130,8 +131,8 @@ const options = {
         'Відеодомофон',
         'Система охоронної сигналізації',
         'Кондиціювання',
-      ]
-    }
+      ],
+    },
   },
 
   business: {
@@ -157,11 +158,12 @@ const options = {
         '/servicesPageImgs/portfolio3/img3.webp',
         '/servicesPageImgs/portfolio3/img4.webp',
       ],
-      alt: 'business example'
+      alt: 'business example',
     },
     table: {
       title: 'Детальніше, що саме входить у вартість:',
-      description: 'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі! ',
+      description:
+        'Усі роботи та матеріали входять у вартість ремонту, вам не потрібно більше ничого купляти, тільки завезти свої меблі та речі! ',
       text: '',
       tableData: [
         'Дизайн-проект',
@@ -191,8 +193,8 @@ const options = {
         'Відеодомофон',
         'Система охоронної сигналізації',
         'Кондиціювання',
-      ]
-    }
+      ],
+    },
   },
 }
 
@@ -204,18 +206,14 @@ const ServicesItem = () => {
     <PageWrapper>
       <>
         {optionsKeys.map((item, index) => {
-          return name === item ? (
+          return name === item && (
             <div key={index} className={styles.servicesItemContainer}>
               <section className={styles.adviceFormContainer}>
                 <AdviceFormContainer item={options[item].adviceForm} />
               </section>
 
-              <section
-                className={styles.portfolioContainer}
-              >
-                <Portfolio
-                  data={options[item].portfolio}
-                />
+              <section className={styles.portfolioContainer}>
+                <Portfolio data={options[item].portfolio} />
               </section>
 
               <section
@@ -223,7 +221,6 @@ const ServicesItem = () => {
                 style={{
                   backgroundImage: 'url(/servicesPageImgs/background.png)',
                 }}>
-
                 <section className={styles.tableContainer}>
                   <TableContainer data={options[item].table} />
                 </section>
@@ -233,10 +230,9 @@ const ServicesItem = () => {
                     option={'services'} // 'services' / 'apartmentDesign' / 'smartHause'
                   />
                 </section>
-
               </section>
             </div>
-          ) : undefined
+          )
         })}
       </>
     </PageWrapper>

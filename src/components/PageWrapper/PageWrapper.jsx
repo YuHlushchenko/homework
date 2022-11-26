@@ -1,10 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import Navigation from '@components/Navigation/Navigation'
 import Footer from '@components/Footer/Footer'
 import ToTopButton from '@components/UI/ToTopButton/ToTopButton'
 import NotificationsContainer from '@components/NotificationsContainer/NotificationsContainer'
-import Notification from '../Notification/Notification'
+import Notification from '@components/Notification/Notification'
 import { useRecoilValue } from 'recoil'
 import { notificationState } from '../../atoms'
 

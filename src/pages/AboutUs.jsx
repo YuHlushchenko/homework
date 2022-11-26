@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/aboutUs.module.sass'
 import PageWrapper from '../components/PageWrapper/PageWrapper'
 

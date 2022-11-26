@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/apartmentDesignItem.module.sass'
 import { useParams } from 'react-router-dom'
 import PageWrapper from '@components/PageWrapper/PageWrapper'
@@ -47,8 +46,8 @@ const options = {
         'Схема розташування сантехніки',
         'Специфікація матеріалів',
         '',
-      ]
-    }
+      ],
+    },
   },
 
   visualisation: {
@@ -89,8 +88,8 @@ const options = {
         'План стелі',
         'Схема розташування сантехніки',
         'Специфікація матеріалів',
-      ]
-    }
+      ],
+    },
   },
 
   placement: {
@@ -122,8 +121,8 @@ const options = {
         'Обмірний план квартири',
         'План розташування меблів',
         'Консультація дізайнера',
-      ]
-    }
+      ],
+    },
   },
 }
 

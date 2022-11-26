@@ -1,6 +1,6 @@
 import styles from './Footer.module.sass'
 import { NavLink } from 'react-router-dom'
-import Button from '../UI/Button/Button'
+import Button from '@components/UI/Button/Button'
 
 const navLinks = [
   {
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.contactInfoContainer}>
-            <a href="tel:+38970000000">
+            <a href="tel:+38000000000">
               <div className={styles.btnContainer}>
                 <Button value={'ЗАТЕЛЕФОНУВАТИ'} />
               </div>

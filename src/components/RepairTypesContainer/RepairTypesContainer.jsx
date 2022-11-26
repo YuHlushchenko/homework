@@ -1,6 +1,5 @@
-import React from 'react'
 import styles from './RepairTypesContainer.module.sass'
-import RepairTypesItem from '../RepairTypesItem/RepairTypesItem'
+import RepairTypesItem from '@components/RepairTypesItem/RepairTypesItem'
 
 const dataRepair = {
   economy: {

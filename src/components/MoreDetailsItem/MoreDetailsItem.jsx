@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './MoreDetailsItem.module.sass'
 import PropTypes from 'prop-types'
 

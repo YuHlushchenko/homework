@@ -1,5 +1,4 @@
-import React from 'react'
-import PageWrapper from '../components/PageWrapper/PageWrapper'
+import PageWrapper from '@components/PageWrapper/PageWrapper'
 import styles from '../styles/page404.module.sass'
 
 const Page404 = () => {
@@ -8,7 +7,9 @@ const Page404 = () => {
       <div className={styles.container}>
         <h2>404</h2>
         <p>Сторінка, яку Ви шукаєте не знайдена або не існує.</p>
-        <p>Повернутися <a href='/'>На головну</a>.</p>
+        <p>
+          Повернутися <a href="/">На головну</a>.
+        </p>
       </div>
     </PageWrapper>
   )
