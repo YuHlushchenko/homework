@@ -5,6 +5,7 @@ import styles from './Portfolio.module.sass'
 const Portfolio = ({ data }) => {
   const [showImgs, setShowImgs] = useState(false)
   const [zoom, setZoom] = useState(null)
+  const [countShownImgs, setCountShownImgs] = useState(data.imgSrcs.slice(0, 6))
   const ref = useRef()
 
   useEffect(() => {
@@ -21,14 +22,19 @@ const Portfolio = ({ data }) => {
     }
   }, [zoom])
 
+  useEffect(() => {
+    showImgs ? setCountShownImgs(data.imgSrcs) : setCountShownImgs(data.imgSrcs.slice(0, 6))
+
+  }, [showImgs, data])
+
   return (
     <div className={styles.portfolioContainer}>
       <h3>{data?.title}</h3>
       <div className={styles.brLine}></div>
       <div className={styles.mainContantContainer}>
         <div className={styles.photosContainer}>
-          {data?.imgSrcs.map((item, index) => {
-            if (showImgs) {
+          {
+            countShownImgs && countShownImgs.map((item, index) => {
               return (
                 <div key={index + 1}>
                   <div className={styles.imgContainer}>
@@ -72,52 +78,8 @@ const Portfolio = ({ data }) => {
                   </div>
                 </div>
               )
-            } else if (!showImgs && index <= 5) {
-              return (
-                <div key={index + 1}>
-                  <div className={styles.imgContainer}>
-                    <button type="button" onClick={() => setZoom(index + 1)}>
-                      <img src={item} alt={data?.alt} />
-                    </button>
-                  </div>
-
-                  <div
-                    className={
-                      zoom === index + 1 ? styles.zoomContainer : styles.hide
-                    }
-                    ref={ref}>
-                    <img src={item} alt={data?.alt} />
-
-                    <div className={styles.closeZoomContainer}>
-                      <button type="button" onClick={() => setZoom(null)}>
-                        <svg
-                          width="28"
-                          height="29"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M18 6.5L6 18.5"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M6 6.5L18 18.5"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
-          })}
+            })
+          }
         </div>
 
         <div

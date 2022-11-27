@@ -9,8 +9,6 @@ const Notification = ({ notificationData }) => {
             style={notificationData.isSuccess ? { backgroundColor: '#00c04b' } : { backgroundColor: '#DB0000' }}
         >
             <p>{notificationData.message}</p>
-
-            <div className={styles.lineProgress}></div>
         </div>
     )
 }

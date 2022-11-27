@@ -45,7 +45,6 @@ const options = {
         'План стелі',
         'Схема розташування сантехніки',
         'Специфікація матеріалів',
-        '',
       ],
     },
   },
@@ -143,7 +142,7 @@ const ApartmentDesignItem = () => {
               <section
                 className={styles.tableContainer}
                 style={{
-                  backgroundImage: 'url(/servicesPageImgs/background.png)',
+                  backgroundImage: 'url(/servicesPageImgs/background.webp)',
                 }}>
                 <TableContainer data={options[item].table} />
               </section>

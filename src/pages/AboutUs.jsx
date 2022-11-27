@@ -1,5 +1,5 @@
 import styles from '../styles/aboutUs.module.sass'
-import PageWrapper from '../components/PageWrapper/PageWrapper'
+import PageWrapper from '@components/PageWrapper/PageWrapper'
 
 const infoBlocksContent = [
   {

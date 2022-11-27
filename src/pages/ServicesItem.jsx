@@ -219,7 +219,7 @@ const ServicesItem = () => {
               <section
                 className={styles.backgroundContainer}
                 style={{
-                  backgroundImage: 'url(/servicesPageImgs/background.png)',
+                  backgroundImage: 'url(/servicesPageImgs/background.webp)',
                 }}>
                 <section className={styles.tableContainer}>
                   <TableContainer data={options[item].table} />

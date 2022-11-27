@@ -63,7 +63,7 @@ const DesignRepair = () => {
         <section
           className={styles.tableContainer}
           style={{
-            backgroundImage: 'url(/servicesPageImgs/background.png)',
+            backgroundImage: 'url(/servicesPageImgs/background.webp)',
           }}>
           <TableContainer data={table} />
         </section>
