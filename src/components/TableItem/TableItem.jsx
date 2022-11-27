@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './TableItem.module.sass'
 import PropTypes from 'prop-types'
-import autoAnimate from '@formkit/auto-animate'
+import {CSSTransition} from 'react-transition-group'
 
 const TableItem = ({ tableData }) => {
   const [showMore, setShowMore] = useState(false)
@@ -10,21 +10,20 @@ const TableItem = ({ tableData }) => {
       ? tableData.slice(0, 6)
       : tableData
   )
-  const ref = useRef(null)
 
   const showMoreHandler = () => setShowMore(!showMore)
 
   useEffect(() => {
-    ref.current && autoAnimate(ref.current)
-  }, [ref])
-
-  useEffect(() => {
-    if(window.innerWidth < 850) {
+    if (window.innerWidth < 850) {
       showMore ? setCountShownTableItems(tableData) : setCountShownTableItems(tableData.slice(0, 6))
     } else {
       setCountShownTableItems(tableData)
     }
   }, [showMore, tableData])
+
+  const isEven = (x) => {
+    return (x + 1) % 2 === 0
+  }
 
   return (
     <div className={styles.tableContainer}>
@@ -32,49 +31,52 @@ const TableItem = ({ tableData }) => {
       <div
         className={
           showMore ? `${styles.table} ${styles.tableOpened}` : `${styles.table}`
-        }
-        ref={ref}>
-        {
-          countShownTableItems && countShownTableItems.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className={
-                  (index + 1) % 2 === 0
-                    ? `${styles.cell} ${styles.bg}`
-                    : `${styles.cell}`
-                }>
-                <div className={styles.cellTextContainer}>
-                  <p>{item}</p>
-                </div>
+        }>
+        <CSSTransition
+          in={showMore}
+          timeout={500}
+        >{
+            state => countShownTableItems && countShownTableItems.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className={
+                    isEven(index)
+                      ? index >= 6 ? `${styles.cell} ${styles.bg} ${state}` : `${styles.cell} ${styles.bg}`
+                      : index >= 6 ? `${styles.cell} ${state}` : `${styles.cell}` 
+                  }>
+                  <div className={styles.cellTextContainer}>
+                    <p>{item}</p>
+                  </div>
 
-                <div className={styles.iconContainer}>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M12 5V19"
-                      stroke="black"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M5 12H19"
-                      stroke="black"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <div className={styles.iconContainer}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 5V19"
+                        stroke="black"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M5 12H19"
+                        stroke="black"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            )
-          })
-        }
+              )
+            })
+          }
+        </CSSTransition>
       </div>
 
       {tableData && tableData.length > 6 && <div

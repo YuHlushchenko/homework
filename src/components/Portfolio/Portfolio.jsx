@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Portfolio.module.sass'
+import './Portfolio.css'
+import { CSSTransition } from 'react-transition-group'
 
 const Portfolio = ({ data }) => {
   const [showImgs, setShowImgs] = useState(false)
@@ -33,53 +35,58 @@ const Portfolio = ({ data }) => {
       <div className={styles.brLine}></div>
       <div className={styles.mainContantContainer}>
         <div className={styles.photosContainer}>
-          {
-            countShownImgs && countShownImgs.map((item, index) => {
-              return (
-                <div key={index + 1}>
-                  <div className={styles.imgContainer}>
-                    <button type="button" onClick={() => setZoom(index + 1)}>
-                      <img src={item} alt={data?.alt} />
-                    </button>
-                  </div>
-
-                  <div
-                    className={
-                      zoom === index + 1 ? styles.zoomContainer : styles.hide
-                    }
-                    ref={ref}>
-                    <img src={item} alt={data?.alt} />
-
-                    <div className={styles.closeZoomContainer}>
-                      <button type="button" onClick={() => setZoom(null)}>
-                        <svg
-                          width="28"
-                          height="29"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M18 6.5L6 18.5"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M6 6.5L18 18.5"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+          <CSSTransition
+            in={showImgs}
+            timeout={500}
+          >
+            {
+              state => countShownImgs && countShownImgs.map((item, index) => {
+                return (
+                  <div key={index + 1}>
+                    <div className={index + 1 >= 7 ? `${styles.imgContainer} ${state}` : `${styles.imgContainer}`}>
+                      <button type="button" onClick={() => setZoom(index + 1)}>
+                        <img src={item} alt={data?.alt} />
                       </button>
                     </div>
+
+                    <div
+                      className={
+                        zoom === index + 1 ? styles.zoomContainer : styles.hide
+                      }
+                      ref={ref}>
+                      <img src={item} alt={data?.alt} />
+
+                      <div className={styles.closeZoomContainer}>
+                        <button type="button" onClick={() => setZoom(null)}>
+                          <svg
+                            width="28"
+                            height="29"
+                            viewBox="0 0 24 25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M18 6.5L6 18.5"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M6 6.5L18 18.5"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              )
-            })
-          }
+                )
+              })
+            }
+          </CSSTransition>
         </div>
 
         <div
